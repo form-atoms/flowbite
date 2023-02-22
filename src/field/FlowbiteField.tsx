@@ -14,7 +14,7 @@ type Children = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {
     id: string;
     helperText: ReactNode;
-    color: FlowbiteStateColor;
+    color?: FlowbiteStateColor;
   }
 >;
 
