@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="120" style="margin: 32px" src="../../form-atoms-field.svg">
+  <img width="120" style="margin: 32px" src="https://raw.githubusercontent.com/MiroslavPetrik/form-atoms-field/main/form-atoms-field.svg">
   <h1>@form-atoms/flowbite</h1>
 </div>
 
