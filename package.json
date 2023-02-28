@@ -26,6 +26,15 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "test": "vitest",
+    "publish": "yarn npm publish --access public",
+    "build": "tsc --build ./tsconfig.build.json",
+    "sb": "yarn watch:storybook",
+    "build:storybook": "storybook build",
+    "watch:storybook": "storybook dev -p 6006",
+    "semantic-release": "semantic-release"
+  },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
@@ -78,15 +87,6 @@
     "react-dom": "18.2.0",
     "react-render-prop-type": "0.1.0",
     "tailwindcss": "3.2.4"
-  },
-  "scripts": {
-    "test": "vitest",
-    "publish": "yarn npm publish --access public",
-    "build": "tsc --build ./tsconfig.build.json",
-    "sb": "yarn watch:storybook",
-    "build:storybook": "storybook build",
-    "watch:storybook": "storybook dev -p 6006",
-    "semantic-release": "semantic-release"
   },
   "release": {
     "branches": [
