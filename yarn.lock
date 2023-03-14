@@ -1890,7 +1890,7 @@ __metadata:
     vitest: 0.28.4
     zod: ^3.20.6
   peerDependencies:
-    form-atoms: "*"
+    form-atoms: ^3
   languageName: unknown
   linkType: soft
 
