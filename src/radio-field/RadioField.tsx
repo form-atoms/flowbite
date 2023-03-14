@@ -1,13 +1,15 @@
 import {
-  SelectFieldProps,
+  RadioGroupProps,
+  useOptions,
+  SelectField,
   useSelectFieldProps,
-  useSelectOptions,
+  FieldProps,
 } from "@form-atoms/field";
 import { HelperText, Label, Radio } from "flowbite-react";
 
 import { FlowbiteField } from "../field";
 
-export const RadioField = <Option,>({
+export const RadioField = <Option, Field extends SelectField>({
   field,
   options,
   getValue,
@@ -16,13 +18,10 @@ export const RadioField = <Option,>({
   helperText,
   required,
   ...uiProps
-}: SelectFieldProps<Option>) => {
-  const props = useSelectFieldProps(field);
-  const { renderOptions } = useSelectOptions(field, {
-    getValue,
-    getLabel,
-    options,
-  });
+}: RadioGroupProps<Option, Field> & Omit<FieldProps<Field>, "field">) => {
+  // @ts-ignore
+  const props = useSelectFieldProps({ field, options, getValue });
+  const { renderOptions } = useOptions({ field, options, getLabel });
 
   return (
     <FlowbiteField
@@ -31,22 +30,22 @@ export const RadioField = <Option,>({
       label={label}
       helperText={helperText}
     >
-      {({ color, helperText, id: _, ...fieldProps }) => (
+      {({ color, helperText, id, ...fieldProps }) => (
         <>
-          {renderOptions.map(({ value, label, isActive }) => (
+          {renderOptions.map(({ id, value, label }) => (
             <div className="flex items-center gap-2" key={value}>
               <Radio
                 {...props}
                 role="radio"
-                id={value}
+                id={id}
                 value={value}
-                name={props.name ?? props.id}
-                checked={isActive}
-                aria-checked={isActive}
+                name={props.name ?? id}
+                checked={props.value === value}
+                aria-checked={props.value === value}
                 {...uiProps}
                 {...fieldProps}
               />
-              <Label htmlFor={value}>{label}</Label>
+              <Label htmlFor={id}>{label}</Label>
             </div>
           ))}
           {helperText && <HelperText color={color}>{helperText}</HelperText>}

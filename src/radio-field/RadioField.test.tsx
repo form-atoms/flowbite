@@ -1,4 +1,3 @@
-import { selectField } from "@form-atoms/field";
 import { render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
 import { formAtom, useFormSubmit } from "form-atoms";
@@ -7,6 +6,7 @@ import { describe, expect, it } from "vitest";
 import { getLabel, getValue, options } from "../select-field/country";
 
 import { RadioField } from ".";
+import { stringField } from "@form-atoms/field";
 
 describe("<RadioField />", () => {
   const props = {
@@ -17,7 +17,7 @@ describe("<RadioField />", () => {
   };
 
   it("should render error message when submitting empty & required", async () => {
-    const field = selectField();
+    const field = stringField();
     const form = formAtom({ field });
     const { result } = renderHook(() => useFormSubmit(form));
 
@@ -35,9 +35,9 @@ describe("<RadioField />", () => {
     expect(onSubmit).not.toBeCalled();
   });
 
-  describe("with optional selectField()", () => {
+  describe("with optional stringField()", () => {
     it("submits form with undefined empty value", async () => {
-      const option = selectField({ optional: true });
+      const option = stringField({ optional: true });
       const form = formAtom({ option });
       const { result } = renderHook(() => useFormSubmit(form));
 
