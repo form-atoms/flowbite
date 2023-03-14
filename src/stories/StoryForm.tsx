@@ -34,7 +34,7 @@ export const StoryForm = <Fields extends FormFields>({
       {children({ required, form })}
       <div className="flex gap-2">
         <Button type="submit">Submit</Button>
-        <Button color="gray" onClick={reset}>
+        <Button color="gray" onClick={() => reset()}>
           Reset
         </Button>
       </div>

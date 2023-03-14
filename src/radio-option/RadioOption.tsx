@@ -1,6 +1,6 @@
 import {
+  CheckboxField,
   FieldProps,
-  ValidatedFieldAtom,
   useCheckboxFieldProps,
   useRequiredProps,
 } from "@form-atoms/field";
@@ -8,7 +8,7 @@ import { HelperText, Label, Radio } from "flowbite-react";
 
 import { useFieldError } from "../hooks";
 
-export const RadioOption = <Field extends ValidatedFieldAtom<boolean>>({
+export const RadioOption = <Field extends CheckboxField>({
   field,
   required,
   label,

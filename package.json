@@ -67,6 +67,7 @@
     "autoprefixer": "10.4.13",
     "babel-loader": "^8.3.0",
     "concurrently": "^7.6.0",
+    "form-atoms": "^3.0.0",
     "happy-dom": "8.7.1",
     "jotai-devtools": "0.3.0-next.3",
     "postcss": "8.4.21",
@@ -81,7 +82,6 @@
     "@form-atoms/field": "2.5.0",
     "flowbite": "1.6.3",
     "flowbite-react": "0.3.8",
-    "form-atoms": "3.0.0",
     "jotai": "2.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -112,5 +112,8 @@
       ],
       "@semantic-release/github"
     ]
+  },
+  "peerDependencies": {
+    "form-atoms": "^3"
   }
 }
