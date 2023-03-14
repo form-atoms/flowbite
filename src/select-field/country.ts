@@ -1,4 +1,4 @@
-import { selectField } from "@form-atoms/field";
+import { stringField } from "@form-atoms/field";
 
 export const options = [
   { code: "SK", name: "Slovak Republic" },
@@ -10,4 +10,4 @@ type Country = { code: string; name: string };
 export const getValue = (opt: Country) => opt.code;
 export const getLabel = (opt: Country) => opt.name;
 
-export const country = selectField();
+export const country = stringField();

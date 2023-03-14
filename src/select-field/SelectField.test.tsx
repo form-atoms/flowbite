@@ -1,4 +1,3 @@
-import { selectField } from "@form-atoms/field";
 import { render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
 import userEvent from "@testing-library/user-event";
@@ -8,6 +7,7 @@ import { describe, expect, it } from "vitest";
 import { country, getLabel, getValue, options } from "./country";
 
 import { SelectField } from "./";
+import { stringField } from "@form-atoms/field";
 
 describe("<SelectField />", () => {
   const props = {
@@ -26,7 +26,7 @@ describe("<SelectField />", () => {
   });
 
   it("should render error message when submitting empty & required", async () => {
-    const field = selectField();
+    const field = stringField();
     const form = formAtom({ field });
     const { result } = renderHook(() => useFormSubmit(form));
 
@@ -49,7 +49,7 @@ describe("<SelectField />", () => {
   });
 
   it("should use the placeholder prop", () => {
-    const field = selectField();
+    const field = stringField();
 
     render(
       <SelectField field={field} {...props} placeholder="Pick a country" />
@@ -60,7 +60,7 @@ describe("<SelectField />", () => {
 
   describe("with optional selectField()", () => {
     it("submits with undefined", async () => {
-      const option = selectField({ optional: true });
+      const option = stringField({ optional: true });
       const form = formAtom({ option });
       const { result } = renderHook(() => useFormSubmit(form));
 
