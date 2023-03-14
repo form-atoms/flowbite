@@ -30,20 +30,20 @@ export const RadioField = <Option, Field extends SelectField>({
       label={label}
       helperText={helperText}
     >
-      {({ color, helperText, id, ...fieldProps }) => (
+      {({ color, helperText, id: fieldId, ...fieldProps }) => (
         <>
           {renderOptions.map(({ id, value, label }) => (
-            <div className="flex items-center gap-2" key={value}>
+            <div className="flex items-center gap-2" key={id}>
               <Radio
                 {...props}
                 role="radio"
-                id={id}
-                value={value}
-                name={props.name ?? id}
-                checked={props.value === value}
-                aria-checked={props.value === value}
                 {...uiProps}
                 {...fieldProps}
+                id={id}
+                value={value}
+                name={props.name ?? fieldId}
+                checked={props.value === value}
+                aria-checked={props.value === value}
               />
               <Label htmlFor={id}>{label}</Label>
             </div>

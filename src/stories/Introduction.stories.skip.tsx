@@ -1,8 +1,3 @@
-import {
-  countryOptions,
-  profileFields,
-} from "@form-atoms/field/dist/scenarios/profile";
-
 import { CheckboxField } from "../checkbox-field";
 import { FileField } from "../file-field";
 import { NumberField } from "../number-field";
