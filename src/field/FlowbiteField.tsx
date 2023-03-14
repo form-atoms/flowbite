@@ -1,11 +1,11 @@
 import {
   FieldProps,
   RequiredProps,
-  ValidatedFieldAtom,
+  ZodField,
   useRequiredProps,
 } from "@form-atoms/field";
 import { Label } from "flowbite-react";
-import { ReactNode, useId } from "react";
+import { ReactNode } from "react";
 import { RenderProp } from "react-render-prop-type";
 
 import { FlowbiteStateColor, useFieldError } from "../hooks";
@@ -18,17 +18,17 @@ type Children = RenderProp<
   }
 >;
 
-type FlowbiteFieldProps<Field extends ValidatedFieldAtom<any>> =
-  FieldProps<Field> & Children;
+type FlowbiteFieldProps<Field extends ZodField<any, any>> = FieldProps<Field> &
+  Children;
 
-export const FlowbiteField = <Field extends ValidatedFieldAtom<any>>({
+export const FlowbiteField = <Field extends ZodField<any, any>>({
   field,
   required,
   label,
   children,
   ...uiProps
 }: FlowbiteFieldProps<Field>) => {
-  const id = useId();
+  const id = `${field}`;
   const { color, error } = useFieldError(field);
   const { isFieldRequired, ...props } = useRequiredProps(field, required);
 
