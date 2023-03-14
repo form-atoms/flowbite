@@ -1821,16 +1821,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:0.0.4":
-  version: 0.0.4
-  resolution: "@form-atoms/field@npm:0.0.4"
+"@form-atoms/field@npm:2.4.2":
+  version: 2.4.2
+  resolution: "@form-atoms/field@npm:2.4.2"
   dependencies:
-    form-atoms: 2.0.0
-    jotai: 2.0.0
-    object-path-immutable: 4.1.2
-    react: 18.2.0
+    object-path-immutable: ^4.1.2
     react-render-prop-type: 0.1.0
-  checksum: e43f9170f24ab8b165658ef34da51dc76c423aa95fdb53bed08e0d1ae4bfe35836eb2e8ac81f9c044f96483775148a5527952210e5ecdd3532a49e2bdc30d483
+  peerDependencies:
+    form-atoms: ^3
+    jotai: ^2
+    react: ">=16.8"
+    zod: ^3
+  checksum: 8bf310097078dca02d411171cd8ccd109eb88094fa9b2e694af51efb4583e132c3780c4fb8672e65e79f841f5903252140be0a1dfd6fe5119657f9ed99070be8
   languageName: node
   linkType: hard
 
@@ -1842,7 +1844,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
-    "@form-atoms/field": 0.0.4
+    "@form-atoms/field": 2.4.2
     "@mdx-js/react": ^1.6.22
     "@semantic-release/changelog": ^6.0.2
     "@semantic-release/git": ^10.0.1
@@ -1872,9 +1874,9 @@ __metadata:
     concurrently: ^7.6.0
     flowbite: 1.6.3
     flowbite-react: 0.3.8
-    form-atoms: 2.0.0
+    form-atoms: 3.0.0
     happy-dom: 8.7.1
-    jotai: 2.0.0
+    jotai: 2.0.3
     jotai-devtools: 0.3.0-next.3
     postcss: 8.4.21
     prettier-plugin-tailwindcss: 0.2.2
@@ -8326,15 +8328,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-atoms@npm:2.0.0":
-  version: 2.0.0
-  resolution: "form-atoms@npm:2.0.0"
+"form-atoms@npm:3.0.0":
+  version: 3.0.0
+  resolution: "form-atoms@npm:3.0.0"
   dependencies:
     "@testing-library/user-event": ^13.0.0
   peerDependencies:
     jotai: ^2.0.0
     react: ">=16.8"
-  checksum: 1493f2e8d9cdc06a395e1cbb5a6fd88fe1e817dcf60bdf84c3c8a9c58c502db24dcfb2e79e2e65218e80df19e63467f89e282770fffacb5ad063c7db73b3a781
+  checksum: be820a018e0c132f625ef86c4c82a641a84cb6b52286839108f4fb88ee570a9d30bed44a060a658e557310e4eb6045ac753d11f656364a308806f39a33eef2d4
   languageName: node
   linkType: hard
 
@@ -9957,15 +9959,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:2.0.0":
-  version: 2.0.0
-  resolution: "jotai@npm:2.0.0"
+"jotai@npm:2.0.3":
+  version: 2.0.3
+  resolution: "jotai@npm:2.0.3"
   peerDependencies:
     react: ">=17.0.0"
   peerDependenciesMeta:
     react:
       optional: true
-  checksum: 19ff656797ebfa3e935ab8e53f9895982c1d12d44a6f03611147b3ee3381387baf91edf5d81f2a17ed3c709a7278a26daee090164e83855120391ea60769e20b
+  checksum: 3ad1d6a9b7e40a8dd8cdc423441164c25852a328c98806ed0e2a283a4e07af661f4a88b50528367aeae582932171bc8979e45cbc9023af30b9f4a348faeed567
   languageName: node
   linkType: hard
 
@@ -11601,7 +11603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-path-immutable@npm:4.1.2":
+"object-path-immutable@npm:^4.1.2":
   version: 4.1.2
   resolution: "object-path-immutable@npm:4.1.2"
   dependencies:

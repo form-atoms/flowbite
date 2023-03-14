@@ -78,11 +78,11 @@
     "zod": "^3.20.6"
   },
   "dependencies": {
-    "@form-atoms/field": "0.0.4",
+    "@form-atoms/field": "2.4.2",
     "flowbite": "1.6.3",
     "flowbite-react": "0.3.8",
-    "form-atoms": "2.0.0",
-    "jotai": "2.0.0",
+    "form-atoms": "3.0.0",
+    "jotai": "2.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-render-prop-type": "0.1.0",
