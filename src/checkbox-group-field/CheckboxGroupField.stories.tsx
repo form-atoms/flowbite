@@ -1,15 +1,14 @@
-import { multiSelectField } from "@form-atoms/field";
-
 import { CheckboxGroupField } from "./CheckboxGroupField";
 import { getLabel, getValue, options } from "./languages";
 import { FormStory, meta, optionalField } from "../stories";
+import { stringArrayField } from "@form-atoms/field";
 
 export default {
   title: "CheckboxGroupField",
   ...meta,
 };
 
-const proficientLanguages = multiSelectField();
+const proficientLanguages = stringArrayField();
 
 export const Required: FormStory = {
   args: {
@@ -27,7 +26,7 @@ export const Required: FormStory = {
   },
 };
 
-const optionalLanguages = multiSelectField({ optional: true });
+const optionalLanguages = stringArrayField({ optional: true });
 
 export const Optional: FormStory = {
   ...optionalField,

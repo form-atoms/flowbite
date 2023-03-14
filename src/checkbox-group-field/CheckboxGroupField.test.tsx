@@ -1,4 +1,3 @@
-import { multiSelectField } from "@form-atoms/field";
 import { render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
 import userEvent from "@testing-library/user-event";
@@ -8,6 +7,7 @@ import { describe, expect, it } from "vitest";
 import { getLabel, getValue, options } from "./languages";
 
 import { CheckboxGroupField } from ".";
+import { stringArrayField } from "@form-atoms/field";
 
 describe("<CheckboxGroupField />", () => {
   const props = {
@@ -18,7 +18,7 @@ describe("<CheckboxGroupField />", () => {
   };
 
   it("should focus first checkbox when clicked on first label", async () => {
-    const field = multiSelectField();
+    const field = stringArrayField();
 
     render(<CheckboxGroupField field={field} {...props} />);
 
@@ -30,7 +30,7 @@ describe("<CheckboxGroupField />", () => {
   });
 
   it("should render error message when submitting empty & required", async () => {
-    const field = multiSelectField();
+    const field = stringArrayField();
     const form = formAtom({ field });
     const { result } = renderHook(() => useFormSubmit(form));
 
@@ -48,9 +48,9 @@ describe("<CheckboxGroupField />", () => {
     expect(onSubmit).not.toBeCalled();
   });
 
-  describe("with optional multiSelectField()", () => {
+  describe("with optional stringArrayField()", () => {
     it("submits form with empty array value", async () => {
-      const value = multiSelectField({ optional: true });
+      const value = stringArrayField({ optional: true });
       const form = formAtom({ value });
       const { result } = renderHook(() => useFormSubmit(form));
 

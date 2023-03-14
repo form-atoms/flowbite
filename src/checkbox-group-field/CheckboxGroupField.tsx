@@ -1,29 +1,28 @@
 import {
-  MultiSelectFieldProps,
-  useMultiSelectFieldProps,
-  useMultiSelectOptions,
+  FieldProps,
+  useCheckboxGroup,
+  UseCheckboxGroupProps,
+  ZodArrayField,
 } from "@form-atoms/field";
 import { Checkbox, HelperText, Label } from "flowbite-react";
 
 import { FlowbiteField } from "../field";
 
-export const CheckboxGroupField = <Option,>({
+export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
   field,
   options,
   getValue,
   getLabel,
   label,
   required,
-  placeholder,
   helperText,
   ...uiProps
-}: MultiSelectFieldProps<Option>) => {
-  const props = useMultiSelectFieldProps(field);
-  const { renderOptions } = useMultiSelectOptions(field, {
+}: UseCheckboxGroupProps<Option, Field> & FieldProps<Field>) => {
+  const checkboxGroup = useCheckboxGroup({
+    field,
+    options,
     getValue,
     getLabel,
-    options,
-    placeholder,
   });
 
   return (
@@ -34,25 +33,17 @@ export const CheckboxGroupField = <Option,>({
       label={label}
     >
       {({ color, helperText, required: isInputRequired, ...fieldProps }) => {
-        // maybe move into multiSelectOptions?
-        const required = props.value.length === 0 ? isInputRequired : false;
-
         return (
           <>
-            {renderOptions.map(({ value, label, isActive }) => (
-              <div key={value} className="flex gap-2">
+            {checkboxGroup.map((checkboxProps) => (
+              <div key={checkboxProps.id} className="flex gap-2">
                 <Checkbox
                   role="checkbox"
-                  {...props}
                   {...uiProps}
                   {...fieldProps}
-                  required={required}
-                  aria-required={required}
-                  id={value}
-                  checked={isActive}
-                  value={value}
+                  {...checkboxProps}
                 />
-                <Label htmlFor={value}>{label}</Label>
+                <Label htmlFor={checkboxProps.id}>{checkboxProps.label}</Label>
               </div>
             ))}
             {helperText && <HelperText color={color}>{helperText}</HelperText>}

@@ -78,7 +78,7 @@
     "zod": "^3.20.6"
   },
   "dependencies": {
-    "@form-atoms/field": "2.4.2",
+    "@form-atoms/field": "2.5.0",
     "flowbite": "1.6.3",
     "flowbite-react": "0.3.8",
     "form-atoms": "3.0.0",
