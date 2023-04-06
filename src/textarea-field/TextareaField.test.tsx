@@ -59,7 +59,7 @@ describe("<TextareaField />", () => {
   });
 
   describe("with optional textField()", () => {
-    it("submits form with undefined empty value", async () => {
+    it("submits form with empty string", async () => {
       const message = textField({ optional: true });
       const form = formAtom({ message });
       const { result } = renderHook(() => useFormSubmit(form));
@@ -75,7 +75,7 @@ describe("<TextareaField />", () => {
         result.current(onSubmit)();
       });
 
-      expect(onSubmit).toHaveBeenCalledWith({ message: undefined });
+      expect(onSubmit).toHaveBeenCalledWith({ message: "" });
     });
   });
 });
