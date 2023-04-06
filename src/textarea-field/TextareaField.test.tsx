@@ -8,12 +8,11 @@ import { describe, expect, it } from "vitest";
 import { TextareaField } from ".";
 
 describe("<TextareaField />", () => {
-  // Error: Element TEXTAREA does not implement "select".
-  it.skip("should focus input when clicked on label", async () => {
+  it("should focus input when clicked on label", async () => {
     const bio = textField();
     render(<TextareaField field={bio} label="biography" />);
 
-    await userEvent.click(screen.getByLabelText("biography"));
+    await userEvent.click(screen.getByLabelText("biography", { exact: false }));
 
     expect(screen.getByRole("textbox")).toHaveFocus();
   });
