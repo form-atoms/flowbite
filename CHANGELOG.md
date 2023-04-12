@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.1.0...v2.1.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* drop image field ([362e6fc](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/362e6fc4ce34879056df58af66201353b2967999))
+
 # [2.1.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.0.0...v2.1.0) (2023-04-12)
 
 
