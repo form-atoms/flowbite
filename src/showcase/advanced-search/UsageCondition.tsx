@@ -12,13 +12,13 @@ const RadioItem = ({ children }: PropsWithChildren) => (
   <li className="w-full pl-3 capitalize dark:border-gray-600"> {children}</li>
 );
 
-const condition = stringField();
+export const usageCondition = stringField();
 
 const options = ["all", "new", "used"];
 
 export const UsageCondition = () => (
   <RadioField
-    field={condition}
+    field={usageCondition}
     label="Condition"
     options={options}
     getValue={(opt) => opt}

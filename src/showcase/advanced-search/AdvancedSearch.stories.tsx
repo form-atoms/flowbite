@@ -1,8 +1,18 @@
+import { FormStory, meta } from "../../stories";
 import { AdvancedSearch } from "./AdvancedSearch";
 
+import { color } from "./ColorPicker";
+import { usageCondition } from "./UsageCondition";
+import { rating } from "./Rating";
+
 export default {
-  component: AdvancedSearch,
   title: "showcase/AdvancedSearch",
+  ...meta,
 };
 
-export const Primary = AdvancedSearch;
+export const Primary: FormStory = {
+  args: {
+    fields: { color, rating, usageCondition },
+    children: () => <AdvancedSearch />,
+  },
+};
