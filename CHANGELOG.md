@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.0.0...v2.1.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* bump form-atoms-field ([a1c0264](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/a1c026418e5b63a76a1b4e779462637615df6be4))
+* RadioOption ([9169c7a](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/9169c7aa4d5381e0c1e7c77c3ae12d5c957cd152))
+
+
+### Features
+
+* RadioField with wrappers ([f0628e8](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/f0628e8a44750880156e1b439ca94dbc7264fbce))
+
 # [2.0.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v1.0.0...v2.0.0) (2023-03-14)
 
 
