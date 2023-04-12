@@ -8,11 +8,11 @@ const Dot = ({ color }: { color: string }) => (
 );
 
 const colors = [
-  { name: "Blue", value: "bg-blue-400" },
-  { name: "Gray", value: "bg-gray-400" },
-  { name: "Green", value: "bg-green-400" },
-  { name: "Pink", value: "bg-pink-400" },
-  { name: "Red", value: "bg-red-400" },
+  { name: "Blue", colorClass: "bg-blue-400" },
+  { name: "Gray", colorClass: "bg-gray-400" },
+  { name: "Green", colorClass: "bg-green-400" },
+  { name: "Pink", colorClass: "bg-pink-400" },
+  { name: "Red", colorClass: "bg-red-400" },
 ];
 
 export const color = stringArrayField();
@@ -26,7 +26,7 @@ export const ColorPicker = () => (
     getValue={(color) => color.name}
     getLabel={(color) => (
       <>
-        <Dot color={color.value} /> {color.name}
+        <Dot color={color.colorClass} /> {color.name}
       </>
     )}
   />
