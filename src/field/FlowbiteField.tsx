@@ -9,6 +9,7 @@ import { ReactNode } from "react";
 import { RenderProp } from "react-render-prop-type";
 
 import { FlowbiteStateColor, useFieldError } from "../hooks";
+import { useAtomValue } from "jotai";
 
 type Children = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {
@@ -30,7 +31,9 @@ export const FlowbiteField = <Field extends ZodField<any, any>>({
 }: FlowbiteFieldProps<Field>) => {
   const id = `${field}`;
   const { color, error } = useFieldError(field);
-  const { isFieldRequired, ...props } = useRequiredProps(field, required);
+  const requiredProps = useRequiredProps({ field, required });
+  const atom = useAtomValue(field);
+  const isFieldRequired = useAtomValue(atom.required);
 
   const helperText = uiProps.helperText ?? error;
 
@@ -41,7 +44,7 @@ export const FlowbiteField = <Field extends ZodField<any, any>>({
           {label} {isFieldRequired ? "(required)" : ""}
         </Label>
       )}
-      {children({ ...props, id, helperText, color })}
+      {children({ ...requiredProps, id, helperText, color })}
     </div>
   );
 };

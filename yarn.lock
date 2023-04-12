@@ -1843,9 +1843,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:2.5.0":
-  version: 2.5.0
-  resolution: "@form-atoms/field@npm:2.5.0"
+"@form-atoms/field@npm:2.5.11":
+  version: 2.5.11
+  resolution: "@form-atoms/field@npm:2.5.11"
   dependencies:
     object-path-immutable: ^4.1.2
     react-render-prop-type: 0.1.0
@@ -1854,7 +1854,7 @@ __metadata:
     jotai: ^2
     react: ">=16.8"
     zod: ^3
-  checksum: 60c38c8365fc785c012bae2175fcfc339519aba75942a46921590782c4dc8f59486680b236f14872ebdc1a751adb7065728597f5cd5b20f7a2ba074e433cd37b
+  checksum: 36de4b1005eb91551a5f19e9487cf1c5944612e1b7065e2cfe0a43dcae8335c33ea94429eebf3f356f2add522d6685237845e32d9c6b92c458552262c8c1d149
   languageName: node
   linkType: hard
 
@@ -1866,7 +1866,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
-    "@form-atoms/field": 2.5.0
+    "@form-atoms/field": 2.5.11
     "@mdx-js/react": ^1.6.22
     "@semantic-release/changelog": ^6.0.2
     "@semantic-release/git": ^10.0.1
