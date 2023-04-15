@@ -4,6 +4,7 @@ import { AdvancedSearch } from "./AdvancedSearch";
 import { color } from "./ColorPicker";
 import { usageCondition } from "./UsageCondition";
 import { rating } from "./Rating";
+import { productBrand } from "./ProductBrand";
 
 export default {
   title: "showcase/AdvancedSearch",
@@ -12,7 +13,7 @@ export default {
 
 export const Primary: FormStory = {
   args: {
-    fields: { color, rating, usageCondition },
+    fields: { productBrand, color, rating, usageCondition },
     children: () => <AdvancedSearch />,
   },
 };
