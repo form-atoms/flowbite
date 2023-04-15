@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.1.1...v2.2.0) (2023-04-15)
+
+
+### Features
+
+* reorganize ([ed29b52](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/ed29b52488c6eec02475f4ac371d01a20618796b))
+
 ## [2.1.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.1.0...v2.1.1) (2023-04-12)
 
 
