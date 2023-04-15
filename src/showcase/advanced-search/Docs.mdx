@@ -1,0 +1,36 @@
+import { Meta, Markdown, Stories } from "@storybook/blocks";
+import * as AdvancedSearch from "./AdvancedSearch.stories";
+
+<Meta title="showcase/AdvancedSearch" of={AdvancedSearch} />
+
+# Advanced Faceted Search
+
+Not just markup, but fully working [Advanced faceted search](https://flowbite.com/blocks/application/faceted-search-drawers/#advanced-faceted-search-with-datepicker).
+
+```tsx
+const password = textField({
+  schema: z.string().min(6),
+});
+
+const confirmPassword = textField({
+  validate: zodValidate(
+    (get) => {
+      // 1. jotai's get will read the atom value
+      const initialPassword = get(get(password).value);
+
+      // 2. validate exact match by z.literal()
+      return z.literal(initialPassword);
+    },
+    {
+      on: "change",
+      formatError: ({ issues }) => {
+        return issues.map(({ code, message }) =>
+          code === "invalid_literal" ? "Passwords must match" : message
+        );
+      },
+    }
+  ),
+});
+```
+
+<Stories />
