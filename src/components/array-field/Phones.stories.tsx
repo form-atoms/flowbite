@@ -7,7 +7,7 @@ import {
 
 import { ArrayField } from "./ArrayField";
 import { RadioOption } from "../radio-option";
-import { FormStory, VariantProps, meta } from "../stories";
+import { FormStory, VariantProps, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {

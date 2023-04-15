@@ -1,9 +1,8 @@
 import { numberField } from "@form-atoms/field";
-import { expect } from "@storybook/jest";
 import { userEvent, within } from "@storybook/testing-library";
 
 import { NumberField } from "./NumberField";
-import { FormStory, meta, optionalField } from "../stories";
+import { FormStory, meta, optionalField } from "../story-form";
 
 export default {
   title: "NumberField",

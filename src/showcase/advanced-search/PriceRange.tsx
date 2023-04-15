@@ -1,5 +1,5 @@
 import { numberField } from "@form-atoms/field";
-import { NumberField } from "../../number-field";
+import { NumberField } from "../../";
 
 export const priceMin = numberField({ optional: true });
 export const priceMax = numberField({ optional: true });

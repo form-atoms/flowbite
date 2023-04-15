@@ -1,5 +1,5 @@
 import { numberField } from "@form-atoms/field";
-import { RadioField } from "../../radio-field";
+import { RadioField } from "../../";
 import { Rating } from "flowbite-react";
 
 export const rating = numberField({ optional: true });

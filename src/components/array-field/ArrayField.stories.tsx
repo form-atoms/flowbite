@@ -1,7 +1,7 @@
 import { arrayFieldAtoms, textField } from "@form-atoms/field";
 
 import { ArrayField } from "./ArrayField";
-import { FormStory, VariantProps, meta } from "../stories";
+import { FormStory, VariantProps, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {

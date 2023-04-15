@@ -1,4 +1,4 @@
-import { FormStory, meta } from "../../stories";
+import { FormStory, meta } from "../../components/story-form";
 import { AdvancedSearch } from "./AdvancedSearch";
 
 import { color } from "./ColorPicker";

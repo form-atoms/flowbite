@@ -1,5 +1,5 @@
 import { stringField } from "@form-atoms/field";
-import { SelectField } from "../../select-field";
+import { SelectField } from "../../";
 
 export const productBrand = stringField({ optional: true });
 
