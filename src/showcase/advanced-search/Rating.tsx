@@ -2,7 +2,7 @@ import { numberField } from "@form-atoms/field";
 import { RadioField } from "../../radio-field";
 import { Rating } from "flowbite-react";
 
-export const rating = numberField();
+export const rating = numberField({ optional: true });
 
 const options = [5, 4, 3, 2, 1];
 
