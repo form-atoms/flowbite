@@ -48,7 +48,7 @@
     "@storybook/addon-essentials": "7.0.3",
     "@storybook/addon-interactions": "7.0.3",
     "@storybook/addon-links": "7.0.3",
-    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/addon-styling": "^1.0.1",
     "@storybook/jest": "0.1.0",
     "@storybook/react": "7.0.3",
     "@storybook/react-webpack5": "7.0.3",

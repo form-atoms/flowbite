@@ -6,15 +6,9 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     {
-      name: "@storybook/addon-postcss",
+      name: "@storybook/addon-styling",
       options: {
-        cssLoaderOptions: {
-          // When you have splitted your css over multiple files
-          // and use @import('./other-styles.css')
-          importLoaders: 1,
-        },
-        postcssLoaderOptions: {
-          // When using postCSS 8
+        postCss: {
           implementation: require("postcss"),
         },
       },
