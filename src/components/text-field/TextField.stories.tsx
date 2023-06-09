@@ -23,9 +23,8 @@ export const Required: FormStory = {
 };
 
 const nickname = textField({
-  optional: true,
   schema: z.string().min(4),
-});
+}).optional();
 
 export const Optional: FormStory = {
   ...optionalField,

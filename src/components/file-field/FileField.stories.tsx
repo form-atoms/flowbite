@@ -1,20 +1,20 @@
-import { fileField } from "@form-atoms/field";
+import { filesField } from "@form-atoms/field";
 
-import { FileField } from "./FileField";
+import { FilesField } from "./FilesField";
 import { FormStory, meta, optionalField } from "../story-form";
 
 export default {
-  title: "FileField",
+  title: "FilesField",
   ...meta,
 };
 
-const profilePicture = fileField();
+const profilePicture = filesField();
 
 export const Required: FormStory = {
   args: {
     fields: { profilePicture },
     children: ({ required }) => (
-      <FileField
+      <FilesField
         field={profilePicture}
         label="Profile Picture"
         required={required}
@@ -23,14 +23,14 @@ export const Required: FormStory = {
   },
 };
 
-const profilePictureOpitonal = fileField({ optional: true });
+const profilePictureOpitonal = filesField().optional();
 
 export const Optional: FormStory = {
   ...optionalField,
   args: {
     fields: { profilePicture: profilePictureOpitonal },
     children: () => (
-      <FileField field={profilePictureOpitonal} label="Profile Picture" />
+      <FilesField field={profilePictureOpitonal} label="Profile Picture" />
     ),
   },
 };

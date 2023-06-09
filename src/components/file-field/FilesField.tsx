@@ -1,25 +1,25 @@
 import {
   FileFieldProps,
   useClearFileInputEffect,
-  useFileFieldProps,
+  useFilesFieldProps,
 } from "@form-atoms/field";
 import { FileInput, FileInputProps } from "flowbite-react";
 
 import { FlowbiteField } from "../field";
 import { InputColors } from "../hooks";
 
-type FlowbiteFileFieldProps = FileFieldProps &
+type FlowbiteFilesFieldProps = FileFieldProps &
   FileInputProps & { colors?: InputColors };
 
-export const FileField = ({
+export const FilesField = ({
   label,
   field,
   helperText,
   colors,
   required,
   ...uiProps
-}: FlowbiteFileFieldProps) => {
-  const { value, ...props } = useFileFieldProps(field);
+}: FlowbiteFilesFieldProps) => {
+  const { value, ...props } = useFilesFieldProps(field);
   useClearFileInputEffect(field);
 
   return (

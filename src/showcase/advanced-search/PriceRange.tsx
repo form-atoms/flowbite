@@ -1,8 +1,8 @@
 import { numberField } from "@form-atoms/field";
 import { NumberField } from "../../";
 
-export const priceMin = numberField({ optional: true });
-export const priceMax = numberField({ optional: true });
+export const priceMin = numberField().optional();
+export const priceMax = numberField().optional();
 
 export const PriceRange = () => (
   <div className="flex gap-3">

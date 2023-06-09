@@ -60,7 +60,7 @@ describe("<SelectField />", () => {
 
   describe("with optional selectField()", () => {
     it("submits with undefined", async () => {
-      const option = stringField({ optional: true });
+      const option = stringField().optional();
       const form = formAtom({ option });
       const { result } = renderHook(() => useFormSubmit(form));
 

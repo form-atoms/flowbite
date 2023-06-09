@@ -1,17 +1,17 @@
-import { fileField } from "@form-atoms/field";
+import { filesField } from "@form-atoms/field";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
 import userEvent from "@testing-library/user-event";
 import { formAtom, useForm, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
 
-import { FileField } from ".";
+import { FilesField } from ".";
 
 describe("<FileField />", () => {
   it("should focus input when clicked on label", async () => {
-    const profilePic = fileField();
+    const profilePic = filesField();
 
-    render(<FileField field={profilePic} label="photo" />);
+    render(<FilesField field={profilePic} label="photo" />);
 
     await userEvent.click(screen.getByLabelText("photo", { exact: false }));
 
@@ -19,11 +19,11 @@ describe("<FileField />", () => {
   });
 
   it.skip("should render error message when submitting empty & required file field", async () => {
-    const doc = fileField();
+    const doc = filesField();
     const form = formAtom({ doc });
     const { result } = renderHook(() => useFormSubmit(form));
 
-    render(<FileField field={doc} label="document scan" />);
+    render(<FilesField field={doc} label="document scan" />);
 
     const onSubmit = vi.fn();
     await domAct(async () => {
@@ -38,13 +38,13 @@ describe("<FileField />", () => {
     expect(onSubmit).not.toBeCalled();
   });
 
-  describe("with optional numberField()", () => {
-    it("submits form with undefined empty value", async () => {
-      const value = fileField({ optional: true });
+  describe("with optional filesField()", () => {
+    it("submits form with empty array value", async () => {
+      const value = filesField().optional();
       const form = formAtom({ value });
       const { result } = renderHook(() => useFormSubmit(form));
 
-      render(<FileField field={value} />);
+      render(<FilesField field={value} />);
 
       const input = screen.getByRole("dialog");
 
@@ -55,15 +55,15 @@ describe("<FileField />", () => {
         result.current(onSubmit)();
       });
 
-      expect(onSubmit).toHaveBeenCalledWith({ value: undefined });
+      expect(onSubmit).toHaveBeenCalledWith({ value: [] });
     });
 
     it("has pristine input after form reset", async () => {
-      const logo = fileField({ optional: true });
+      const logo = filesField().optional();
       const form = formAtom({ logo });
       const { result } = renderHook(() => useForm(form));
 
-      render(<FileField field={logo} />);
+      render(<FilesField field={logo} />);
 
       const fileInput = screen.getByRole("dialog") as HTMLInputElement;
 
@@ -94,7 +94,7 @@ describe("<FileField />", () => {
       });
 
       expect(fileInput).toBeValid();
-      expect(onSubmit).toHaveBeenCalledWith({ logo: undefined });
+      expect(onSubmit).toHaveBeenCalledWith({ logo: [] });
     });
   });
 });

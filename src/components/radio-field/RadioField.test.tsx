@@ -37,7 +37,7 @@ describe("<RadioField />", () => {
 
   describe("with optional stringField()", () => {
     it("submits form with undefined empty value", async () => {
-      const option = stringField({ optional: true });
+      const option = stringField().optional();
       const form = formAtom({ option });
       const { result } = renderHook(() => useFormSubmit(form));
 

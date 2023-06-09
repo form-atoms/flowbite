@@ -66,7 +66,7 @@ describe("<NumberField />", () => {
 
   describe("with optional numberField()", () => {
     it("submits form with undefined empty value", async () => {
-      const value = numberField({ optional: true });
+      const value = numberField().optional();
       const form = formAtom({ value });
       const { result } = renderHook(() => useFormSubmit(form));
 

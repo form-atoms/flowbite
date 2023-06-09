@@ -1,6 +1,6 @@
 import {
-  ArrayFieldProps,
-  ArrayField as HeadlessArrayField,
+  ListFieldProps,
+  ListField as HeadlessArrayField,
 } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
 import { FormFields } from "form-atoms";
@@ -13,7 +13,7 @@ export const ArrayField = <
   label,
   children,
   ...arrayProps
-}: ArrayFieldProps<Fields, Path> & Partial<{ label: ReactNode }>) => {
+}: ListFieldProps<Fields, Path> & Partial<{ label: ReactNode }>) => {
   return (
     <>
       {label && <Label>{label}</Label>}

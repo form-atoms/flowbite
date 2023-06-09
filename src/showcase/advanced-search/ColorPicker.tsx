@@ -15,7 +15,7 @@ const colors = [
   { name: "Red", colorClass: "bg-red-400" },
 ];
 
-export const color = stringArrayField({ optional: true });
+export const color = stringArrayField().optional();
 
 export const ColorPicker = () => (
   <CheckboxGroupField
