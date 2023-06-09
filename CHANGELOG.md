@@ -1,3 +1,14 @@
+# [3.0.0-next.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.2.0...v3.0.0-next.1) (2023-06-09)
+
+
+* BREAKING CHANGE: upgrade to v3 ([c713ece](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/c713ece1bed2ba6a601c689d1e85079c31a461e3))
+
+
+### BREAKING CHANGES
+
+* rename ArrayField to ListField
+* rename FileField to FilesField
+
 # [2.2.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.1.1...v2.2.0) (2023-04-15)
 
 
