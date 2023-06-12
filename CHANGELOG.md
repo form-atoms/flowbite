@@ -1,3 +1,10 @@
+# [3.0.0-next.2](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.0.0-next.1...v3.0.0-next.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* rename exports closes [#4](https://github.com/MiroslavPetrik/form-atoms-flowbite/issues/4) ([ca220ef](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/ca220ef042e6321d37f167ec576f246e712c6109))
+
 # [3.0.0-next.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.2.0...v3.0.0-next.1) (2023-06-09)
 
 
