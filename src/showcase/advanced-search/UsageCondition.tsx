@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { RadioField } from "../../";
+import { RadioField } from "../../components";
 import { stringField } from "@form-atoms/field";
 
 const Container = ({ children }: PropsWithChildren) => (

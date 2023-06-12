@@ -5,13 +5,13 @@ import {
   textField,
 } from "@form-atoms/field";
 
-import { ArrayField } from "./ArrayField";
+import { ListField } from "./ListField";
 import { RadioOption } from "../radio-option";
 import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {
-  title: "ArrayField",
+  title: "ListField",
   ...meta,
 };
 
@@ -40,13 +40,13 @@ const formFields = {
   ].map(phoneBuilder),
 };
 
-export const PhonesArrayField = formStory({
+export const PhonesListField = formStory({
   args: {
     fields: formFields,
     children: ({ required, form }) => (
       <RadioControl name="primaryPhone">
         {({ control }) => (
-          <ArrayField
+          <ListField
             keyFrom="primary"
             form={form}
             path={["phones"]}
@@ -71,7 +71,7 @@ export const PhonesArrayField = formStory({
                 </Radio>
               </>
             )}
-          </ArrayField>
+          </ListField>
         )}
       </RadioControl>
     ),

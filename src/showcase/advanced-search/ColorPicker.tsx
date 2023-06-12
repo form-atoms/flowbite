@@ -1,5 +1,5 @@
 import { stringArrayField } from "@form-atoms/field";
-import { CheckboxGroupField } from "../../";
+import { CheckboxGroupField } from "../../components";
 
 const Dot = ({ color }: { color: string }) => (
   <span
