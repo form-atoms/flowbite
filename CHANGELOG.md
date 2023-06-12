@@ -1,3 +1,25 @@
+# [3.0.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.2.0...v3.0.0) (2023-06-12)
+
+
+* BREAKING CHANGE: upgrade to v3 (#3) ([e04c3fb](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/e04c3fb757c0a923202f60786d32ba34f86b34a7)), closes [#3](https://github.com/MiroslavPetrik/form-atoms-flowbite/issues/3)
+
+
+### BREAKING CHANGES
+
+* upgrade to v3
+* rename ArrayField to ListField
+* rename FileField to FilesField
+
+* chore(release): 3.0.0-next.1
+
+# [3.0.0-next.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.2.0...v3.0.0-next.1) (2023-06-09)
+* upgrade to v3 ([c713ece](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/c713ece1bed2ba6a601c689d1e85079c31a461e3))
+
+### BREAKING CHANGES
+
+* rename ArrayField to ListField
+* rename FileField to FilesField
+
 # [3.0.0-next.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v2.2.0...v3.0.0-next.1) (2023-06-09)
 
 
