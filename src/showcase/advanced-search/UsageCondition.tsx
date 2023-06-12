@@ -12,7 +12,7 @@ const RadioItem = ({ children }: PropsWithChildren) => (
   <li className="w-full pl-3 capitalize dark:border-gray-600"> {children}</li>
 );
 
-export const usageCondition = stringField({ optional: true });
+export const usageCondition = stringField().optional();
 
 const options = ["all", "new", "used"];
 

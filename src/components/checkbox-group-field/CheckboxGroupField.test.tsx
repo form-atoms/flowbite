@@ -50,7 +50,7 @@ describe("<CheckboxGroupField />", () => {
 
   describe("with optional stringArrayField()", () => {
     it("submits form with empty array value", async () => {
-      const value = stringArrayField({ optional: true });
+      const value = stringArrayField().optional();
       const form = formAtom({ value });
       const { result } = renderHook(() => useFormSubmit(form));
 

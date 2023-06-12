@@ -7,7 +7,7 @@ import {
 
 import { ArrayField } from "./ArrayField";
 import { RadioOption } from "../radio-option";
-import { FormStory, VariantProps, meta } from "../story-form";
+import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {
@@ -30,7 +30,7 @@ const phoneBuilder = (
   primary: checkboxField({
     name: "primaryPhone",
     value: primary,
-  }),
+  }).optional(),
 });
 
 const formFields = {
@@ -40,10 +40,10 @@ const formFields = {
   ].map(phoneBuilder),
 };
 
-export const PhonesArrayField: FormStory = {
+export const PhonesArrayField = formStory({
   args: {
     fields: formFields,
-    children: ({ required, form }: VariantProps<typeof formFields>) => (
+    children: ({ required, form }) => (
       <RadioControl name="primaryPhone">
         {({ control }) => (
           <ArrayField
@@ -76,4 +76,4 @@ export const PhonesArrayField: FormStory = {
       </RadioControl>
     ),
   },
-};
+});

@@ -24,7 +24,7 @@ export const Required: FormStory = {
   },
 };
 
-const subscribeToNewsletter = checkboxField({ optional: true });
+const subscribeToNewsletter = checkboxField().optional();
 
 export const Optional: FormStory = {
   ...optionalField,

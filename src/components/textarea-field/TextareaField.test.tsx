@@ -59,7 +59,7 @@ describe("<TextareaField />", () => {
 
   describe("with optional textField()", () => {
     it("submits form with empty string", async () => {
-      const message = textField({ optional: true });
+      const message = textField().optional();
       const form = formAtom({ message });
       const { result } = renderHook(() => useFormSubmit(form));
 

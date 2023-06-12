@@ -56,7 +56,7 @@ describe("<CheckboxField />", () => {
 
   describe("optional checkboxField()", () => {
     it("submits when unchecked", async () => {
-      const newsletter = checkboxField({ optional: true });
+      const newsletter = checkboxField().optional();
       const form = formAtom({ newsletter });
       const { result } = renderHook(() => useFormSubmit(form));
 

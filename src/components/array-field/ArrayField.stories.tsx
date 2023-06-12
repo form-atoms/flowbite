@@ -1,4 +1,4 @@
-import { arrayFieldAtoms, textField } from "@form-atoms/field";
+import { listFieldAtoms, textField } from "@form-atoms/field";
 
 import { ArrayField } from "./ArrayField";
 import { FormStory, VariantProps, meta } from "../story-form";
@@ -31,7 +31,7 @@ const addressBuilder = (
 });
 
 const fields = {
-  addresses: arrayFieldAtoms(addressBuilder, [
+  addresses: listFieldAtoms(addressBuilder, [
     { city: "Stockholm", street: "Carl Gustav Street" },
     { city: "Bratislava", street: "Kosicka" },
   ]),

@@ -19,7 +19,7 @@ export const Required: FormStory = {
   },
 };
 
-const comment = textField({ optional: true });
+const comment = textField().optional();
 
 export const Optional: FormStory = {
   ...optionalField,

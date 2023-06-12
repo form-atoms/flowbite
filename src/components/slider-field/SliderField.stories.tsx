@@ -32,12 +32,11 @@ export const Required: FormStory = {
 };
 
 const optional = numberField({
-  optional: true,
   schema: z
     .number({ required_error: "Please adjust your confidence" })
     .min(0)
     .max(100),
-});
+}).optional();
 
 export const Optional: FormStory = {
   ...optionalField,

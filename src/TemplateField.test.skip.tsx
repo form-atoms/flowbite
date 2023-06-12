@@ -60,7 +60,7 @@ describe("<Field />", () => {
 
   describe("with optional field", () => {
     it("submits with undefined", async () => {
-      // const message = textField({ optional: true });
+      // const message = textField().optional();
       const form = formAtom({
         /** message */
       });

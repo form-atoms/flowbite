@@ -20,7 +20,7 @@ describe("<TextField />", () => {
 
   describe("with optional textField()", () => {
     it("submits with empty string", async () => {
-      const message = textField({ optional: true });
+      const message = textField().optional();
       const form = formAtom({ message });
       const { result } = renderHook(() => useFormSubmit(form));
 
@@ -40,7 +40,7 @@ describe("<TextField />", () => {
   });
 
   it("has pristine input after form reset", async () => {
-    const message = textField({ optional: true });
+    const message = textField().optional();
     const form = formAtom({ message });
     const { result } = renderHook(() => useForm(form));
 

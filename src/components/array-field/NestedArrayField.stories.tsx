@@ -1,10 +1,10 @@
-import { arrayFieldAtoms, numberField, textField } from "@form-atoms/field";
+import { numberField, textField } from "@form-atoms/field";
 import { Button } from "flowbite-react";
 import { Fragment } from "react";
 
 import { ArrayField } from "./ArrayField";
 import { NumberField } from "../number-field";
-import { FormStory, VariantProps, meta } from "../story-form";
+import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {
@@ -38,7 +38,7 @@ const personBuilder = (
   }),
 });
 
-const addressWithPeopleBuilder = (
+const addressBuilder = (
   { city, street, people }: (Address & { people: Person[] }) | undefined = {
     city: "",
     street: "",
@@ -53,33 +53,45 @@ const addressWithPeopleBuilder = (
     name: "street",
     value: street,
   }),
-  people: arrayFieldAtoms(personBuilder, people),
+  people: [],
 });
 
 const fields = {
-  addresses: arrayFieldAtoms(addressWithPeopleBuilder, [
+  addresses: [
     {
-      city: "Stockholm",
-      street: "Carl Gustav Street",
-      people: [{ name: "Simon", age: 20 }],
+      city: textField({
+        name: "city",
+        value: "Bratislava",
+      }),
+      street: textField({
+        name: "street",
+        value: "Kosicka",
+      }),
+      people: [
+        {
+          name: textField({
+            name: "name",
+            value: "Simon",
+          }),
+          age: numberField({
+            name: "age",
+            value: 20,
+          }),
+        },
+      ],
     },
-    {
-      city: "Bratislava",
-      street: "Kosicka",
-      people: [{ name: "Arnold", age: 33 }],
-    },
-  ]),
+  ],
 };
 
-export const AddressesWithPeopleArrayField: FormStory = {
+export const AddressesWithPeopleArrayField = formStory({
   args: {
     fields,
-    children: ({ form }: VariantProps<typeof fields>) => (
+    children: ({ form }) => (
       <ArrayField
         keyFrom="street"
         path={["addresses"]}
         form={form}
-        builder={addressWithPeopleBuilder}
+        builder={addressBuilder}
         AddItemButton={({ add }) => (
           <Button color="gray" onClick={add}>
             Add Address
@@ -118,4 +130,4 @@ export const AddressesWithPeopleArrayField: FormStory = {
       </ArrayField>
     ),
   },
-};
+});
