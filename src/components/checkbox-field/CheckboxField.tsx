@@ -1,7 +1,7 @@
 import { CheckboxFieldProps, useCheckboxFieldProps } from "@form-atoms/field";
 import { Checkbox, CheckboxProps, HelperText, Label } from "flowbite-react";
 
-import { useFieldError } from "../hooks";
+import { useFieldError } from "../../hooks";
 
 export const CheckboxField = ({
   field,

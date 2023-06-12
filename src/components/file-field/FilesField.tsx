@@ -6,7 +6,7 @@ import {
 import { FileInput, FileInputProps } from "flowbite-react";
 
 import { FlowbiteField } from "../field";
-import { InputColors } from "../hooks";
+import { InputColors } from "../../hooks";
 
 type FlowbiteFilesFieldProps = FileFieldProps &
   FileInputProps & { colors?: InputColors };

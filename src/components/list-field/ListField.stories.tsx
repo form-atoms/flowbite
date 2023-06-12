@@ -1,11 +1,11 @@
 import { listFieldAtoms, textField } from "@form-atoms/field";
 
-import { ArrayField } from "./ArrayField";
-import { FormStory, VariantProps, meta } from "../story-form";
+import { ListField } from "./ListField";
+import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {
-  title: "ArrayField",
+  title: "ListField",
   ...meta,
 };
 
@@ -37,11 +37,11 @@ const fields = {
   ]),
 };
 
-export const AddressesArrayField: FormStory = {
+export const AddressesListField = formStory({
   args: {
     fields,
-    children: ({ form }: VariantProps<typeof fields>) => (
-      <ArrayField
+    children: ({ form }) => (
+      <ListField
         keyFrom="city"
         path={["addresses"]}
         form={form}
@@ -53,7 +53,7 @@ export const AddressesArrayField: FormStory = {
             <TextField label="Street" field={fields.street} />
           </div>
         )}
-      </ArrayField>
+      </ListField>
     ),
   },
-};
+});

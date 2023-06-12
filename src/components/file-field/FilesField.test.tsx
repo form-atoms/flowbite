@@ -7,7 +7,7 @@ import { describe, expect, it } from "vitest";
 
 import { FilesField } from ".";
 
-describe("<FileField />", () => {
+describe("<FilesField />", () => {
   it("should focus input when clicked on label", async () => {
     const profilePic = filesField();
 

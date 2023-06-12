@@ -2,13 +2,13 @@ import { numberField, textField } from "@form-atoms/field";
 import { Button } from "flowbite-react";
 import { Fragment } from "react";
 
-import { ArrayField } from "./ArrayField";
+import { ListField } from "./ListField";
 import { NumberField } from "../number-field";
 import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {
-  title: "ArrayField",
+  title: "ListField",
   ...meta,
 };
 
@@ -83,11 +83,11 @@ const fields = {
   ],
 };
 
-export const AddressesWithPeopleArrayField = formStory({
+export const AddressesWithPeopleListField = formStory({
   args: {
     fields,
     children: ({ form }) => (
-      <ArrayField
+      <ListField
         keyFrom="street"
         path={["addresses"]}
         form={form}
@@ -104,7 +104,7 @@ export const AddressesWithPeopleArrayField = formStory({
               <TextField label="City" field={fields.city} />
               <TextField label="Street" field={fields.street} />
             </div>
-            <ArrayField
+            <ListField
               keyFrom="name"
               path={["addresses", index, "people"]}
               builder={personBuilder}
@@ -124,10 +124,10 @@ export const AddressesWithPeopleArrayField = formStory({
                   <NumberField label="Age" field={fields.age} />
                 </div>
               )}
-            </ArrayField>
+            </ListField>
           </Fragment>
         )}
-      </ArrayField>
+      </ListField>
     ),
   },
 });

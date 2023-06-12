@@ -8,7 +8,7 @@ import { Label } from "flowbite-react";
 import { ReactNode } from "react";
 import { RenderProp } from "react-render-prop-type";
 
-import { FlowbiteStateColor, useFieldError } from "../hooks";
+import { FlowbiteStateColor, useFieldError } from "../../hooks";
 import { useAtomValue } from "jotai";
 
 type Children = RenderProp<

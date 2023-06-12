@@ -6,7 +6,7 @@ import {
 } from "@form-atoms/field";
 import { HelperText, Label, Radio } from "flowbite-react";
 
-import { useFieldError } from "../hooks";
+import { useFieldError } from "../../hooks";
 import { useAtomValue } from "jotai";
 
 export const RadioOption = <Field extends CheckboxField>({

@@ -1,12 +1,12 @@
 import {
   ListFieldProps,
-  ListField as HeadlessArrayField,
+  ListField as HeadlessListField,
 } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
 import { FormFields } from "form-atoms";
 import { ReactNode } from "react";
 
-export const ArrayField = <
+export const ListField = <
   Fields extends FormFields,
   Path extends (string | number)[]
 >({
@@ -20,7 +20,7 @@ export const ArrayField = <
       {/**
        *  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
        *  @ts-ignore */}
-      <HeadlessArrayField
+      <HeadlessListField
         {...arrayProps}
         RemoveItemButton={({ remove }) => (
           <Button color="failure" onClick={remove}>
@@ -42,7 +42,7 @@ export const ArrayField = <
             {children(props)}
           </Card>
         )}
-      </HeadlessArrayField>
+      </HeadlessListField>
     </>
   );
 };
