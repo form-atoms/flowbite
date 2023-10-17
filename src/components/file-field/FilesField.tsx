@@ -1,8 +1,4 @@
-import {
-  FileFieldProps,
-  useClearFileInputEffect,
-  useFilesFieldProps,
-} from "@form-atoms/field";
+import { FileFieldProps, useFilesFieldProps } from "@form-atoms/field";
 import { FileInput, FileInputProps } from "flowbite-react";
 
 import { FlowbiteField } from "../field";
@@ -19,8 +15,7 @@ export const FilesField = ({
   required,
   ...uiProps
 }: FlowbiteFilesFieldProps) => {
-  const { value, ...props } = useFilesFieldProps(field);
-  useClearFileInputEffect(field);
+  const props = useFilesFieldProps(field);
 
   return (
     <FlowbiteField
