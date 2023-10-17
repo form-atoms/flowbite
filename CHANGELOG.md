@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.0.1...v3.1.0) (2023-10-17)
+
+
+### Features
+
+* bump form-atoms/field ([af7e47a](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/af7e47a13780bfdb6d6e44559c0ea1c25e52113e))
+
 ## [3.0.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.0.0...v3.0.1) (2023-06-12)
 
 
