@@ -30,9 +30,9 @@
     "test": "vitest",
     "publish": "yarn npm publish --access public",
     "build": "tsc --build ./tsconfig.build.json",
-    "sb": "yarn watch:storybook",
+    "sb": "yarn storybook",
     "build:storybook": "storybook build",
-    "watch:storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
@@ -82,8 +82,8 @@
   },
   "dependencies": {
     "@form-atoms/field": "3.5.0",
-    "flowbite": "1.6.3",
-    "flowbite-react": "0.3.8",
+    "flowbite": "1.8.1",
+    "flowbite-react": "0.6.4",
     "jotai": "2.4.3",
     "jotai-effect": "0.1.0",
     "react": "18.2.0",

@@ -3221,7 +3221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react-dom@npm:^1.1.2, @floating-ui/react-dom@npm:^1.3.0":
+"@floating-ui/react-dom@npm:^1.3.0":
   version: 1.3.0
   resolution: "@floating-ui/react-dom@npm:1.3.0"
   dependencies:
@@ -3233,7 +3233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react-dom@npm:^2.0.0":
+"@floating-ui/react-dom@npm:^2.0.0, @floating-ui/react-dom@npm:^2.0.1":
   version: 2.0.2
   resolution: "@floating-ui/react-dom@npm:2.0.2"
   dependencies:
@@ -3242,20 +3242,6 @@ __metadata:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   checksum: 4797e1f7a19c1e531ed0d578ccdcbe58970743e5a480ba30424857fc953063f36d481f8c5d69248a8f1d521b739e94bf5e1ffb35506400dea3d914f166ed2f7f
-  languageName: node
-  linkType: hard
-
-"@floating-ui/react@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "@floating-ui/react@npm:0.16.0"
-  dependencies:
-    "@floating-ui/react-dom": ^1.1.2
-    aria-hidden: ^1.1.3
-    tabbable: ^6.0.1
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: 16c7c753b593357a43dc3c412e1769e0c1aefed3808c0555b575e033cc72c49154fd78cd80583189afbba32c549f9888bd4509e85aeb9e01bef94e547faa21c4
   languageName: node
   linkType: hard
 
@@ -3270,6 +3256,20 @@ __metadata:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   checksum: 00fd827c2dcf879fec221d89ef5b90836bbecacc236ce2acc787db32ae7311d490cd136b13a8d0b6ab12842554a2ee1110605aa832af71a45c0a7297e342072c
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react@npm:^0.24.3":
+  version: 0.24.8
+  resolution: "@floating-ui/react@npm:0.24.8"
+  dependencies:
+    "@floating-ui/react-dom": ^2.0.1
+    aria-hidden: ^1.2.3
+    tabbable: ^6.0.1
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: b345d3bbb7b1eb4a8d09bb5cb0c46713b0b051578a1bb15fb49708b27009dcb992cdd55ffc79ae56d7e4494ce122f6e971e7d2737c9a2bffd88cb2408230f9af
   languageName: node
   linkType: hard
 
@@ -3334,8 +3334,8 @@ __metadata:
     autoprefixer: 10.4.13
     babel-loader: ^8.3.0
     concurrently: ^7.6.0
-    flowbite: 1.6.3
-    flowbite-react: 0.3.8
+    flowbite: 1.8.1
+    flowbite-react: 0.6.4
     form-atoms: 3.1.0
     happy-dom: 9.1.7
     jotai: 2.4.3
@@ -7427,7 +7427,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aria-hidden@npm:^1.1.1":
+"aria-hidden@npm:^1.1.1, aria-hidden@npm:^1.2.3":
   version: 1.2.3
   resolution: "aria-hidden@npm:1.2.3"
   dependencies:
@@ -8255,7 +8255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6, classnames@npm:^2.3.2":
+"classnames@npm:^2.2.6":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -10217,30 +10217,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite-react@npm:0.3.8":
-  version: 0.3.8
-  resolution: "flowbite-react@npm:0.3.8"
+"flowbite-react@npm:0.6.4":
+  version: 0.6.4
+  resolution: "flowbite-react@npm:0.6.4"
   dependencies:
-    "@floating-ui/react": ^0.16.0
-    classnames: ^2.3.2
-    react-icons: ^4.6.0
+    "@floating-ui/react": ^0.24.3
+    flowbite: ^1.6.6
+    react-icons: ^4.10.1
     react-indiana-drag-scroll: ^2.2.0
+    tailwind-merge: ^1.13.2
   peerDependencies:
-    flowbite: ^1
     react: ^18
     react-dom: ^18
     tailwindcss: ^3
-  checksum: bf7d8a749487400b69b72f6e2018fbe1b04fe3a734bfab0c32097c93cf6d8a7dfa0f0fadeaaddf320974458a32782206d544d20ee4c6fb56ed5a707ad631a82e
+  checksum: 3830d2e6f85d4617d50bf5f91c6548661fc5fd6fa1a75a533179cfc57fcc25b65697eaa3809f85f6f2753e9b780714605e73b649b0ebb19ba756b7c44cbfb173
   languageName: node
   linkType: hard
 
-"flowbite@npm:1.6.3":
-  version: 1.6.3
-  resolution: "flowbite@npm:1.6.3"
+"flowbite@npm:1.8.1, flowbite@npm:^1.6.6":
+  version: 1.8.1
+  resolution: "flowbite@npm:1.8.1"
   dependencies:
     "@popperjs/core": ^2.9.3
     mini-svg-data-uri: ^1.4.3
-  checksum: 2e728f6d207d8eeef67bc2ee056ef2567c8112ec4ad7e337350285c07ee5c7ff0d044e6390935ba2641ed48665fb43fdf432a93366f3455bc514ab6407aade15
+  checksum: 51fa33656082ae15e66fefdf595d76cad4e7d80795d5c4174e4cfcb56bd03d867a11d42fe83a6adc1272a895edd657a76b6bdad8ccf86781d9bf34a85c516525
   languageName: node
   linkType: hard
 
@@ -14802,12 +14802,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.6.0":
-  version: 4.7.1
-  resolution: "react-icons@npm:4.7.1"
+"react-icons@npm:^4.10.1":
+  version: 4.11.0
+  resolution: "react-icons@npm:4.11.0"
   peerDependencies:
     react: "*"
-  checksum: ed3cbdc5fc0c4d7d2debf78fdc8c4c80aeacf85a506a9a3c11b1d5922de393ac0a6542012b7fb81761e9280c54d0f26827d50a92b54ec8f0c8e52364d89970b5
+  checksum: 7b8b80bbe2dabcc54b6c2129b7761a04b19caebe24389adc7683478ef41212b9ca0b53c63abcc06b3c01b94c84855ec5142b4c357e19c4aaaad9a4db23a3c485
   languageName: node
   linkType: hard
 
@@ -16342,6 +16342,13 @@ __metadata:
   version: 6.1.1
   resolution: "tabbable@npm:6.1.1"
   checksum: 348639497262241ce8e0ccb0664ea582a386183107299ee8f27cf7b56bc84f36e09eaf667d3cb4201e789634012a91f7129bcbd49760abe874fbace35b4cf429
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^1.13.2":
+  version: 1.14.0
+  resolution: "tailwind-merge@npm:1.14.0"
+  checksum: 8cf5d37f51b3b32e4bdd5544feaed34357bfba2f64f14834cc4a21ac29b0ae22d7255386467a0f1dadb3e38499389efbbabeddcd0b16571af5a0d346a4921877
   languageName: node
   linkType: hard
 
