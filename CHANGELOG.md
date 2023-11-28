@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.2...v3.1.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* **RequiredIndicator:** display as asterisk instead of text ([8a58926](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/8a589268c239c6f970e3793be561a74683386da3))
+
 ## [3.1.2](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.1...v3.1.2) (2023-10-17)
 
 
