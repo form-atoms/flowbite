@@ -10,6 +10,7 @@ import { RenderProp } from "react-render-prop-type";
 
 import { FlowbiteStateColor, useFieldError } from "../../hooks";
 import { useAtomValue } from "jotai";
+import { RequiredIndicator } from "@/components";
 
 type Children = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {
@@ -41,7 +42,8 @@ export const FlowbiteField = <Field extends ZodField<any, any>>({
     <div className="flex flex-col gap-2">
       {label && (
         <Label color={color} htmlFor={id}>
-          {label} {isFieldRequired ? "(required)" : ""}
+          <span>{label}</span>
+          {isFieldRequired ? <RequiredIndicator /> : ""}
         </Label>
       )}
       {children({ ...requiredProps, id, helperText, color })}

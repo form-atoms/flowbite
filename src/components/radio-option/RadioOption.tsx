@@ -8,6 +8,7 @@ import { HelperText, Label, Radio } from "flowbite-react";
 
 import { useFieldError } from "../../hooks";
 import { useAtomValue } from "jotai";
+import { RequiredIndicator } from "@/components";
 
 export const RadioOption = <Field extends CheckboxField>({
   field,
@@ -27,7 +28,10 @@ export const RadioOption = <Field extends CheckboxField>({
       <Radio {...props} id={id} {...requiredProps} role="radio" />
       <div className="flex flex-col">
         <Label htmlFor={id} color={error ? "failure" : undefined}>
-          {label} {isFieldRequired ? "(required)" : ""}
+          <>
+            {label}
+            {isFieldRequired ? <RequiredIndicator /> : ""}
+          </>
         </Label>
         <HelperText
           className="mt-0 text-xs"

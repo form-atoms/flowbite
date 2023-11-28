@@ -5,6 +5,7 @@ export * from "./file-field";
 export * from "./number-field";
 export * from "./radio-field";
 export * from "./rating-field";
+export * from "./required-indicator";
 export * from "./select-field";
 export * from "./slider-field";
 export * from "./text-field";
