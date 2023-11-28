@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.3...v3.1.4) (2023-11-28)
+
+
+### Bug Fixes
+
+* **checkboxGroup:** vertically align label with checkbox ([a33dc21](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/a33dc214f2e249d95430f847a8b17dfb07d054d6))
+
 ## [3.1.3](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.2...v3.1.3) (2023-11-28)
 
 
