@@ -5,6 +5,7 @@ import {
   ZodArrayField,
 } from "@form-atoms/field";
 import { Checkbox, HelperText, Label } from "flowbite-react";
+import { Option as BaseOption, type OptionRenderProp } from "@/components";
 
 import { FlowbiteField } from "../field";
 
@@ -16,8 +17,11 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
   label,
   required,
   helperText,
+  Option = BaseOption,
   ...uiProps
-}: UseCheckboxGroupProps<Option, Field> & FieldProps<Field>) => {
+}: UseCheckboxGroupProps<Option, Field> &
+  FieldProps<Field> &
+  OptionRenderProp) => {
   const checkboxGroup = useCheckboxGroup({
     field,
     options,
@@ -36,7 +40,7 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
         return (
           <>
             {checkboxGroup.map((checkboxProps) => (
-              <div key={checkboxProps.id} className="flex gap-2">
+              <Option key={checkboxProps.id}>
                 <Checkbox
                   role="checkbox"
                   {...uiProps}
@@ -44,7 +48,7 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
                   {...checkboxProps}
                 />
                 <Label htmlFor={checkboxProps.id}>{checkboxProps.label}</Label>
-              </div>
+              </Option>
             ))}
             {helperText && <HelperText color={color}>{helperText}</HelperText>}
           </>
