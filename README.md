@@ -1,7 +1,7 @@
 <div align="center">
 <div align="center">
-  <img width="120" style="margin: 32px" src="https://raw.githubusercontent.com/MiroslavPetrik/form-atoms-field/main/form-atoms-field.svg">
-    <span style="font-size: 100px; vertical-align: top;">+</span>
+  <img width="120" style="margin: 32px" src="https://raw.githubusercontent.com/MiroslavPetrik/form-atoms-field/main/public/form-atoms-field.svg">
+    <img width="120" style="margin: 32px" src="https://raw.githubusercontent.com/MiroslavPetrik/form-atoms-flowbite/main/public/plus.svg">
    <img width="110" style="margin: 32px" src="https://github.com/themesberg/flowbite-react/blob/main/public/android-chrome-192x192.png?raw=true">
    </div>
   <h1>Form Atoms with Flowbite React style</h1>
