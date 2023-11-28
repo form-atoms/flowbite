@@ -1,18 +1,34 @@
 import {
   ListFieldProps,
-  ListField as HeadlessListField,
+  ListField as BaseListField,
+  AddItemButtonProps,
+  RemoveItemButtonProps,
 } from "@form-atoms/field";
-import { Button, Card, Label } from "flowbite-react";
+import { Button, Label } from "flowbite-react";
 import { FormFields } from "form-atoms";
 import { ReactNode } from "react";
 
+const FlowbiteAddItemButton = ({ add }: AddItemButtonProps) => (
+  <Button onClick={add}>Add Item</Button>
+);
+
+const FlowbiteRemoveItemButton = ({ remove }: RemoveItemButtonProps) => (
+  <Button color="failure" outline onClick={remove}>
+    Remove
+  </Button>
+);
+/**
+ * Not a proper field, as it does not display errors, like when minimum 1 item in array would be required.
+ */
 export const ListField = <
   Fields extends FormFields,
   Path extends (string | number)[]
 >({
   label,
+  AddItemButton = FlowbiteAddItemButton,
+  RemoveItemButton = FlowbiteRemoveItemButton,
   children,
-  ...arrayProps
+  ...props
 }: ListFieldProps<Fields, Path> & Partial<{ label: ReactNode }>) => {
   return (
     <>
@@ -20,29 +36,9 @@ export const ListField = <
       {/**
        *  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
        *  @ts-ignore */}
-      <HeadlessListField
-        {...arrayProps}
-        RemoveItemButton={({ remove }) => (
-          <Button color="failure" onClick={remove}>
-            Remove
-          </Button>
-        )}
-        AddItemButton={({ add }) => (
-          <Button color="gray" onClick={add}>
-            Add Item
-          </Button>
-        )}
-      >
-        {(props) => (
-          <Card>
-            <div className="flex justify-between">
-              {props.index}
-              <props.RemoveItemButton />
-            </div>
-            {children(props)}
-          </Card>
-        )}
-      </HeadlessListField>
+      <BaseListField {...props} {...{ AddItemButton, RemoveItemButton }}>
+        {(props) => <>{children(props)}</>}
+      </BaseListField>
     </>
   );
 };
