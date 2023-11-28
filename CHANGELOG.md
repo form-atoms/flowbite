@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.1...v3.1.2) (2023-10-17)
+
+
+### Bug Fixes
+
+* bump deps ([75a0f55](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/75a0f5532a06f454d934cb0b64a7ba8058a76414))
+
 ## [3.1.1](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.0...v3.1.1) (2023-10-17)
 
 
