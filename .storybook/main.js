@@ -1,3 +1,5 @@
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   staticDirs: ["../public"],
@@ -20,5 +22,16 @@ module.exports = {
   },
   core: {
     disableTelemetry: true,
+  },
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.plugins = [
+        ...(config.resolve.plugins || []),
+        new TsconfigPathsPlugin({
+          extensions: config.resolve.extensions,
+        }),
+      ];
+    }
+    return config;
   },
 };
