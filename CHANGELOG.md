@@ -1,3 +1,10 @@
+## [3.1.5](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.4...v3.1.5) (2023-11-28)
+
+
+### Bug Fixes
+
+* **dependencies:** move to peerDependency ([52ddd77](https://github.com/MiroslavPetrik/form-atoms-flowbite/commit/52ddd774eb71083499765ac97976697778077275))
+
 ## [3.1.4](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.3...v3.1.4) (2023-11-28)
 
 
