@@ -8,6 +8,10 @@
   <h1>Form Atoms with Flowbite React style</h1>
 </div>
 
+<a aria-label="NPM version" href="https://www.npmjs.com/package/%40form-atoms/flowbite">
+  <img alt="NPM Version" src="https://img.shields.io/npm/v/%40form-atoms/flowbite?style=for-the-badge&labelColor=24292e">
+</a>
+
 ### Demo
 
 Visit project's [🎨 Storybook](https://form-atoms.github.io/flowbite/)
