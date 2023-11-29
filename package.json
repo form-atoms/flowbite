@@ -3,9 +3,9 @@
   "version": "0.0.0-semantic-release",
   "type": "module",
   "author": "Miroslav Petrik <miroslavpetrik@outlook.com>",
-  "homepage": "https://github.com/MiroslavPetrik/form-atoms-flowbite#readme",
-  "repository": "github:MiroslavPetrik/form-atoms-flowbite",
-  "bugs": "https://github.com/MiroslavPetrik/form-atoms-flowbite/issues",
+  "homepage": "https://github.com/form-atoms/flowbite#readme",
+  "repository": "github/form-atoms/flowbite",
+  "bugs": "https://github.com/form-atoms/flowbite/issues",
   "license": "MIT",
   "keywords": [
     "react last form",
