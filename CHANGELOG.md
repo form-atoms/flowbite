@@ -1,3 +1,11 @@
+## [3.1.6](https://github.com/form-atoms/flowbite/compare/v3.1.5...v3.1.6) (2023-11-29)
+
+
+### Bug Fixes
+
+* release ([d5cb1fe](https://github.com/form-atoms/flowbite/commit/d5cb1fe2be6923e4f7ba8b414a4b553637673efb))
+* repository url ([ea2cda7](https://github.com/form-atoms/flowbite/commit/ea2cda7d02c3cd42a31d3ae97b6de6c509de6d2d))
+
 ## [3.1.5](https://github.com/MiroslavPetrik/form-atoms-flowbite/compare/v3.1.4...v3.1.5) (2023-11-28)
 
 
