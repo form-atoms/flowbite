@@ -4,7 +4,10 @@
   "type": "module",
   "author": "Miroslav Petrik <miroslavpetrik@outlook.com>",
   "homepage": "https://github.com/form-atoms/flowbite#readme",
-  "repository": "github/form-atoms/flowbite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/form-atoms/flowbite.git"
+  },
   "bugs": "https://github.com/form-atoms/flowbite/issues",
   "license": "MIT",
   "keywords": [
