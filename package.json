@@ -6,7 +6,7 @@
   "homepage": "https://github.com/form-atoms/flowbite#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/form-atoms/flowbite.git"
+    "url": "git+https://github.com/form-atoms/flowbite.git"
   },
   "bugs": "https://github.com/form-atoms/flowbite/issues",
   "license": "MIT",
