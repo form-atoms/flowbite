@@ -1,3 +1,10 @@
+## [3.1.8](https://github.com/form-atoms/flowbite/compare/v3.1.7...v3.1.8) (2023-12-01)
+
+
+### Bug Fixes
+
+* use the new listFieldBuilder ([2b96041](https://github.com/form-atoms/flowbite/commit/2b9604173a3eff1655ee8a9f7253498db944f5c0))
+
 ## [3.1.7](https://github.com/form-atoms/flowbite/compare/v3.1.6...v3.1.7) (2023-11-29)
 
 
