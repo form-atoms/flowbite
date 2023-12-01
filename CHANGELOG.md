@@ -1,3 +1,10 @@
+## [3.1.9](https://github.com/form-atoms/flowbite/compare/v3.1.8...v3.1.9) (2023-12-01)
+
+
+### Bug Fixes
+
+* add publishConfig ([0bf9908](https://github.com/form-atoms/flowbite/commit/0bf9908a35527e375beef9b70c04d71ac27dcee4))
+
 ## [3.1.8](https://github.com/form-atoms/flowbite/compare/v3.1.7...v3.1.8) (2023-12-01)
 
 
