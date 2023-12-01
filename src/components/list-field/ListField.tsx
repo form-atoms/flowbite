@@ -1,7 +1,7 @@
 import {
-  ListFieldProps,
-  ListField as BaseListField,
   AddItemButtonProps,
+  ListField as BaseListField,
+  ListFieldProps,
   RemoveItemButtonProps,
 } from "@form-atoms/field";
 import { Button, Label } from "flowbite-react";
@@ -22,7 +22,7 @@ const FlowbiteRemoveItemButton = ({ remove }: RemoveItemButtonProps) => (
  */
 export const ListField = <
   Fields extends FormFields,
-  Path extends (string | number)[]
+  Path extends (string | number)[],
 >({
   label,
   AddItemButton = FlowbiteAddItemButton,

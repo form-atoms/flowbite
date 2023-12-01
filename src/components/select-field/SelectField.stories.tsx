@@ -1,7 +1,8 @@
+import { stringField } from "@form-atoms/field";
+
 import { country, getLabel, getValue, options } from "./country";
 import { SelectField } from "./SelectField";
 import { FormStory, meta, optionalField } from "../story-form";
-import { stringField } from "@form-atoms/field";
 
 export default {
   title: "SelectField",

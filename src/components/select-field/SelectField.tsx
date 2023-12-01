@@ -1,11 +1,11 @@
 import {
-  useSelectFieldProps,
-  SelectProps,
-  useSelectOptions,
-  SelectField as SelectZodField,
   PlaceholderOption,
+  SelectProps,
+  SelectField as SelectZodField,
+  useSelectFieldProps,
+  useSelectOptions,
 } from "@form-atoms/field";
-import { Select, SelectProps as FlowbiteSelectProps } from "flowbite-react";
+import { SelectProps as FlowbiteSelectProps, Select } from "flowbite-react";
 import { ReactNode } from "react";
 
 import { FlowbiteField } from "../field";
@@ -22,7 +22,6 @@ export const SelectField = <Option, Field extends SelectZodField>({
   ...uiProps
 }: SelectProps<Option, Field> &
   FlowbiteSelectProps & { label?: ReactNode }) => {
-  // @ts-ignore
   const props = useSelectFieldProps({ field, options, getValue });
   const { selectOptions } = useSelectOptions({
     field,

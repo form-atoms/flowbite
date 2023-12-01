@@ -1,6 +1,5 @@
-import { numberField, textField } from "@form-atoms/field";
-import { Button } from "flowbite-react";
-import { Fragment } from "react";
+import { listFieldBuilder, numberField, textField } from "@form-atoms/field";
+import { Button, Card } from "flowbite-react";
 
 import { ListField } from "./ListField";
 import { NumberField } from "../number-field";
@@ -12,22 +11,7 @@ export default {
   ...meta,
 };
 
-type Address = {
-  city: string;
-  street: string;
-};
-
-type Person = {
-  age: number;
-  name: string;
-};
-
-const personBuilder = (
-  { name, age }: Person | undefined = {
-    name: "",
-    age: 0,
-  }
-) => ({
+const personBuilder = listFieldBuilder(({ name, age }) => ({
   name: textField({
     name: "name",
     value: name,
@@ -36,15 +20,9 @@ const personBuilder = (
     name: "age",
     value: age,
   }),
-});
+}));
 
-const addressBuilder = (
-  { city, street, people }: (Address & { people: Person[] }) | undefined = {
-    city: "",
-    street: "",
-    people: [],
-  }
-) => ({
+const addressBuilder = listFieldBuilder(({ city, street, people = [] }) => ({
   city: textField({
     name: "city",
     value: city,
@@ -53,34 +31,22 @@ const addressBuilder = (
     name: "street",
     value: street,
   }),
-  people: [],
-});
+  people: personBuilder(people),
+}));
 
 const fields = {
-  addresses: [
+  addresses: addressBuilder([
     {
-      city: textField({
-        name: "city",
-        value: "Bratislava",
-      }),
-      street: textField({
-        name: "street",
-        value: "Kosicka",
-      }),
+      city: "Bratislava",
+      street: "Kosicka",
       people: [
         {
-          name: textField({
-            name: "name",
-            value: "Simon",
-          }),
-          age: numberField({
-            name: "age",
-            value: 20,
-          }),
+          name: "Simon",
+          age: 20,
         },
       ],
     },
-  ],
+  ]),
 };
 
 export const AddressesWithPeopleListField = formStory({
@@ -99,7 +65,7 @@ export const AddressesWithPeopleListField = formStory({
         )}
       >
         {({ fields, index }) => (
-          <Fragment key={index}>
+          <Card>
             <div className="grid grid-flow-col grid-cols-2 gap-4">
               <TextField label="City" field={fields.city} />
               <TextField label="Street" field={fields.street} />
@@ -115,17 +81,14 @@ export const AddressesWithPeopleListField = formStory({
                 </Button>
               )}
             >
-              {({ fields, index }) => (
-                <div
-                  key={index}
-                  className="grid grid-flow-col grid-cols-2 gap-4"
-                >
+              {({ fields }) => (
+                <Card className="grid grid-flow-col grid-cols-2 gap-4">
                   <TextField label="Name" field={fields.name} />
                   <NumberField label="Age" field={fields.age} />
-                </div>
+                </Card>
               )}
             </ListField>
-          </Fragment>
+          </Card>
         )}
       </ListField>
     ),

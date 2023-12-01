@@ -1,29 +1,18 @@
-import { listFieldAtoms, textField } from "@form-atoms/field";
-import { z } from "zod";
-import { TextField, ListField } from "@/components";
-import { formAtom } from "form-atoms";
+import { listFieldBuilder, textField } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
+import { formAtom } from "form-atoms";
 import {
-  HiOutlineTrash,
-  HiOutlineChevronUp,
   HiOutlineChevronDown,
+  HiOutlineChevronUp,
+  HiOutlineTrash,
 } from "react-icons/hi2";
+import { z } from "zod";
 
-type Address = {
-  city: string;
-  street: string;
-  zip: string;
-};
+import { ListField, TextField } from "@/components";
 
 const zipCodeSchema = z.string().regex(/^\d{5}$/);
 
-const addressBuilder = (
-  { city, street, zip }: Address | undefined = {
-    city: "",
-    street: "",
-    zip: "",
-  }
-) => ({
+const addressBuilder = listFieldBuilder(({ city, street, zip }) => ({
   city: textField({
     name: "city",
     value: city,
@@ -33,10 +22,10 @@ const addressBuilder = (
     value: street,
   }),
   zip: textField({ schema: zipCodeSchema, name: "zip", value: zip }),
-});
+}));
 
 const fields = {
-  addresses: listFieldAtoms(addressBuilder, [
+  addresses: addressBuilder([
     { city: "Bratislava", street: "Hrad", zip: "81106" },
   ]),
 };

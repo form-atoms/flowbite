@@ -2,8 +2,10 @@ import {
   Radio,
   RadioControl,
   checkboxField,
+  listFieldBuilder,
   textField,
 } from "@form-atoms/field";
+import { Card } from "flowbite-react";
 
 import { ListField } from "./ListField";
 import { RadioOption } from "../radio-option";
@@ -15,29 +17,19 @@ export default {
   ...meta,
 };
 
-type Phone = {
-  number?: string;
-  primary: boolean;
-};
-
-const phoneBuilder = (
-  { number, primary }: Phone | undefined = {
-    number: undefined,
-    primary: false,
-  }
-) => ({
+const phoneBuilder = listFieldBuilder(({ number, primary }) => ({
   number: textField({ name: "number", value: number }),
   primary: checkboxField({
     name: "primaryPhone",
     value: primary,
   }).optional(),
-});
+}));
 
 const formFields = {
-  phones: [
+  phones: phoneBuilder([
     { number: "+421 933 888 999", primary: true },
     { number: "+420 905 100 200", primary: false },
-  ].map(phoneBuilder),
+  ]),
 };
 
 export const PhonesListField = formStory({
@@ -53,7 +45,7 @@ export const PhonesListField = formStory({
             builder={phoneBuilder}
           >
             {({ fields }) => (
-              <>
+              <Card>
                 <TextField
                   field={fields.number}
                   required={required}
@@ -69,7 +61,7 @@ export const PhonesListField = formStory({
                     />
                   )}
                 </Radio>
-              </>
+              </Card>
             )}
           </ListField>
         )}

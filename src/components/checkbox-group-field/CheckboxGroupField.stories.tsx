@@ -1,7 +1,8 @@
+import { stringArrayField } from "@form-atoms/field";
+
 import { CheckboxGroupField } from "./CheckboxGroupField";
 import { getLabel, getValue, options } from "./languages";
 import { FormStory, meta, optionalField } from "../story-form";
-import { stringArrayField } from "@form-atoms/field";
 
 export default {
   title: "CheckboxGroupField",

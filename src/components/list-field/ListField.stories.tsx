@@ -1,4 +1,5 @@
-import { listFieldAtoms, textField } from "@form-atoms/field";
+import { listFieldBuilder, textField } from "@form-atoms/field";
+import { Card } from "flowbite-react";
 
 import { ListField } from "./ListField";
 import { formStory, meta } from "../story-form";
@@ -9,17 +10,7 @@ export default {
   ...meta,
 };
 
-type Address = {
-  city: string;
-  street: string;
-};
-
-const addressBuilder = (
-  { city, street }: Address | undefined = {
-    city: "",
-    street: "",
-  }
-) => ({
+const addressBuilder = listFieldBuilder(({ city, street }) => ({
   city: textField({
     name: "city",
     value: city,
@@ -28,10 +19,10 @@ const addressBuilder = (
     name: "street",
     value: street,
   }),
-});
+}));
 
 const fields = {
-  addresses: listFieldAtoms(addressBuilder, [
+  addresses: addressBuilder([
     { city: "Stockholm", street: "Carl Gustav Street" },
     { city: "Bratislava", street: "Kosicka" },
   ]),
@@ -47,11 +38,11 @@ export const AddressesListField = formStory({
         form={form}
         builder={addressBuilder}
       >
-        {({ fields, index }) => (
-          <div key={index} className="grid grid-flow-col grid-cols-2 gap-4">
+        {({ fields }) => (
+          <Card className="grid grid-flow-col grid-cols-2 gap-4">
             <TextField label="City" field={fields.city} />
             <TextField label="Street" field={fields.street} />
-          </div>
+          </Card>
         )}
       </ListField>
     ),

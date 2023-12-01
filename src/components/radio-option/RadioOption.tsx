@@ -5,10 +5,11 @@ import {
   useRequiredProps,
 } from "@form-atoms/field";
 import { HelperText, Label, Radio } from "flowbite-react";
+import { useAtomValue } from "jotai";
+
+import { RequiredIndicator } from "@/components";
 
 import { useFieldError } from "../../hooks";
-import { useAtomValue } from "jotai";
-import { RequiredIndicator } from "@/components";
 
 export const RadioOption = <Field extends CheckboxField>({
   field,

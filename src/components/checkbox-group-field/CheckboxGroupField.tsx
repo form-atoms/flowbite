@@ -1,10 +1,11 @@
 import {
   FieldProps,
-  useCheckboxGroup,
   UseCheckboxGroupProps,
   ZodArrayField,
+  useCheckboxGroup,
 } from "@form-atoms/field";
 import { Checkbox, HelperText, Label } from "flowbite-react";
+
 import { Option as BaseOption, type OptionRenderProp } from "@/components";
 
 import { FlowbiteField } from "../field";

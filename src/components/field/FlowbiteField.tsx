@@ -5,12 +5,13 @@ import {
   useRequiredProps,
 } from "@form-atoms/field";
 import { Label } from "flowbite-react";
+import { useAtomValue } from "jotai";
 import { ReactNode } from "react";
 import { RenderProp } from "react-render-prop-type";
 
-import { FlowbiteStateColor, useFieldError } from "../../hooks";
-import { useAtomValue } from "jotai";
 import { RequiredIndicator } from "@/components";
+
+import { FlowbiteStateColor, useFieldError } from "../../hooks";
 
 type Children = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {

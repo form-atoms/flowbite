@@ -1,13 +1,13 @@
+import { stringField } from "@form-atoms/field";
 import { render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 import { formAtom, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
 
 import { country, getLabel, getValue, options } from "./country";
 
 import { SelectField } from "./";
-import { stringField } from "@form-atoms/field";
 
 describe("<SelectField />", () => {
   const props = {
@@ -52,7 +52,7 @@ describe("<SelectField />", () => {
     const field = stringField();
 
     render(
-      <SelectField field={field} {...props} placeholder="Pick a country" />
+      <SelectField field={field} {...props} placeholder="Pick a country" />,
     );
 
     expect(screen.getByText("Pick a country")).toBeInTheDocument();

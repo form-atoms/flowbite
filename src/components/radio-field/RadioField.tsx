@@ -1,18 +1,19 @@
 import {
-  RadioGroupProps,
-  useOptions,
-  SelectField,
-  useSelectFieldProps,
   FieldProps,
+  RadioGroupProps,
+  SelectField,
+  useOptions,
+  useSelectFieldProps,
 } from "@form-atoms/field";
 import { HelperText, Label, Radio } from "flowbite-react";
+import { Fragment, PropsWithChildren } from "react";
 import { RenderProp } from "react-render-prop-type";
+
 import {
-  FlowbiteField,
   Option as BaseOption,
+  FlowbiteField,
   type OptionRenderProp,
 } from "@/components";
-import { Fragment, PropsWithChildren } from "react";
 
 export const RadioField = <Option, Field extends SelectField>({
   field,
@@ -28,7 +29,6 @@ export const RadioField = <Option, Field extends SelectField>({
 }: RadioGroupProps<Option, Field> &
   Omit<FieldProps<Field>, "field"> &
   Partial<RenderProp<PropsWithChildren, "Container"> & OptionRenderProp>) => {
-  // @ts-ignore
   const props = useSelectFieldProps({ field, options, getValue });
   const { renderOptions } = useOptions({ field, options, getLabel });
 

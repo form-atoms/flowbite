@@ -1,7 +1,7 @@
 import { filesField } from "@form-atoms/field";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 import { formAtom, useForm, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
 
@@ -33,7 +33,7 @@ describe("<FilesField />", () => {
     // TODO: event does not cause re-render
     expect(screen.getByRole("dialog")).toBeInvalid();
     expect(
-      screen.getByText("Input not instance of FileList")
+      screen.getByText("Input not instance of FileList"),
     ).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });

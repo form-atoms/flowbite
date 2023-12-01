@@ -1,7 +1,8 @@
+import { stringField } from "@form-atoms/field";
+
 import { RadioField } from "./RadioField";
 import { country, getLabel, getValue, options } from "../select-field/country";
 import { FormStory, meta, optionalField } from "../story-form";
-import { stringField } from "@form-atoms/field";
 
 export default {
   title: "RadioField",
