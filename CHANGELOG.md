@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/form-atoms/flowbite/compare/v3.1.9...v3.1.10) (2023-12-02)
+
+
+### Bug Fixes
+
+* drop module; add typecheck ([c7c1ea4](https://github.com/form-atoms/flowbite/commit/c7c1ea4b8de15df0e6a6a4c76e3475eea413d204))
+
 ## [3.1.9](https://github.com/form-atoms/flowbite/compare/v3.1.8...v3.1.9) (2023-12-01)
 
 
