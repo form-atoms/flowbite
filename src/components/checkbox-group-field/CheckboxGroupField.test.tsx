@@ -1,6 +1,5 @@
 import { stringArrayField } from "@form-atoms/field";
-import { render, screen } from "@testing-library/react";
-import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
+import { act, render, renderHook, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { formAtom, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
@@ -37,7 +36,7 @@ describe("<CheckboxGroupField />", () => {
     render(<CheckboxGroupField field={field} {...props} />);
 
     const onSubmit = vi.fn();
-    await domAct(async () => {
+    await act(async () => {
       result.current(onSubmit)();
     });
 
@@ -57,7 +56,7 @@ describe("<CheckboxGroupField />", () => {
       render(<CheckboxGroupField field={value} {...props} />);
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 

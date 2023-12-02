@@ -1,6 +1,11 @@
 import { textField } from "@form-atoms/field";
-import { fireEvent, render, screen } from "@testing-library/react";
-import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
+import {
+  act,
+  fireEvent,
+  render,
+  renderHook,
+  screen,
+} from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { formAtom, useForm, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
@@ -31,7 +36,7 @@ describe("<TextField />", () => {
       expect(textbox).toBeValid();
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
@@ -52,14 +57,14 @@ describe("<TextField />", () => {
 
     expect(textbox).toHaveValue("memento mori");
 
-    await domAct(async () => {
+    await act(async () => {
       result.current.reset();
     });
 
     expect(textbox).toHaveValue("");
 
     const onSubmit = vi.fn();
-    await domAct(async () => {
+    await act(async () => {
       result.current.submit(onSubmit)();
     });
 

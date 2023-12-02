@@ -1,5 +1,4 @@
-import { fireEvent, screen } from "@testing-library/react";
-import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
+import { act, fireEvent, renderHook, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { formAtom, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
@@ -23,10 +22,8 @@ describe("<Field />", () => {
       });
       const { result } = renderHook(() => useFormSubmit(form));
 
-      // render
-
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
@@ -50,7 +47,7 @@ describe("<Field />", () => {
       expect(input).toBeValid();
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
@@ -73,7 +70,7 @@ describe("<Field />", () => {
       expect(textarea).toBeValid();
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 

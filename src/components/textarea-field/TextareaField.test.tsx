@@ -1,6 +1,11 @@
 import { textField } from "@form-atoms/field";
-import { fireEvent, render, screen } from "@testing-library/react";
-import { act as domAct, renderHook } from "@testing-library/react-hooks/dom";
+import {
+  act,
+  fireEvent,
+  render,
+  renderHook,
+  screen,
+} from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { formAtom, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
@@ -26,7 +31,7 @@ describe("<TextareaField />", () => {
       render(<TextareaField field={bio} label="bio" />);
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
@@ -49,7 +54,7 @@ describe("<TextareaField />", () => {
       expect(textarea).toBeValid();
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
@@ -70,7 +75,7 @@ describe("<TextareaField />", () => {
       expect(textarea).toBeValid();
 
       const onSubmit = vi.fn();
-      await domAct(async () => {
+      await act(async () => {
         result.current(onSubmit)();
       });
 
