@@ -15,11 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "types": ["vitest/globals"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "types": ["vitest/globals"]
   },
-  "include": ["src", "./.storybook", "./setup.ts"]
+  "include": ["src", "./setup.ts"]
 }

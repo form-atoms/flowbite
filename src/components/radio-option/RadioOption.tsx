@@ -7,9 +7,8 @@ import {
 import { HelperText, Label, Radio } from "flowbite-react";
 import { useAtomValue } from "jotai";
 
-import { RequiredIndicator } from "@/components";
-
 import { useFieldError } from "../../hooks";
+import { RequiredIndicator } from "../required-indicator";
 
 export const RadioOption = <Field extends CheckboxField>({
   field,

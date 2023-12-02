@@ -9,8 +9,7 @@ import { useAtomValue } from "jotai";
 import { ReactNode } from "react";
 import { RenderProp } from "react-render-prop-type";
 
-import { RequiredIndicator } from "@/components";
-
+import { RequiredIndicator } from "../";
 import { FlowbiteStateColor, useFieldError } from "../../hooks";
 
 type Children = RenderProp<

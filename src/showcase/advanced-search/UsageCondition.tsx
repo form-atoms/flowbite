@@ -25,6 +25,6 @@ export const UsageCondition = () => (
     getValue={(opt) => opt}
     getLabel={(opt) => opt}
     Container={Container}
-    RadioItem={RadioItem}
+    Option={RadioItem}
   />
 );

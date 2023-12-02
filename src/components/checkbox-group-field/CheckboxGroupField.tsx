@@ -6,8 +6,7 @@ import {
 } from "@form-atoms/field";
 import { Checkbox, HelperText, Label } from "flowbite-react";
 
-import { Option as BaseOption, type OptionRenderProp } from "@/components";
-
+import { Option as BaseOption, type OptionRenderProp } from "../";
 import { FlowbiteField } from "../field";
 
 export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
@@ -22,7 +21,7 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
   ...uiProps
 }: UseCheckboxGroupProps<Option, Field> &
   FieldProps<Field> &
-  OptionRenderProp) => {
+  Partial<OptionRenderProp>) => {
   const checkboxGroup = useCheckboxGroup({
     field,
     options,
@@ -37,24 +36,31 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
       helperText={helperText}
       label={label}
     >
-      {({ color, helperText, required: isInputRequired, ...fieldProps }) => {
-        return (
-          <>
-            {checkboxGroup.map((checkboxProps) => (
-              <Option key={checkboxProps.id}>
-                <Checkbox
-                  role="checkbox"
-                  {...uiProps}
-                  {...fieldProps}
-                  {...checkboxProps}
-                />
-                <Label htmlFor={checkboxProps.id}>{checkboxProps.label}</Label>
-              </Option>
-            ))}
-            {helperText && <HelperText color={color}>{helperText}</HelperText>}
-          </>
-        );
-      }}
+      {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        ({ color, helperText, required: isInputRequired, ...fieldProps }) => {
+          return (
+            <>
+              {checkboxGroup.map((checkboxProps) => (
+                <Option key={checkboxProps.id}>
+                  <Checkbox
+                    role="checkbox"
+                    {...uiProps}
+                    {...fieldProps}
+                    {...checkboxProps}
+                  />
+                  <Label htmlFor={checkboxProps.id}>
+                    {checkboxProps.label}
+                  </Label>
+                </Option>
+              ))}
+              {helperText && (
+                <HelperText color={color}>{helperText}</HelperText>
+              )}
+            </>
+          );
+        }
+      }
     </FlowbiteField>
   );
 };

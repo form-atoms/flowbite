@@ -13,7 +13,7 @@ import {
   Option as BaseOption,
   FlowbiteField,
   type OptionRenderProp,
-} from "@/components";
+} from "../";
 
 export const RadioField = <Option, Field extends SelectField>({
   field,

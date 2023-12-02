@@ -16,36 +16,38 @@ jobs:
     if: ${{!contains(github.event.head_commit.message, '[skip ci]') && !startsWith(github.event.head_commit.message, 'chore:') && !startsWith(github.event.head_commit.message, 'style:')  && !startsWith(github.event.head_commit.message, 'docs:') && !contains(github.event.pull_request.title, '[skip ci]') && !startsWith(github.event.pull_request.title, 'chore:') && !startsWith(github.event.pull_request.title, 'style:') && !startsWith(github.event.pull_request.title, 'docs:') && !startsWith(github.event.head_commit.message, 'chore(') && !startsWith(github.event.head_commit.message, 'style(') && !startsWith(github.event.head_commit.message, 'docs(') && !startsWith(github.event.pull_request.title, 'chore(') && !startsWith(github.event.pull_request.title, 'style(') && !startsWith(github.event.pull_request.title, 'docs(') }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 🔃 Checkout
         uses: actions/checkout@v4
       - run: echo ${{ github.workspace }}
 
-      - name: Setup Node.js
+      - name: 🧫 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/Iron
 
-      - name: Cache node_modules
+      - name: 💾 Cache node_modules
         id: cache-node-modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install
+      - name: 🏗️ Install
         uses: borales/actions-yarn@v4
         with:
           cmd: install
 
-      - name: Build
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
+      - name: ✅ Typecheck
+        run: yarn typecheck
 
-      - name: Release
-        uses: borales/actions-yarn@v4
+      - name: 🧪 Test
+        run: yarn test
+
+      - name: 🔨 Build
+        run: yarn build
+
+      - name: 🚢 Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          cmd: semantic-release
+        run: yarn semantic-release

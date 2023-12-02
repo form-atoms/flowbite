@@ -31,9 +31,8 @@ export const Required: FormStory = {
   },
 };
 
-const optional = numberField({
-  optional: true,
-});
+const optional = numberField().optional();
+
 export const Optional: FormStory = {
   ...optionalField,
   args: {
