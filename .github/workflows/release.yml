@@ -47,7 +47,9 @@ jobs:
         run: yarn build
 
       - name: 🚢 Release
+        uses: borales/actions-yarn@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn semantic-release
+        with:
+          cmd: semantic-release
