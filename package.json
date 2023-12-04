@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@emotion/react": "^11.11.1",
-    "@form-atoms/field": "^3.8.4",
+    "@form-atoms/field": "^3.8.7",
     "@mdx-js/react": "^2.3.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",

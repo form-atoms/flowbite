@@ -32,9 +32,9 @@ export const AddressesListField = formStory({
     fields,
     children: ({ form }) => (
       <ListField
+        form={form}
         keyFrom="city"
         path={["addresses"]}
-        form={form}
         builder={addressBuilder}
       >
         {({ fields }) => (

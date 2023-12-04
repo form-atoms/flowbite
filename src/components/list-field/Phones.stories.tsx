@@ -39,8 +39,8 @@ export const PhonesListField = formStory({
       <RadioControl name="primaryPhone">
         {({ control }) => (
           <ListField
-            keyFrom="primary"
             form={form}
+            keyFrom="primary"
             path={["phones"]}
             builder={phoneBuilder}
           >

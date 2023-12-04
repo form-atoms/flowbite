@@ -58,9 +58,9 @@ export const AddressesWithPeopleListField = formStory({
     fields,
     children: ({ form }) => (
       <ListField
+        form={form}
         keyFrom="street"
         path={["addresses"]}
-        form={form}
         builder={addressBuilder}
         AddItemButton={({ add }) => (
           <Button color="gray" onClick={add}>
@@ -75,10 +75,10 @@ export const AddressesWithPeopleListField = formStory({
               <TextField label="Street" field={fields.street} />
             </div>
             <ListField
+              form={form}
               keyFrom="name"
               path={["addresses", index, "people"]}
               builder={personBuilder}
-              form={form}
               AddItemButton={({ add }) => (
                 <Button color="gray" onClick={add}>
                   Add Person

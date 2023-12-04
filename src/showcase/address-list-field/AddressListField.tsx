@@ -41,7 +41,6 @@ export const AddressesListField = () => (
     <div className="flex flex-col gap-4">
       <ListField
         keyFrom="city"
-        label="Adjust your addresses, the first one will be primary."
         path={["addresses"]}
         form={form}
         builder={addressBuilder}
@@ -50,9 +49,7 @@ export const AddressesListField = () => (
             <HiOutlineTrash />
           </Button>
         )}
-        AddItemButton={({ add }) => (
-          <Button onClick={add}>Pridaj address</Button>
-        )}
+        AddItemButton={({ add }) => <Button onClick={add}>Add address</Button>}
       >
         {({ fields, RemoveItemButton, index, moveUp, moveDown }) => (
           <Card>
