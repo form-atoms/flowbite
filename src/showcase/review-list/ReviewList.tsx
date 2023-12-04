@@ -2,11 +2,12 @@ import {
   AddItemButtonProps,
   ListField,
   RemoveItemButtonProps,
+  type TextField as TTextField,
   listFieldBuilder,
   textField,
 } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
-import { formAtom } from "form-atoms";
+import { FormAtom } from "form-atoms";
 import {
   HiOutlineMinusCircle,
   HiOutlinePlusCircle,
@@ -14,20 +15,6 @@ import {
 } from "react-icons/hi2";
 
 import { TextField } from "../../components";
-
-const textFieldBuilder = listFieldBuilder((value) =>
-  textField({
-    name: "positive",
-    value: value,
-  }),
-);
-
-const fields = {
-  positives: textFieldBuilder(["quality materials used", "waterproof"]),
-  negatives: textFieldBuilder(["could be lighter"]),
-};
-
-const form = formAtom(fields);
 
 const AddButton = ({ add }: AddItemButtonProps) => (
   // The div makes it non-full width
@@ -42,7 +29,20 @@ const RemoveButton = ({ remove }: RemoveItemButtonProps) => (
   </Button>
 );
 
-export const ReviewList = () => (
+export const reviewItemBuilder = listFieldBuilder((value) =>
+  textField({
+    value: value,
+  }),
+);
+
+/**
+ * Generic permits to include this review list in different forms having the positives/negatives fields at minimum.
+ */
+export const ReviewList = ({
+  form,
+}: {
+  form: FormAtom<{ positives: TTextField[]; negatives: TTextField[] }>;
+}) => (
   <Card>
     <Label>Please review your shoes:</Label>
     <div className="flex gap-4">
@@ -51,7 +51,7 @@ export const ReviewList = () => (
         <ListField
           form={form}
           path={["positives"]}
-          builder={textFieldBuilder}
+          builder={reviewItemBuilder}
           RemoveItemButton={RemoveButton}
           AddItemButton={AddButton}
         >
@@ -70,7 +70,7 @@ export const ReviewList = () => (
         <ListField
           form={form}
           path={["negatives"]}
-          builder={textFieldBuilder}
+          builder={reviewItemBuilder}
           RemoveItemButton={RemoveButton}
           AddItemButton={AddButton}
         >
