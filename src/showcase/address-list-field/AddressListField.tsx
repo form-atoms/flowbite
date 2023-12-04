@@ -1,4 +1,4 @@
-import { listFieldBuilder, textField } from "@form-atoms/field";
+import { ListField, listFieldBuilder, textField } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
 import { formAtom } from "form-atoms";
 import {
@@ -8,11 +8,11 @@ import {
 } from "react-icons/hi2";
 import { z } from "zod";
 
-import { ListField, TextField } from "../../components";
+import { TextField } from "../../components";
 
 const zipCodeSchema = z.string().regex(/^\d{5}$/);
 
-const addressBuilder = listFieldBuilder(({ city, street, zip }) => ({
+const addressBuilder = listFieldBuilder(({ city, street, zipCode }) => ({
   city: textField({
     name: "city",
     value: city,
@@ -21,12 +21,16 @@ const addressBuilder = listFieldBuilder(({ city, street, zip }) => ({
     name: "street",
     value: street,
   }),
-  zip: textField({ schema: zipCodeSchema, name: "zip", value: zip }),
+  zipCode: textField({
+    schema: zipCodeSchema,
+    name: "zipCode",
+    value: zipCode,
+  }),
 }));
 
 const fields = {
   addresses: addressBuilder([
-    { city: "Bratislava", street: "Hrad", zip: "81106" },
+    { city: "Bratislava", street: "Hrad", zipCode: "81106" },
   ]),
 };
 
@@ -46,7 +50,9 @@ export const AddressesListField = () => (
             <HiOutlineTrash />
           </Button>
         )}
-        AddItemButton={({ add }) => <Button onClick={add}>Add address</Button>}
+        AddItemButton={({ add }) => (
+          <Button onClick={add}>Pridaj address</Button>
+        )}
       >
         {({ fields, RemoveItemButton, index, moveUp, moveDown }) => (
           <Card>
@@ -64,7 +70,7 @@ export const AddressesListField = () => (
             </div>
             <TextField label="City" field={fields.city} />
             <TextField label="Street" field={fields.street} />
-            <TextField label="Zip Code" field={fields.zip} pattern="#####" />
+            <TextField label="Zip Code" field={fields.zipCode} />
           </Card>
         )}
       </ListField>

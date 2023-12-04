@@ -1,7 +1,6 @@
-import { listFieldBuilder, textField } from "@form-atoms/field";
+import { ListField, listFieldBuilder, textField } from "@form-atoms/field";
 import { Card } from "flowbite-react";
 
-import { ListField } from "./ListField";
 import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 

@@ -2,7 +2,6 @@ export * from "./checkbox-field";
 export * from "./checkbox-group-field";
 export * from "./field";
 export * from "./file-field";
-export * from "./list-field";
 export * from "./number-field";
 export * from "./option";
 export * from "./radio-field";
