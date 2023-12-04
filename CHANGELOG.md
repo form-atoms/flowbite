@@ -1,3 +1,11 @@
+## [3.1.11](https://github.com/form-atoms/flowbite/compare/v3.1.10...v3.1.11) (2023-12-04)
+
+
+### Bug Fixes
+
+* **ListField:** label ([c77fdd0](https://github.com/form-atoms/flowbite/commit/c77fdd04c60d68eb2f481d6e808f1b5be9a1bb61))
+* omit ListField from components, the one from fields package should be used ([e7fae7c](https://github.com/form-atoms/flowbite/commit/e7fae7c1dceab6a9df946a6dacc85477825219f3))
+
 ## [3.1.10](https://github.com/form-atoms/flowbite/compare/v3.1.9...v3.1.10) (2023-12-02)
 
 
