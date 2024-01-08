@@ -1,3 +1,11 @@
+## [3.1.12-next.1](https://github.com/form-atoms/flowbite/compare/v3.1.11...v3.1.12-next.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* **list:** use listField & List ([07abc55](https://github.com/form-atoms/flowbite/commit/07abc554f64905405097f41b0abb1aed5060fcf4))
+* type issues ([6e2bce1](https://github.com/form-atoms/flowbite/commit/6e2bce12172c595e6c7c851cb8685336cc650c3b))
+
 ## [3.1.11](https://github.com/form-atoms/flowbite/compare/v3.1.10...v3.1.11) (2023-12-04)
 
 
