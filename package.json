@@ -132,7 +132,7 @@
     ]
   },
   "peerDependencies": {
-    "@form-atoms/field": "^3",
+    "@form-atoms/field": "^4",
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.7.0"
   },

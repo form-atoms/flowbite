@@ -2784,7 +2784,7 @@ __metadata:
     vitest: "npm:0.34.6"
     zod: "npm:^3.22.4"
   peerDependencies:
-    "@form-atoms/field": ^3
+    "@form-atoms/field": ^4
     flowbite: ^1.8.1
     flowbite-react: ^0.7.0
   languageName: unknown
