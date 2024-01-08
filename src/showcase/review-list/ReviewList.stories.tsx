@@ -1,4 +1,6 @@
-import { ReviewList, reviewItemBuilder } from "./ReviewList";
+import { listField, textField } from "@form-atoms/field";
+
+import { ReviewList } from "./ReviewList";
 import { formStory, meta } from "../../components/story-form";
 
 export default {
@@ -7,13 +9,19 @@ export default {
 };
 
 const fields = {
-  positives: reviewItemBuilder(["quality materials used", "waterproof"]),
-  negatives: reviewItemBuilder(["could be lighter"]),
+  positives: listField({
+    value: ["quality materials used", "waterproof"],
+    builder: (value) => textField({ value }),
+  }),
+  negatives: listField({
+    value: ["could be lighter"],
+    builder: (value) => textField({ value }),
+  }),
 };
 
 export const Primary = formStory({
   args: {
     fields,
-    children: ({ form }) => <ReviewList form={form} />,
+    children: ({ fields }) => <ReviewList fields={fields} />,
   },
 });
