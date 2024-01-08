@@ -1,3 +1,15 @@
+# [4.0.0-next.1](https://github.com/form-atoms/flowbite/compare/v3.1.12-next.1...v4.0.0-next.1) (2024-01-08)
+
+
+### Features
+
+* v4 field ([e22591a](https://github.com/form-atoms/flowbite/commit/e22591a1242b8a7827a6da5087a5de59a9cd31c6))
+
+
+### BREAKING CHANGES
+
+* now uses @form-atoms/field v4
+
 ## [3.1.12-next.1](https://github.com/form-atoms/flowbite/compare/v3.1.11...v3.1.12-next.1) (2024-01-08)
 
 
