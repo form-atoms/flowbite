@@ -30,6 +30,7 @@ export const RatingField = ({
             {options.map((value) => (
               <div key={value} onClick={() => actions.setValue(value)}>
                 <Rating.Star
+                  // @ts-expect-error https://github.com/form-atoms/field/issues/66
                   filled={props.value && value ? value <= props.value : false}
                 />
               </div>
