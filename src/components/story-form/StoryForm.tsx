@@ -8,6 +8,7 @@ import { RenderProp } from "react-render-prop-type";
 export type VariantProps<Fields extends FormFields> = {
   required: boolean;
   form: FormAtom<Fields>;
+  fields: Fields;
 };
 
 type StoryFormProps<Fields extends FormFields> = {
@@ -31,7 +32,7 @@ export const StoryForm = <Fields extends FormFields>({
       })}
       className="flex flex-col gap-4"
     >
-      {children({ required, form })}
+      {children({ required, form, fields })}
       <div className="flex gap-2">
         <Button type="submit">Submit</Button>
         <Button color="gray" onClick={() => reset()}>

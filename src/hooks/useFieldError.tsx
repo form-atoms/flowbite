@@ -5,8 +5,8 @@ export type InputColors = (keyof FlowbiteStateColors)[];
 
 export type FlowbiteStateColor = keyof FlowbiteStateColors;
 
-export const useFieldError = <Value,>(
-  field: FieldAtom<Value>,
+export const useFieldError = (
+  field: FieldAtom<any>,
   colors: InputColors = ["failure"],
 ) => {
   const { validateStatus, errors, touched } = useFieldState(field);

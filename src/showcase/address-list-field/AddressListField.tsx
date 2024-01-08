@@ -1,4 +1,4 @@
-import { ListField, listFieldBuilder, textField } from "@form-atoms/field";
+import { List, listField, textField } from "@form-atoms/field";
 import { Button, Card, Label } from "flowbite-react";
 import { formAtom } from "form-atoms";
 import {
@@ -12,26 +12,27 @@ import { TextField } from "../../components";
 
 const zipCodeSchema = z.string().regex(/^\d{5}$/);
 
-const addressBuilder = listFieldBuilder(({ city, street, zipCode }) => ({
-  city: textField({
-    name: "city",
-    value: city,
+const addresses = listField({
+  value: [{ city: "Bratislava", street: "Hrad", zipCode: "81106" }],
+  builder: ({ city, street, zipCode }) => ({
+    city: textField({
+      name: "city",
+      value: city,
+    }),
+    street: textField({
+      name: "street",
+      value: street,
+    }),
+    zipCode: textField({
+      schema: zipCodeSchema,
+      name: "zipCode",
+      value: zipCode,
+    }),
   }),
-  street: textField({
-    name: "street",
-    value: street,
-  }),
-  zipCode: textField({
-    schema: zipCodeSchema,
-    name: "zipCode",
-    value: zipCode,
-  }),
-}));
+});
 
 const fields = {
-  addresses: addressBuilder([
-    { city: "Bratislava", street: "Hrad", zipCode: "81106" },
-  ]),
+  addresses,
 };
 
 const form = formAtom(fields);
@@ -39,19 +40,16 @@ const form = formAtom(fields);
 export const AddressesListField = () => (
   <div className="max-w-xl">
     <div className="flex flex-col gap-4">
-      <ListField
-        keyFrom="city"
-        path={["addresses"]}
-        form={form}
-        builder={addressBuilder}
-        RemoveItemButton={({ remove }) => (
+      <List
+        field={fields.addresses}
+        RemoveButton={({ remove }) => (
           <Button onClick={remove} color="failure">
             <HiOutlineTrash />
           </Button>
         )}
-        AddItemButton={({ add }) => <Button onClick={add}>Add address</Button>}
+        AddButton={({ add }) => <Button onClick={add}>Add address</Button>}
       >
-        {({ fields, RemoveItemButton, index, moveUp, moveDown }) => (
+        {({ fields, RemoveButton, index, moveUp, moveDown }) => (
           <Card>
             <div className="flex items-center justify-between">
               <Label>Address #{index + 1}</Label>
@@ -62,7 +60,7 @@ export const AddressesListField = () => (
                 <Button color="light" onClick={moveDown}>
                   <HiOutlineChevronDown />
                 </Button>
-                <RemoveItemButton />
+                <RemoveButton />
               </div>
             </div>
             <TextField label="City" field={fields.city} />
@@ -70,7 +68,7 @@ export const AddressesListField = () => (
             <TextField label="Zip Code" field={fields.zipCode} />
           </Card>
         )}
-      </ListField>
+      </List>
     </div>
   </div>
 );

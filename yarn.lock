@@ -2706,9 +2706,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:^3.8.7":
-  version: 3.8.7
-  resolution: "@form-atoms/field@npm:3.8.7"
+"@form-atoms/field@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@form-atoms/field@npm:4.0.0"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -2717,7 +2717,7 @@ __metadata:
     jotai-effect: ^0
     react: ">=16.8"
     zod: ^3
-  checksum: baeca497ce2cc146180f2f53d2aede5e95038fc3b5d422a6939752573c7030db873c4de45ed156c9c64df2b9b6cf38f1c86cfb3ee9fbb675750cd1cd82cb3f38
+  checksum: f27c1f5b8d20f78e0c60193b9e94efeaf2be4196a325f074e13b37f10d3ea9a3b5837c6088498b6ae5a97242435289f9da77232942b0958f5e0041cfad8bf4f3
   languageName: node
   linkType: hard
 
@@ -2726,7 +2726,7 @@ __metadata:
   resolution: "@form-atoms/flowbite@workspace:."
   dependencies:
     "@emotion/react": "npm:^11.11.1"
-    "@form-atoms/field": "npm:^3.8.7"
+    "@form-atoms/field": "npm:^4.0.0"
     "@mdx-js/react": "npm:^2.3.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^11.1.0"
@@ -2763,7 +2763,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.0.1"
     flowbite: "npm:^2.2.0"
     flowbite-react: "npm:^0.7.0"
-    form-atoms: "npm:3.2.0"
+    form-atoms: "npm:3.2.1"
     happy-dom: "npm:12.10.3"
     jotai: "npm:^2.6.0"
     jotai-devtools: "npm:0.7.0"
@@ -2784,7 +2784,7 @@ __metadata:
     vitest: "npm:0.34.6"
     zod: "npm:^3.22.4"
   peerDependencies:
-    "@form-atoms/field": ^3
+    "@form-atoms/field": ^4
     flowbite: ^1.8.1
     flowbite-react: ^0.7.0
   languageName: unknown
@@ -10283,13 +10283,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-atoms@npm:3.2.0":
-  version: 3.2.0
-  resolution: "form-atoms@npm:3.2.0"
+"form-atoms@npm:3.2.1":
+  version: 3.2.1
+  resolution: "form-atoms@npm:3.2.1"
   peerDependencies:
     jotai: ^2.0.0
     react: ">=16.8"
-  checksum: a096c2077da6ad4d2ed0a56d6b33862586e027ac52697b0f7bc7b56993da815cf4debeec78bdba5e8836c582f686fb8ade5e5c4ca89f710aaa86dbc05c64fa83
+  checksum: 70d8bf68d2462e36419622038776faad85342fcda0513b4be81cc4658adee0ab6d369f90030f5bc58c2f37cf91698b04afb076fd93db3453f28178beae59a918
   languageName: node
   linkType: hard
 

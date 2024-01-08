@@ -1,9 +1,9 @@
 import {
-  ListField,
+  List,
   Radio,
   RadioControl,
   checkboxField,
-  listFieldBuilder,
+  listField,
   textField,
 } from "@form-atoms/field";
 import { Card } from "flowbite-react";
@@ -17,33 +17,27 @@ export default {
   ...meta,
 };
 
-const phoneBuilder = listFieldBuilder(({ number, primary }) => ({
-  number: textField({ name: "number", value: number }),
-  primary: checkboxField({
-    name: "primaryPhone",
-    value: primary,
-  }).optional(),
-}));
-
-const formFields = {
-  phones: phoneBuilder([
+const phones = listField({
+  value: [
     { number: "+421 933 888 999", primary: true },
     { number: "+420 905 100 200", primary: false },
-  ]),
-};
+  ],
+  builder: ({ number, primary }) => ({
+    number: textField({ name: "number", value: number }),
+    primary: checkboxField({
+      name: "primaryPhone",
+      value: primary,
+    }).optional(),
+  }),
+});
 
 export const PhonesListField = formStory({
   args: {
-    fields: formFields,
-    children: ({ required, form }) => (
+    fields: { phones },
+    children: ({ required, fields }) => (
       <RadioControl name="primaryPhone">
         {({ control }) => (
-          <ListField
-            form={form}
-            keyFrom="primary"
-            path={["phones"]}
-            builder={phoneBuilder}
-          >
+          <List field={fields.phones}>
             {({ fields }) => (
               <Card>
                 <TextField
@@ -63,7 +57,7 @@ export const PhonesListField = formStory({
                 </Radio>
               </Card>
             )}
-          </ListField>
+          </List>
         )}
       </RadioControl>
     ),
