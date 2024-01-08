@@ -1,3 +1,27 @@
+# [4.0.0](https://github.com/form-atoms/flowbite/compare/v3.1.11...v4.0.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* **list:** use listField & List ([#7](https://github.com/form-atoms/flowbite/issues/7)) ([ffcf6f3](https://github.com/form-atoms/flowbite/commit/ffcf6f310fff66cffb7aac1a6e7ac1952d5710db))
+
+
+### BREAKING CHANGES
+
+* **list:** now uses @form-atoms/field v4
+
+* chore(release): 4.0.0-next.1
+
+# [4.0.0-next.1](https://github.com/form-atoms/flowbite/compare/v3.1.12-next.1...v4.0.0-next.1) (2024-01-08)
+
+### Features
+
+* v4 field ([e22591a](https://github.com/form-atoms/flowbite/commit/e22591a1242b8a7827a6da5087a5de59a9cd31c6))
+
+### BREAKING CHANGES
+
+* now uses @form-atoms/field v4
+
 # [4.0.0-next.1](https://github.com/form-atoms/flowbite/compare/v3.1.12-next.1...v4.0.0-next.1) (2024-01-08)
 
 
