@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/form-atoms/flowbite/compare/v4.0.0...v4.0.1) (2024-01-09)
+
+
+### Bug Fixes
+
+* package entry point ([aad9849](https://github.com/form-atoms/flowbite/commit/aad9849127656858fe99603cbbee0e6e1291bcb8))
+
 # [4.0.0](https://github.com/form-atoms/flowbite/compare/v3.1.11...v4.0.0) (2024-01-08)
 
 
