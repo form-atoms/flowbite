@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/form-atoms/flowbite/compare/v4.0.1...v4.0.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* **initialValue:** enable setting initial value via prop ([#6](https://github.com/form-atoms/flowbite/issues/6)) ([#9](https://github.com/form-atoms/flowbite/issues/9)) ([cc9340f](https://github.com/form-atoms/flowbite/commit/cc9340fb2aa7aa7f0e5c28e850d2466697a20093))
+
 ## [4.0.1](https://github.com/form-atoms/flowbite/compare/v4.0.0...v4.0.1) (2024-01-09)
 
 
