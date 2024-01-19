@@ -36,3 +36,19 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const initial = numberField();
+
+export const Initialized: FormStory = {
+  ...optionalField,
+  args: {
+    fields: { initial },
+    children: () => (
+      <RatingField
+        field={initial}
+        initialValue={4}
+        label="Rate your experience"
+      />
+    ),
+  },
+};

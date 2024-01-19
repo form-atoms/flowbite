@@ -47,3 +47,25 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const initial = numberField({
+  schema: z
+    .number({ required_error: "Please adjust your confidence" })
+    .min(0)
+    .max(100),
+}).optional();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { confidence: initial },
+    children: () => (
+      <SliderField
+        min={0}
+        max={100}
+        initialValue={80}
+        field={initial}
+        label="Confidence"
+      />
+    ),
+  },
+};

@@ -44,3 +44,22 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const langs = stringArrayField();
+
+export const Initialized: FormStory = {
+  ...optionalField,
+  args: {
+    fields: { langs },
+    children: () => (
+      <CheckboxGroupField
+        field={langs}
+        initialValue={["css", "ts", "react"]}
+        label="What programming languages are you proficient?"
+        options={options}
+        getValue={getValue}
+        getLabel={getLabel}
+      />
+    ),
+  },
+};

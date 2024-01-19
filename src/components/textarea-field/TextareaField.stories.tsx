@@ -28,3 +28,18 @@ export const Optional: FormStory = {
     children: () => <TextareaField field={comment} label="Comment" />,
   },
 };
+
+const initial = textField();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { initial },
+    children: () => (
+      <TextareaField
+        field={initial}
+        label="Comment"
+        initialValue="Live love laugh"
+      />
+    ),
+  },
+};

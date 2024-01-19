@@ -44,3 +44,22 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const initial = stringField();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { country: initial },
+    children: () => (
+      <SelectField
+        field={initial}
+        initialValue="SK"
+        label="Country of Origin"
+        placeholder="Click to pick a country"
+        options={options}
+        getValue={getValue}
+        getLabel={getLabel}
+      />
+    ),
+  },
+};

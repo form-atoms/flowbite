@@ -2827,9 +2827,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@form-atoms/field@npm:4.0.0"
+"@form-atoms/field@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "@form-atoms/field@npm:4.0.7"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -2838,7 +2838,7 @@ __metadata:
     jotai-effect: ^0
     react: ">=16.8"
     zod: ^3
-  checksum: f27c1f5b8d20f78e0c60193b9e94efeaf2be4196a325f074e13b37f10d3ea9a3b5837c6088498b6ae5a97242435289f9da77232942b0958f5e0041cfad8bf4f3
+  checksum: 2efaafa224a13049f0782b3e9e59a6cca60ec0719a5fc4391ba9b885c2b0f585ce9c12091470ee3291396578987806660146a8df65b9c1edf978bef2701e2fed
   languageName: node
   linkType: hard
 
@@ -2847,7 +2847,7 @@ __metadata:
   resolution: "@form-atoms/flowbite@workspace:."
   dependencies:
     "@emotion/react": "npm:^11.11.1"
-    "@form-atoms/field": "npm:^4.0.0"
+    "@form-atoms/field": "npm:^4.0.7"
     "@mdx-js/react": "npm:^2.3.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^11.1.0"

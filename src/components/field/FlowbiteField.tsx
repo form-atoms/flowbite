@@ -12,7 +12,7 @@ import { RenderProp } from "react-render-prop-type";
 import { RequiredIndicator } from "../";
 import { FlowbiteStateColor, useFieldError } from "../../hooks";
 
-type Children = RenderProp<
+type ChildrenProp = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {
     id: string;
     helperText: ReactNode;
@@ -20,16 +20,17 @@ type Children = RenderProp<
   }
 >;
 
-type FlowbiteFieldProps<Field extends ZodField<any, any>> = FieldProps<Field> &
-  Children;
+export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> & {
+  helperText?: ReactNode;
+};
 
-export const FlowbiteField = <Field extends ZodField<any, any>>({
+export const FlowbiteField = <Field extends ZodField>({
   field,
   required,
   label,
   children,
   ...uiProps
-}: FlowbiteFieldProps<Field>) => {
+}: FlowbiteFieldProps<Field> & ChildrenProp) => {
   const id = `${field}`;
   const { color, error } = useFieldError(field);
   const requiredProps = useRequiredProps({ field, required });

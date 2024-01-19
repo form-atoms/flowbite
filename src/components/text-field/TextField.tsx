@@ -12,9 +12,10 @@ export const TextField = ({
   field,
   helperText,
   required,
+  initialValue,
   ...uiProps
 }: FlowbiteTextFieldProps) => {
-  const props = useTextFieldProps(field);
+  const props = useTextFieldProps(field, { initialValue });
 
   return (
     <FlowbiteField
@@ -28,7 +29,6 @@ export const TextField = ({
           role="textbox"
           type="text"
           {...props}
-          value={props.value ?? ""}
           {...uiProps}
           {...fieldProps}
         />
