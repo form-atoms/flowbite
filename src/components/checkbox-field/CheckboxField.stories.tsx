@@ -39,3 +39,20 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const imGoing = checkboxField();
+
+export const Initialized: FormStory = {
+  ...optionalField,
+  args: {
+    fields: { imGoing },
+    children: () => (
+      <CheckboxField
+        field={imGoing}
+        initialValue={true}
+        label="I'm going"
+        helperText="Oh yes 👍"
+      />
+    ),
+  },
+};

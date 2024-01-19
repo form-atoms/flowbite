@@ -42,3 +42,21 @@ export const Optional: FormStory = {
     ),
   },
 };
+
+const initialized = stringField();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { country: initialized },
+    children: () => (
+      <RadioField
+        field={initialized}
+        label="Country of Origin"
+        options={options}
+        initialValue="CZ"
+        getValue={getValue}
+        getLabel={getLabel}
+      />
+    ),
+  },
+};

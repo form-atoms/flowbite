@@ -34,6 +34,17 @@ export const Optional: FormStory = {
   },
 };
 
+const initial = textField();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { initial },
+    children: () => (
+      <TextField field={initial} initialValue="Ferry Corsten" label="Artist" />
+    ),
+  },
+};
+
 const email = textField({
   schema: z.string().email(),
 });

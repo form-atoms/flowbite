@@ -1,10 +1,18 @@
-import { NumberFieldProps, useNumberFieldProps } from "@form-atoms/field";
+import {
+  NumberField,
+  NumberFieldProps,
+  useNumberFieldProps,
+} from "@form-atoms/field";
 import { HelperText, Rating, RatingProps } from "flowbite-react";
 import { useFieldActions } from "form-atoms";
 
-import { FlowbiteField } from "../field";
+import { FlowbiteField, FlowbiteFieldProps } from "../field";
 
 const options = [1, 2, 3, 4, 5];
+
+export type RatingFieldProps = FlowbiteFieldProps<NumberField> &
+  RatingProps &
+  NumberFieldProps;
 
 export const RatingField = ({
   field,
@@ -12,9 +20,10 @@ export const RatingField = ({
   label,
   helperText,
   required,
+  initialValue,
   ...uiProps
-}: RatingProps & NumberFieldProps) => {
-  const props = useNumberFieldProps(field);
+}: RatingFieldProps) => {
+  const props = useNumberFieldProps(field, { initialValue });
   const actions = useFieldActions(field);
 
   return (

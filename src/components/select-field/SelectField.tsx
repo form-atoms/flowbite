@@ -6,9 +6,13 @@ import {
   useSelectOptions,
 } from "@form-atoms/field";
 import { SelectProps as FlowbiteSelectProps, Select } from "flowbite-react";
-import { ReactNode } from "react";
 
 import { FlowbiteField } from "../field";
+
+export type SelectFieldProps<
+  Option,
+  Field extends SelectZodField,
+> = SelectProps<Option, Field> & FlowbiteSelectProps;
 
 export const SelectField = <Option, Field extends SelectZodField>({
   field,
@@ -19,10 +23,13 @@ export const SelectField = <Option, Field extends SelectZodField>({
   label,
   helperText,
   required,
+  initialValue,
   ...uiProps
-}: SelectProps<Option, Field> &
-  FlowbiteSelectProps & { label?: ReactNode }) => {
-  const props = useSelectFieldProps({ field, options, getValue });
+}: SelectFieldProps<Option, Field>) => {
+  const props = useSelectFieldProps(
+    { field, options, getValue },
+    { initialValue },
+  );
   const { selectOptions } = useSelectOptions({
     field,
     options,

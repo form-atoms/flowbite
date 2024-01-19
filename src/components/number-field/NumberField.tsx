@@ -8,9 +8,10 @@ export const NumberField = ({
   field,
   helperText,
   required,
+  initialValue,
   ...inputProps
 }: NumberFieldProps & TextInputProps) => {
-  const props = useNumberFieldProps(field);
+  const props = useNumberFieldProps(field, { initialValue });
 
   return (
     <FlowbiteField
@@ -25,7 +26,6 @@ export const NumberField = ({
           type="number"
           {...inputProps}
           {...props}
-          value={props.value ?? ""}
           {...fieldProps}
         />
       )}

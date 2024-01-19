@@ -1,5 +1,6 @@
 import { CheckboxFieldProps, useCheckboxFieldProps } from "@form-atoms/field";
 import { Checkbox, CheckboxProps, HelperText, Label } from "flowbite-react";
+import { ReactNode } from "react";
 
 import { useFieldError } from "../../hooks";
 
@@ -7,9 +8,10 @@ export const CheckboxField = ({
   field,
   label,
   helperText,
+  initialValue,
   ...uiProps
-}: CheckboxFieldProps & CheckboxProps) => {
-  const props = useCheckboxFieldProps(field);
+}: CheckboxFieldProps & CheckboxProps & { helperText?: ReactNode }) => {
+  const props = useCheckboxFieldProps(field, { initialValue });
   const { color, error } = useFieldError(field);
   const help = error ?? helperText;
 

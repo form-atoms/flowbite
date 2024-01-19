@@ -40,3 +40,14 @@ export const Optional: FormStory = {
     children: () => <NumberField field={optional} label="Amount" />,
   },
 };
+
+const initialized = numberField();
+
+export const Initialized: FormStory = {
+  args: {
+    fields: { initialized },
+    children: () => (
+      <NumberField field={initialized} initialValue={300} label="Amount" />
+    ),
+  },
+};

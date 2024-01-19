@@ -1,5 +1,4 @@
 import {
-  FieldProps,
   RadioGroupProps,
   SelectField,
   useOptions,
@@ -12,8 +11,18 @@ import { RenderProp } from "react-render-prop-type";
 import {
   Option as BaseOption,
   FlowbiteField,
+  FlowbiteFieldProps,
   type OptionRenderProp,
 } from "../";
+
+type ContainerProp = RenderProp<PropsWithChildren, "Container">;
+
+export type RadioFieldProps<
+  Option,
+  Field extends SelectField,
+> = FlowbiteFieldProps<Field> &
+  RadioGroupProps<Option, Field> &
+  Partial<ContainerProp & OptionRenderProp>;
 
 export const RadioField = <Option, Field extends SelectField>({
   field,
@@ -23,13 +32,15 @@ export const RadioField = <Option, Field extends SelectField>({
   label,
   helperText,
   required,
+  initialValue,
   Container = Fragment,
   Option = BaseOption,
   ...uiProps
-}: RadioGroupProps<Option, Field> &
-  Omit<FieldProps<Field>, "field"> &
-  Partial<RenderProp<PropsWithChildren, "Container"> & OptionRenderProp>) => {
-  const props = useSelectFieldProps({ field, options, getValue });
+}: RadioFieldProps<Option, Field>) => {
+  const props = useSelectFieldProps(
+    { field, options, getValue },
+    { initialValue },
+  );
   const { renderOptions } = useOptions({ field, options, getLabel });
 
   return (

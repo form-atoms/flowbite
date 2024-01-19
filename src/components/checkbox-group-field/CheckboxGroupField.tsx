@@ -1,5 +1,4 @@
 import {
-  FieldProps,
   UseCheckboxGroupProps,
   ZodArrayField,
   useCheckboxGroup,
@@ -7,7 +6,14 @@ import {
 import { Checkbox, HelperText, Label } from "flowbite-react";
 
 import { Option as BaseOption, type OptionRenderProp } from "../";
-import { FlowbiteField } from "../field";
+import { FlowbiteField, type FlowbiteFieldProps } from "../field";
+
+export type CheckboxGroupFieldProps<
+  Option,
+  Field extends ZodArrayField,
+> = FlowbiteFieldProps<Field> &
+  UseCheckboxGroupProps<Option, Field> &
+  Partial<OptionRenderProp>;
 
 export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
   field,
@@ -17,17 +23,19 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
   label,
   required,
   helperText,
+  initialValue,
   Option = BaseOption,
   ...uiProps
-}: UseCheckboxGroupProps<Option, Field> &
-  FieldProps<Field> &
-  Partial<OptionRenderProp>) => {
-  const checkboxGroup = useCheckboxGroup({
-    field,
-    options,
-    getValue,
-    getLabel,
-  });
+}: CheckboxGroupFieldProps<Option, Field>) => {
+  const checkboxGroup = useCheckboxGroup(
+    {
+      field,
+      options,
+      getValue,
+      getLabel,
+    },
+    { initialValue },
+  );
 
   return (
     <FlowbiteField

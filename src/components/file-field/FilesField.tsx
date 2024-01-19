@@ -1,10 +1,10 @@
-import { FileFieldProps, useFilesFieldProps } from "@form-atoms/field";
+import { FilesFieldProps, useFilesFieldProps } from "@form-atoms/field";
 import { FileInput, FileInputProps } from "flowbite-react";
 
 import { InputColors } from "../../hooks";
 import { FlowbiteField } from "../field";
 
-type FlowbiteFilesFieldProps = FileFieldProps &
+type FlowbiteFilesFieldProps = FilesFieldProps &
   FileInputProps & { colors?: InputColors };
 
 export const FilesField = ({
