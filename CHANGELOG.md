@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/form-atoms/flowbite/compare/v4.0.2...v4.0.3) (2024-02-14)
+
+
+### Bug Fixes
+
+* **flowbite-field:** useId instead of field key for SSR support ([2d241ee](https://github.com/form-atoms/flowbite/commit/2d241ee80ff3f4abb2b4cda0bea67f1fc1b7dc53))
+
 ## [4.0.2](https://github.com/form-atoms/flowbite/compare/v4.0.1...v4.0.2) (2024-01-19)
 
 
