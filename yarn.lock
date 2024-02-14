@@ -1866,7 +1866,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.21.0
   resolution: "@babel/runtime@npm:7.21.0"
   dependencies:
@@ -1890,6 +1890,15 @@ __metadata:
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
   checksum: abdcbdd590c7e31762e1bdab94dd466823c8bcedd3ff2fde85eeb94dac7cccaef151ac37c428bda7018ededd27c9a82b4dfeb621f978ad934232475a902f8e3a
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.23.2":
+  version: 7.23.9
+  resolution: "@babel/runtime@npm:7.23.9"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 9a520fe1bf72249f7dd60ff726434251858de15cccfca7aa831bd19d0d3fb17702e116ead82724659b8da3844977e5e13de2bae01eb8a798f2823a669f122be6
   languageName: node
   linkType: hard
 
@@ -2827,9 +2836,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:^4.0.7":
-  version: 4.0.7
-  resolution: "@form-atoms/field@npm:4.0.7"
+"@form-atoms/field@npm:^4.0.13":
+  version: 4.0.13
+  resolution: "@form-atoms/field@npm:4.0.13"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -2838,7 +2847,7 @@ __metadata:
     jotai-effect: ^0
     react: ">=16.8"
     zod: ^3
-  checksum: 2efaafa224a13049f0782b3e9e59a6cca60ec0719a5fc4391ba9b885c2b0f585ce9c12091470ee3291396578987806660146a8df65b9c1edf978bef2701e2fed
+  checksum: 1acab0073f68aa01e120a52a5afe04ab663d4c729a069fc09bc1d206a525f99a22401f9fff8dd0694df36adc2db9cdc0faa8587f9847836b4a6a9385d0cae429
   languageName: node
   linkType: hard
 
@@ -2847,7 +2856,7 @@ __metadata:
   resolution: "@form-atoms/flowbite@workspace:."
   dependencies:
     "@emotion/react": "npm:^11.11.1"
-    "@form-atoms/field": "npm:^4.0.7"
+    "@form-atoms/field": "npm:^4.0.13"
     "@mdx-js/react": "npm:^2.3.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^11.1.0"
@@ -2882,13 +2891,13 @@ __metadata:
     eslint-import-resolver-typescript: "npm:^3.6.1"
     eslint-plugin-import: "npm:^2.29.0"
     eslint-plugin-prettier: "npm:5.0.1"
-    flowbite: "npm:^2.2.0"
-    flowbite-react: "npm:^0.7.0"
-    form-atoms: "npm:3.2.1"
+    flowbite: "npm:^2.3.0"
+    flowbite-react: "npm:^0.7.2"
+    form-atoms: "npm:3.2.4"
     happy-dom: "npm:12.10.3"
-    jotai: "npm:^2.6.0"
-    jotai-devtools: "npm:0.7.0"
-    jotai-effect: "npm:^0.2.3"
+    jotai: "npm:^2.6.4"
+    jotai-devtools: "npm:0.7.1"
+    jotai-effect: "npm:^0.5.0"
     postcss: "npm:8.4.32"
     prettier: "npm:^3.1.0"
     prettier-plugin-tailwindcss: "npm:0.5.7"
@@ -2899,7 +2908,7 @@ __metadata:
     semantic-release: "npm:^22.0.8"
     storybook: "npm:7.6.3"
     tailwindcss: "npm:^3.3.5"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
     vite: "npm:^5.0.11"
     vitest: "npm:1.1.3"
     zod: "npm:^3.22.4"
@@ -4733,15 +4742,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redux-devtools/extension@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "@redux-devtools/extension@npm:3.2.5"
+"@redux-devtools/extension@npm:^3.2.6":
+  version: 3.3.0
+  resolution: "@redux-devtools/extension@npm:3.3.0"
   dependencies:
-    "@babel/runtime": "npm:^7.20.7"
-    immutable: "npm:^4.2.2"
+    "@babel/runtime": "npm:^7.23.2"
+    immutable: "npm:^4.3.4"
   peerDependencies:
-    redux: ^3.1.0 || ^4.0.0
-  checksum: abd623e57c0cc3fd3a3d9292bbae76447c25ae23b8d20fd1b2947c88e2e8848f75347fefd5c0bff0f6a3d2cefb645f458f28ffc9f1e6a5d87c08c58e77de76b7
+    redux: ^3.1.0 || ^4.0.0 || ^5.0.0
+  checksum: 07c2bb6f786900f29509f1e414ae0af845cb276a471e1e0e961d3a6a7dc16485ffe620bf01a1e0a545181d550058d197525760bbddb2c172acac25ddbe9dbd0d
   languageName: node
   linkType: hard
 
@@ -10358,9 +10367,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite-react@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "flowbite-react@npm:0.7.0"
+"flowbite-react@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "flowbite-react@npm:0.7.2"
   dependencies:
     "@floating-ui/react": "npm:^0.26.2"
     contentlayer: "npm:^0.3.4"
@@ -10376,17 +10385,27 @@ __metadata:
     react: ^18
     react-dom: ^18
     tailwindcss: ^3
-  checksum: f939470a77ced4edaac7fa8d7af7b9a83ca0701aad01eeb6e3b4cbe7733a9ebd004729c25cc54eaff8e283676b03498ffd70e412e60ecf4c6ef77dd82830b1ba
+  checksum: cf9e7cbe859de0e62acb83d08cf37ba9b4520722ea58955520d2ef7e5070ac0b97be90361d8a3ea7a63385cb2ff1e6f4fb420f5d081bf1a1110176144d6c8adc
   languageName: node
   linkType: hard
 
-"flowbite@npm:^2.0.0, flowbite@npm:^2.2.0":
+"flowbite@npm:^2.0.0":
   version: 2.2.0
   resolution: "flowbite@npm:2.2.0"
   dependencies:
     "@popperjs/core": "npm:^2.9.3"
     mini-svg-data-uri: "npm:^1.4.3"
   checksum: f00f730325ab69f876bf0cb0cd0ab9a0aac621eb20d096c67e0e0aeeaf67f5d6f91aa195aefcb3c1d5554a07b214c29996a30427405b26cd69e2d9fab2b64fb7
+  languageName: node
+  linkType: hard
+
+"flowbite@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "flowbite@npm:2.3.0"
+  dependencies:
+    "@popperjs/core": "npm:^2.9.3"
+    mini-svg-data-uri: "npm:^1.4.3"
+  checksum: a72bc4c68fd6cc832e2df2fbf329eca5d96d8297da6f0578addca68fccc8e33fcc12c00403b2b8cf550a345e46831d86a35e69b2fd4e79b7087f01b7712310a3
   languageName: node
   linkType: hard
 
@@ -10416,13 +10435,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-atoms@npm:3.2.1":
-  version: 3.2.1
-  resolution: "form-atoms@npm:3.2.1"
+"form-atoms@npm:3.2.4":
+  version: 3.2.4
+  resolution: "form-atoms@npm:3.2.4"
   peerDependencies:
     jotai: ^2.0.0
     react: ">=16.8"
-  checksum: 70d8bf68d2462e36419622038776faad85342fcda0513b4be81cc4658adee0ab6d369f90030f5bc58c2f37cf91698b04afb076fd93db3453f28178beae59a918
+  checksum: de8c2068d71fb3379a1410f035d4ba909c38e63a547fa92eadf66f689906c3a28e349bcd0cc7f3a65cc38d6898f136668e27db5a9e41b5b117add50ef00cd6e2
   languageName: node
   linkType: hard
 
@@ -11517,10 +11536,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immutable@npm:^4.2.2":
-  version: 4.2.4
-  resolution: "immutable@npm:4.2.4"
-  checksum: 13ed8babd3c6e589ae03c1ab2826aeb1d1a9b60c06baaf2cc6292dee252bdc7f66e7ac5647eaaaf11e9b28ebe956e40a993982cc85251e709fd137d001a8b1e8
+"immutable@npm:^4.3.4":
+  version: 4.3.5
+  resolution: "immutable@npm:4.3.5"
+  checksum: dbc1b8c808b9aa18bfce2e0c7bc23714a47267bc311f082145cc9220b2005e9b9cd2ae78330f164a19266a2b0f78846c60f4f74893853ac16fd68b5ae57092d2
   languageName: node
   linkType: hard
 
@@ -12517,14 +12536,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai-devtools@npm:0.7.0":
-  version: 0.7.0
-  resolution: "jotai-devtools@npm:0.7.0"
+"jotai-devtools@npm:0.7.1":
+  version: 0.7.1
+  resolution: "jotai-devtools@npm:0.7.1"
   dependencies:
     "@mantine/core": "npm:^6.0.21"
     "@mantine/hooks": "npm:^6.0.21"
     "@mantine/prism": "npm:^6.0.21"
-    "@redux-devtools/extension": "npm:^3.2.5"
+    "@redux-devtools/extension": "npm:^3.2.6"
     javascript-stringify: "npm:^2.1.0"
     jsondiffpatch: "npm:^0.5.0"
     react-error-boundary: "npm:^4.0.11"
@@ -12533,22 +12552,22 @@ __metadata:
   peerDependencies:
     "@emotion/react": ">=11.0.0"
     react: ">=17.0.0"
-  checksum: ae43f6cf36060dac024f9a73606cfd6c6cfb13233a1066501cd9ea449edc815aede9ae4fce7db9c4651f2b98f064fd1d3bbbe45c1a115f11389d5c095e0d1cdf
+  checksum: c6af39b12111504b4031a704c8cb7e7287f74f3e73586ce47a30ad00b9d77870d9fda860fae70b577dfa116c628f82eb88b3c0388e9587acbf48d5318006d387
   languageName: node
   linkType: hard
 
-"jotai-effect@npm:^0.2.3":
-  version: 0.2.3
-  resolution: "jotai-effect@npm:0.2.3"
+"jotai-effect@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "jotai-effect@npm:0.5.0"
   peerDependencies:
-    jotai: ">=2.4.3"
-  checksum: 3c99923fa6684231920ff34c15d42e4fc06e6dabe9596d6ac480eb35153ef3119c7682077370654b289aafb39b6e9a42b72f410cfda92f40c856af1b4598c4ba
+    jotai: ">=2.5.0"
+  checksum: 8aad4a968e479ae96141f504afa3156e924d154690e2e874d02c6aa42cbd2a78eed80717d6b31d1263a503c3416ecc582301ff689f2097790eb70bf4cef6c280
   languageName: node
   linkType: hard
 
-"jotai@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "jotai@npm:2.6.0"
+"jotai@npm:^2.6.4":
+  version: 2.6.4
+  resolution: "jotai@npm:2.6.4"
   peerDependencies:
     "@types/react": ">=17.0.0"
     react: ">=17.0.0"
@@ -12557,7 +12576,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 7e635f4f5052582095ed3949aa46f26213b10237bc4876db242c936f0f4d4272129727d7419e4fd5b1b83fa55b7ad737575453116a955dcc6b3a26cba14591f2
+  checksum: 645611e82349d9465c945e83bcf842ca98b11e3747e34910731b22a73e0bb104d47973936031e4df1ca1e1bfee722cc5549207df8838fcf9b39b256ac233de06
   languageName: node
   linkType: hard
 
@@ -19007,23 +19026,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.3.2":
-  version: 5.3.2
-  resolution: "typescript@npm:5.3.2"
+"typescript@npm:5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 415e5fb6611f5713e460bad48039f00bcfdbde53a2f911727862d5aa9c5d5edd250059a419df382d8f031709e15a169c41eb62b6a401da5eec7ac0f4e359d6ac
+  checksum: 6e4e6a14a50c222b3d14d4ea2f729e79f972fa536ac1522b91202a9a65af3605c2928c4a790a4a50aa13694d461c479ba92cedaeb1e7b190aadaa4e4b96b8e18
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>":
-  version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+"typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1b45cdfb577a78ae7a9a9d0b77a7b772142cb98ba05e4e5aefba7044a028ded885bcecef63166407a5986645cea816fe4986894336aacd5e791796ea79a6a7ed
+  checksum: c93786fcc9a70718ba1e3819bab56064ead5817004d1b8186f8ca66165f3a2d0100fee91fa64c840dcd45f994ca5d615d8e1f566d39a7470fc1e014dbb4cf15d
   languageName: node
   linkType: hard
 

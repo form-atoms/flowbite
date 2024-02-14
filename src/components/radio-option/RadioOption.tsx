@@ -6,7 +6,7 @@ import {
 } from "@form-atoms/field";
 import { HelperText, Label, Radio } from "flowbite-react";
 import { useAtomValue } from "jotai";
-import { ReactNode } from "react";
+import { ReactNode, useId } from "react";
 
 import { useFieldError } from "../../hooks";
 import { RequiredIndicator } from "../required-indicator";
@@ -17,7 +17,7 @@ export const RadioOption = <Field extends CheckboxField>({
   label,
   helperText,
 }: FieldProps<Field> & { helperText?: ReactNode }) => {
-  const id = `${field}`;
+  const id = useId();
   const props = useCheckboxFieldProps(field);
   const { error } = useFieldError(field);
   const requiredProps = useRequiredProps({ field, required });

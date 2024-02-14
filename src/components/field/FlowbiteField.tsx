@@ -6,7 +6,7 @@ import {
 } from "@form-atoms/field";
 import { Label } from "flowbite-react";
 import { useAtomValue } from "jotai";
-import { ReactNode } from "react";
+import { ReactNode, useId } from "react";
 import { RenderProp } from "react-render-prop-type";
 
 import { RequiredIndicator } from "../";
@@ -31,7 +31,7 @@ export const FlowbiteField = <Field extends ZodField>({
   children,
   ...uiProps
 }: FlowbiteFieldProps<Field> & ChildrenProp) => {
-  const id = `${field}`;
+  const id = useId();
   const { color, error } = useFieldError(field);
   const requiredProps = useRequiredProps({ field, required });
   const atom = useAtomValue(field);
