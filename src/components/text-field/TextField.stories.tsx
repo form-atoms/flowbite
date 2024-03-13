@@ -1,5 +1,4 @@
 import { textField } from "@form-atoms/field";
-import { z } from "zod";
 
 import { TextField } from "./TextField";
 import { FormStory, meta, optionalField } from "../story-form";
@@ -10,7 +9,7 @@ export default {
 };
 
 const username = textField({
-  schema: z.string().min(4),
+  schema: (s) => s.min(4),
 });
 
 export const Required: FormStory = {
@@ -23,7 +22,7 @@ export const Required: FormStory = {
 };
 
 const nickname = textField({
-  schema: z.string().min(4),
+  optionalSchema: (s) => s.min(4),
 }).optional();
 
 export const Optional: FormStory = {
@@ -46,7 +45,7 @@ export const Initialized: FormStory = {
 };
 
 const email = textField({
-  schema: z.string().email(),
+  schema: (s) => s.email(),
 });
 
 export const Email: FormStory = {

@@ -41,7 +41,7 @@ describe("<NumberField />", () => {
       expect(onSubmit).not.toBeCalled();
     });
 
-    it("submits form without error  when entered valid numeric value", async () => {
+    it("submits form without error when entered valid numeric value", async () => {
       const price = numberField();
       const form = formAtom({ price });
       const { result } = renderHook(() => useFormSubmit(form));
@@ -57,7 +57,7 @@ describe("<NumberField />", () => {
       expect(input).toBeInvalid();
       expect(screen.getByText("This field is required")).toBeInTheDocument();
 
-      await fireEvent.change(input, { target: { value: 0 } });
+      await act(() => fireEvent.change(input, { target: { value: 0 } }));
 
       expect(input).toBeValid();
 
