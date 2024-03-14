@@ -2,7 +2,7 @@ import { numberField } from "@form-atoms/field";
 import { userEvent, within } from "@storybook/testing-library";
 
 import { NumberField } from "./NumberField";
-import { FormStory, meta, optionalField } from "../story-form";
+import { FormStory, meta, optionalField } from "../../stories/story-form";
 
 export default {
   title: "NumberField",

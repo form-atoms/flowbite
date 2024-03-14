@@ -1,7 +1,7 @@
 import { checkboxField } from "@form-atoms/field";
 
 import { CheckboxField } from "./CheckboxField";
-import { FormStory, meta, optionalField } from "../story-form";
+import { FormStory, meta, optionalField } from "../../stories/story-form";
 
 export default {
   title: "CheckboxField",

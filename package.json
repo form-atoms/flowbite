@@ -35,8 +35,8 @@
     "publish": "yarn npm publish --access public",
     "build": "tsc --build ./tsconfig.build.json",
     "sb": "yarn storybook",
-    "build:storybook": "storybook build",
-    "storybook": "storybook dev -p 6006",
+    "sb:build": "storybook build",
+    "storybook": "storybook dev",
     "semantic-release": "semantic-release",
     "lint": "eslint --ext .tsx,.ts ./src",
     "lint:fix": "yarn run lint --fix",
@@ -80,7 +80,6 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "5.0.1",
-    "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.3",
     "form-atoms": "3.2.4",
     "happy-dom": "12.10.3",
@@ -133,9 +132,11 @@
     ]
   },
   "peerDependencies": {
-    "@form-atoms/field": "^4",
-    "flowbite": "^1.8.1",
-    "flowbite-react": "^0.7.0"
+    "@form-atoms/field": "^5",
+    "flowbite-react": "^0.7.0",
+    "form-atoms": "^3",
+    "jotai": "^2",
+    "react": ">=16.8"
   },
   "packageManager": "yarn@4.0.2"
 }

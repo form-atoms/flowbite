@@ -1,4 +1,4 @@
-name: storybook
+name: 🎨 Storybook Docs 📄
 
 on:
   push:
@@ -42,7 +42,7 @@ jobs:
       - name: Build storybook
         uses: borales/actions-yarn@v4
         with:
-          cmd: build:storybook
+          cmd: sb:build
 
       - name: Upload storybook
         uses: actions/upload-pages-artifact@v2

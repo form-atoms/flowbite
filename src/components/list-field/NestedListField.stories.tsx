@@ -1,8 +1,8 @@
 import { List, listField, numberField, textField } from "@form-atoms/field";
 import { Button, Card } from "flowbite-react";
 
+import { formStory, meta } from "../../stories/story-form";
 import { NumberField } from "../number-field";
-import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {

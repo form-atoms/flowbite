@@ -4,7 +4,7 @@ import { priceMax, priceMin } from "./PriceRange";
 import { productBrand } from "./ProductBrand";
 import { rating } from "./Rating";
 import { usageCondition } from "./UsageCondition";
-import { FormStory, meta } from "../../components/story-form";
+import { FormStory, meta } from "../story-form";
 
 export default {
   title: "showcase/AdvancedSearch",

@@ -1,7 +1,7 @@
 import { listField, textField } from "@form-atoms/field";
 
 import { ReviewList } from "./ReviewList";
-import { formStory, meta } from "../../components/story-form";
+import { formStory, meta } from "../story-form";
 
 export default {
   title: "showcase/ReviewList",

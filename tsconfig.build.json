@@ -10,7 +10,7 @@
   },
   "include": ["src"],
   "exclude": [
-    "src/showcase/*",
+    "src/stories/*",
     "src/**/*.stories.tsx",
     "src/**/*.test.tsx",
     "src/**/*.skip.tsx"

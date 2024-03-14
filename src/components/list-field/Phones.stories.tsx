@@ -8,8 +8,8 @@ import {
 } from "@form-atoms/field";
 import { Card } from "flowbite-react";
 
+import { formStory, meta } from "../../stories/story-form";
 import { RadioOption } from "../radio-option";
-import { formStory, meta } from "../story-form";
 import { TextField } from "../text-field";
 
 export default {

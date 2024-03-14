@@ -2,7 +2,7 @@ import { numberField } from "@form-atoms/field";
 import { z } from "zod";
 
 import { SliderField } from "./SliderField";
-import { FormStory, meta, optionalField } from "../story-form";
+import { FormStory, meta, optionalField } from "../../stories/story-form";
 
 export default {
   title: "SliderField",

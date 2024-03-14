@@ -1,7 +1,7 @@
 import { textField } from "@form-atoms/field";
 
 import { TextField } from "./TextField";
-import { FormStory, meta, optionalField } from "../story-form";
+import { FormStory, meta, optionalField } from "../../stories/story-form";
 
 export default {
   title: "TextField",
