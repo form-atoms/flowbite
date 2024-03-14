@@ -1,4 +1,5 @@
-import { List, listField, numberField, textField } from "@form-atoms/field";
+import { listField, numberField, textField } from "@form-atoms/field";
+import { List } from "@form-atoms/list-atom";
 import { Button, Card } from "flowbite-react";
 
 import { formStory, meta } from "../../stories/story-form";
@@ -11,6 +12,7 @@ export default {
 };
 
 const addresses = listField({
+  name: "address",
   value: [
     {
       city: "Bratislava",
@@ -23,7 +25,7 @@ const addresses = listField({
       ],
     },
   ],
-  builder: ({ city, street, people = [] }) => ({
+  fields: ({ city, street, people = [] }) => ({
     city: textField({
       name: "city",
       value: city,
@@ -33,8 +35,9 @@ const addresses = listField({
       value: street,
     }),
     people: listField({
+      name: "people",
       value: people,
-      builder: ({ name, age }) => ({
+      fields: ({ name, age }) => ({
         name: textField({
           name: "name",
           value: name,
@@ -53,9 +56,9 @@ export const AddressesWithPeopleListField = formStory({
     fields: { addresses },
     children: ({ fields }) => (
       <List
-        field={fields.addresses}
+        atom={fields.addresses}
         AddButton={({ add }) => (
-          <Button color="gray" onClick={add}>
+          <Button color="gray" onClick={() => add()}>
             Add Address
           </Button>
         )}
@@ -67,9 +70,9 @@ export const AddressesWithPeopleListField = formStory({
               <TextField label="Street" field={fields.street} />
             </div>
             <List
-              field={fields.people}
+              atom={fields.people}
               AddButton={({ add }) => (
-                <Button color="gray" onClick={add}>
+                <Button color="gray" onClick={() => add()}>
                   Add Person
                 </Button>
               )}

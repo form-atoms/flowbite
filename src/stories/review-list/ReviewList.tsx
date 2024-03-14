@@ -1,10 +1,12 @@
 import {
-  AddButtonProps,
-  List,
   type ListField,
-  RemoveButtonProps,
   type TextField as TTextField,
 } from "@form-atoms/field";
+import {
+  type AddButtonProps,
+  List,
+  type RemoveButtonProps,
+} from "@form-atoms/list-atom";
 import { Button, Card, Label } from "flowbite-react";
 import {
   HiOutlineMinusCircle,
@@ -14,7 +16,7 @@ import {
 
 import { TextField } from "../../components";
 
-const AddButton = ({ add }: AddButtonProps) => (
+const AddButton = ({ add }: AddButtonProps<any>) => (
   // The div makes it non-full width
   <div>
     <Button onClick={add}>Add</Button>
@@ -34,8 +36,8 @@ export const ReviewList = ({
   fields,
 }: {
   fields: {
-    positives: ListField<TTextField, string>;
-    negatives: ListField<TTextField, string>;
+    positives: ListField<{ item: TTextField }, { item: string }>;
+    negatives: ListField<{ item: TTextField }, { item: string }>;
   };
 }) => (
   <Card>
@@ -44,7 +46,7 @@ export const ReviewList = ({
       <div className="flex flex-1 flex-col gap-4">
         <Label>Positives</Label>
         <List
-          field={fields.positives}
+          atom={fields.positives}
           RemoveButton={RemoveButton}
           AddButton={AddButton}
         >
@@ -52,7 +54,7 @@ export const ReviewList = ({
             <div className="flex items-center gap-2">
               <RemoveButton />
               <div className="w-full">
-                <TextField icon={HiOutlinePlusCircle} field={fields} />
+                <TextField icon={HiOutlinePlusCircle} field={fields.item} />
               </div>
             </div>
           )}
@@ -61,7 +63,7 @@ export const ReviewList = ({
       <div className="flex flex-1 flex-col gap-4">
         <Label>Negatives</Label>
         <List
-          field={fields.negatives}
+          atom={fields.negatives}
           RemoveButton={RemoveButton}
           AddButton={AddButton}
         >
@@ -69,7 +71,7 @@ export const ReviewList = ({
             <div className="flex w-full items-center gap-2">
               <RemoveButton />
               <div className="w-full">
-                <TextField icon={HiOutlineMinusCircle} field={fields} />
+                <TextField icon={HiOutlineMinusCircle} field={fields.item} />
               </div>
             </div>
           )}

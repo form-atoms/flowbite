@@ -10,12 +10,12 @@ export default {
 
 const fields = {
   positives: listField({
-    value: ["quality materials used", "waterproof"],
-    builder: (value) => textField({ value }),
+    value: [{ item: "quality materials used" }, { item: "waterproof" }],
+    fields: ({ item }) => ({ item: textField({ value: item }) }),
   }),
   negatives: listField({
-    value: ["could be lighter"],
-    builder: (value) => textField({ value }),
+    value: [{ item: "could be lighter" }],
+    fields: ({ item }) => ({ item: textField({ value: item }) }),
   }),
 };
 

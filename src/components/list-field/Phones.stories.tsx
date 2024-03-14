@@ -1,11 +1,11 @@
 import {
-  List,
   Radio,
   RadioControl,
   checkboxField,
   listField,
   textField,
 } from "@form-atoms/field";
+import { List } from "@form-atoms/list-atom";
 import { Card } from "flowbite-react";
 
 import { formStory, meta } from "../../stories/story-form";
@@ -18,11 +18,12 @@ export default {
 };
 
 const phones = listField({
+  name: "phones",
   value: [
     { number: "+421 933 888 999", primary: true },
     { number: "+420 905 100 200", primary: false },
   ],
-  builder: ({ number, primary }) => ({
+  fields: ({ number, primary }) => ({
     number: textField({ name: "number", value: number }),
     primary: checkboxField({
       name: "primaryPhone",
@@ -37,7 +38,7 @@ export const PhonesListField = formStory({
     children: ({ required, fields }) => (
       <RadioControl name="primaryPhone">
         {({ control }) => (
-          <List field={fields.phones}>
+          <List atom={fields.phones}>
             {({ fields }) => (
               <Card>
                 <TextField
