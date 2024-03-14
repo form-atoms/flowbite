@@ -12,6 +12,7 @@ export const DatepickerField = ({
   helperText,
   required,
   initialValue,
+  placeholder = "Please select a date",
   ...uiProps
 }: DatepickerFIeldProps) => {
   const {
@@ -25,6 +26,13 @@ export const DatepickerField = ({
     initialValue,
   });
 
+  const emptyProps = !value
+    ? {
+        value: "",
+        placeholder,
+      }
+    : {};
+
   return (
     <FlowbiteField
       field={field}
@@ -37,6 +45,7 @@ export const DatepickerField = ({
           {...dateFieldProps}
           {...uiProps}
           {...fieldProps}
+          {...emptyProps}
           defaultDate={value}
           onSelectedDateChanged={(valueAsDate) => {
             onChange({

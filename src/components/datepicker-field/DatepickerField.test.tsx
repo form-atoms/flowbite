@@ -1,7 +1,7 @@
 import { dateField } from "@form-atoms/field";
 import { act, render, renderHook, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { formAtom, useFormSubmit } from "form-atoms";
+import { formAtom, useFieldActions, useFormSubmit } from "form-atoms";
 import { describe, expect, it } from "vitest";
 
 import { DatepickerField } from "./DatepickerField";
@@ -33,7 +33,7 @@ describe("<DatepickerField />", () => {
         result.current(onSubmit)();
       });
 
-      render(<DatepickerField role="dialog" field={field} label="label" />);
+      render(<DatepickerField role="dialog" field={field} />);
 
       expect(screen.getByRole("dialog")).toBeInvalid();
       expect(screen.getByText("This field is required")).toBeInTheDocument();
@@ -42,20 +42,12 @@ describe("<DatepickerField />", () => {
 
     it("submits without error when valid", async () => {
       const value = new Date();
-
       const field = dateField();
-      const form = formAtom({
-        field,
-      });
+      const form = formAtom({ field });
       const { result } = renderHook(() => useFormSubmit(form));
 
       render(
-        <DatepickerField
-          initialValue={value}
-          role="dialog"
-          field={field}
-          label="label"
-        />,
+        <DatepickerField field={field} initialValue={value} role="dialog" />,
       );
 
       const input = screen.getByRole("dialog");
@@ -74,16 +66,14 @@ describe("<DatepickerField />", () => {
   describe("with optional field", () => {
     it("submits with undefined", async () => {
       const field = dateField().optional();
-      const form = formAtom({
-        field,
-      });
+      const form = formAtom({ field });
       const { result } = renderHook(() => useFormSubmit(form));
 
-      render(<DatepickerField role="dialog" field={field} label="label" />);
+      render(<DatepickerField field={field} role="dialog" />);
 
-      const textarea = screen.getByRole("dialog");
+      const dateInput = screen.getByRole("dialog");
 
-      expect(textarea).toBeValid();
+      expect(dateInput).toBeValid();
 
       const onSubmit = vi.fn();
       await act(async () => {
@@ -91,6 +81,33 @@ describe("<DatepickerField />", () => {
       });
 
       expect(onSubmit).toHaveBeenCalledWith({ field: undefined });
+    });
+  });
+
+  describe("placeholder", () => {
+    it("renders", () => {
+      const field = dateField();
+
+      render(<DatepickerField field={field} placeholder="Pick a date" />);
+
+      expect(screen.getByPlaceholderText("Pick a date")).toBeInTheDocument();
+    });
+
+    it("appears when the field is cleared", async () => {
+      const field = dateField({ value: new Date() });
+      const { result: fieldActions } = renderHook(() => useFieldActions(field));
+
+      render(<DatepickerField field={field} placeholder="Pick a date" />);
+
+      expect(
+        screen.queryByPlaceholderText("Pick a date"),
+      ).not.toBeInTheDocument();
+
+      await act(async () => {
+        fieldActions.current.setValue(undefined);
+      });
+
+      expect(screen.queryByPlaceholderText("Pick a date")).toBeInTheDocument();
     });
   });
 });

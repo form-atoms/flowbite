@@ -8,24 +8,21 @@ export default {
   ...meta,
 };
 
-const birthday = dateField({
+const dueDate = dateField({
   schema: (s) => {
-    const date = new Date();
-    date.setFullYear(date.getFullYear() - 15);
-
-    return s.max(date);
+    return s.min(new Date());
   },
 });
 
 export const Required: FormStory = {
   args: {
-    fields: { birthday },
+    fields: { dueDate },
     children: ({ required }) => (
       <DatepickerField
-        field={birthday}
-        label="Birthday"
+        field={dueDate}
+        label="Due Date"
         required={required}
-        helperText="You must be at least 15 years old"
+        helperText="Event must be in the future"
       />
     ),
   },
