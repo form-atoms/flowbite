@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/form-atoms/flowbite/compare/v5.0.0...v5.1.0) (2024-03-14)
+
+
+### Features
+
+* **DatepickerField:** integrate dateField with the new Datepicker flowbite component ([#11](https://github.com/form-atoms/flowbite/issues/11)) ([26de38f](https://github.com/form-atoms/flowbite/commit/26de38fa2f6fe092a011c105f5a09662ee1eb4b7))
+
 # [5.0.0](https://github.com/form-atoms/flowbite/compare/v4.0.3...v5.0.0) (2024-03-14)
 
 
