@@ -8,6 +8,9 @@
   <h1>Form Atoms with Flowbite React style</h1>
 </div>
 
+<a aria-label="Minzipped size" href="https://bundlephobia.com/result?p=%40form-atoms/flowbite">
+  <img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/%40form-atoms/flowbite?style=for-the-badge&labelColor=24292e">
+</a>
 <a aria-label="NPM version" href="https://www.npmjs.com/package/%40form-atoms/flowbite">
   <img alt="NPM Version" src="https://img.shields.io/npm/v/%40form-atoms/flowbite?style=for-the-badge&labelColor=24292e">
 </a>
