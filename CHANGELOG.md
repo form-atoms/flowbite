@@ -1,3 +1,16 @@
+# [5.0.0](https://github.com/form-atoms/flowbite/compare/v4.0.3...v5.0.0) (2024-03-14)
+
+
+### Bug Fixes
+
+* **build:** peer dependencies, exclude story-form ([a047c10](https://github.com/form-atoms/flowbite/commit/a047c10edf591728f14927fedf66c2ca3ad5da91))
+* bump field & list-atom ([70a7ef4](https://github.com/form-atoms/flowbite/commit/70a7ef4a137a694202f0471529e80f2d9a32b42f))
+
+
+### BREAKING CHANGES
+
+* now using new major @form-atoms/field
+
 ## [4.0.3](https://github.com/form-atoms/flowbite/compare/v4.0.2...v4.0.3) (2024-02-14)
 
 
