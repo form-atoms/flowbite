@@ -6,9 +6,11 @@ export default {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  framework: { name: "@storybook/react-vite" },
+  framework: {
+    name: "@storybook/react-vite",
+    options: {}
+  },
   core: {
-    builder: "@storybook/builder-vite",
-    disableTelemetry: true,
+    disableTelemetry: true
   },
 };

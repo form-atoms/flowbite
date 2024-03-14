@@ -1,5 +1,5 @@
 import { numberField } from "@form-atoms/field";
-import { userEvent, within } from "@storybook/testing-library";
+import { userEvent, within } from "@storybook/test";
 
 import { NumberField } from "./NumberField";
 import { FormStory, meta, optionalField } from "../../stories/story-form";
