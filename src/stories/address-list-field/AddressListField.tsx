@@ -1,7 +1,6 @@
 import { listField, textField } from "@form-atoms/field";
 import { List } from "@form-atoms/list-atom";
 import { Button, Card, Label } from "flowbite-react";
-import { formAtom } from "form-atoms";
 import {
   HiOutlineChevronDown,
   HiOutlineChevronUp,
@@ -32,17 +31,11 @@ const addresses = listField({
   }),
 });
 
-const fields = {
-  addresses,
-};
-
-const form = formAtom(fields);
-
 export const AddressesListField = () => (
   <div className="max-w-xl">
     <div className="flex flex-col gap-4">
       <List
-        atom={fields.addresses}
+        atom={addresses}
         RemoveButton={({ remove }) => (
           <Button onClick={remove} color="failure">
             <HiOutlineTrash />
