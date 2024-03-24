@@ -46,7 +46,7 @@ export const Initialized: FormStory = {
     children: () => (
       <DatepickerField
         field={initialized}
-        initialValue={new Date()}
+        initialValue={new Date(2024, 2, 31)}
         label="Birthday"
       />
     ),

@@ -110,4 +110,28 @@ describe("<DatepickerField />", () => {
       expect(screen.queryByPlaceholderText("Pick a date")).toBeInTheDocument();
     });
   });
+
+  describe("reset", () => {
+    it("clears the current value back to the initial value", async () => {
+      const field = dateField();
+      const { result: fieldActions } = renderHook(() => useFieldActions(field));
+
+      const initialValue = new Date(2024, 2, 31);
+
+      render(<DatepickerField field={field} initialValue={initialValue} />);
+
+      expect(screen.queryByDisplayValue("March 31, 2024")).toBeInTheDocument();
+
+      await act(() => userEvent.click(screen.getByRole("textbox")));
+      await act(() => userEvent.click(screen.getAllByText("1")[0]!));
+
+      expect(screen.queryByDisplayValue("March 1, 2024")).toBeInTheDocument();
+
+      await act(async () => {
+        fieldActions.current.reset();
+      });
+
+      expect(screen.queryByDisplayValue("March 31, 2024")).toBeInTheDocument();
+    });
+  });
 });

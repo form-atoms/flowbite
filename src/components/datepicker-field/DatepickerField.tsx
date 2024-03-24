@@ -1,5 +1,7 @@
 import { DateFieldProps, useDateFieldProps } from "@form-atoms/field";
 import { Datepicker, DatepickerProps } from "flowbite-react";
+import { DatepickerRef } from "flowbite-react/lib/esm/components/Datepicker/Datepicker";
+import { useEffect, useRef } from "react";
 
 import { FlowbiteField } from "../field";
 
@@ -25,6 +27,13 @@ export const DatepickerField = ({
   } = useDateFieldProps(field, {
     initialValue,
   });
+  const datepickerRef = useRef<DatepickerRef>(null);
+
+  useEffect(() => {
+    if (initialValue && value === initialValue) {
+      datepickerRef.current?.clear();
+    }
+  }, [value]);
 
   const emptyProps = !value
     ? {
@@ -42,6 +51,7 @@ export const DatepickerField = ({
     >
       {(fieldProps) => (
         <Datepicker
+          ref={datepickerRef}
           {...dateFieldProps}
           {...uiProps}
           {...fieldProps}

@@ -2780,9 +2780,9 @@ __metadata:
     eslint-import-resolver-typescript: "npm:^3.6.1"
     eslint-plugin-import: "npm:^2.29.0"
     flowbite-react: "npm:^0.7.5"
-    form-atoms: "npm:3.2.4"
+    form-atoms: "npm:3.2.5"
     happy-dom: "npm:12.10.3"
-    jotai: "npm:^2.7.0"
+    jotai: "npm:^2.7.1"
     jotai-devtools: "npm:0.8.0"
     jotai-effect: "npm:^0.6.0"
     postcss: "npm:8.4.38"
@@ -8631,13 +8631,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-atoms@npm:3.2.4":
-  version: 3.2.4
-  resolution: "form-atoms@npm:3.2.4"
+"form-atoms@npm:3.2.5":
+  version: 3.2.5
+  resolution: "form-atoms@npm:3.2.5"
   peerDependencies:
     jotai: ^2.0.0
     react: ">=16.8"
-  checksum: de8c2068d71fb3379a1410f035d4ba909c38e63a547fa92eadf66f689906c3a28e349bcd0cc7f3a65cc38d6898f136668e27db5a9e41b5b117add50ef00cd6e2
+  checksum: ae886ef78d6248f9d741ad22b272d753e5e7186cba68f3c61ab3ec27f996f6bcab832d930457e6bc395c58f7a193d338eb1854c1dacce83b5db6819b25a3873c
   languageName: node
   linkType: hard
 
@@ -10216,9 +10216,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "jotai@npm:2.7.0"
+"jotai@npm:^2.7.1":
+  version: 2.7.1
+  resolution: "jotai@npm:2.7.1"
   peerDependencies:
     "@types/react": ">=17.0.0"
     react: ">=17.0.0"
@@ -10227,7 +10227,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: fdea3bfcfa3e63541c509c5818b6e3669e4df795eeacba5c6cd642b1cbb77af9fbeca261f95ce53d5abd23dfc2aadc088e78398459b23ad8b173ec6d6f6470dd
+  checksum: 7f735bb771885bee5dcd7e807458281d5422526837bbc52d9bcca9a093117245880794a868ff4e19fcd016064353d64e8d6f7b7485c081d678c51ac7fc459da8
   languageName: node
   linkType: hard
 
