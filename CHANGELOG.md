@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/form-atoms/flowbite/compare/v5.1.0...v5.1.1) (2024-03-24)
+
+
+### Bug Fixes
+
+* **DatepickerField:** clear the datepicker when the field is reset ([b0936cc](https://github.com/form-atoms/flowbite/commit/b0936cc0261ccdde75c89376510c9a863c5e5045))
+
 # [5.1.0](https://github.com/form-atoms/flowbite/compare/v5.0.0...v5.1.0) (2024-03-14)
 
 
