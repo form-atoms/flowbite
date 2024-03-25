@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/form-atoms/flowbite/compare/v5.1.1...v5.1.2) (2024-03-25)
+
+
+### Bug Fixes
+
+* **DatepickerField:** export component ([2190f8b](https://github.com/form-atoms/flowbite/commit/2190f8b1f7c6a6798af6791dc290fed36fa949e4))
+
 ## [5.1.1](https://github.com/form-atoms/flowbite/compare/v5.1.0...v5.1.1) (2024-03-24)
 
 
