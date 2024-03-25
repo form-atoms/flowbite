@@ -1,5 +1,6 @@
 export * from "./checkbox-field";
 export * from "./checkbox-group-field";
+export * from "./datepicker-field";
 export * from "./field";
 export * from "./file-field";
 export * from "./number-field";
