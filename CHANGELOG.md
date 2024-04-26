@@ -1,3 +1,15 @@
+# [5.2.0](https://github.com/form-atoms/flowbite/compare/v5.1.2...v5.2.0) (2024-04-26)
+
+
+### Bug Fixes
+
+* **flowbite:** type imports v0.9 ([01368d6](https://github.com/form-atoms/flowbite/commit/01368d64e16a358968d9304c268951cdf056e827))
+
+
+### Features
+
+* **flowbite:** bump to v0.9 ([2c9a7e6](https://github.com/form-atoms/flowbite/commit/2c9a7e6faf73d46f768b55be8435bbbc1bdfc6fe))
+
 ## [5.1.2](https://github.com/form-atoms/flowbite/compare/v5.1.1...v5.1.2) (2024-03-25)
 
 
