@@ -1,6 +1,6 @@
 import { DateFieldProps, useDateFieldProps } from "@form-atoms/field";
 import { Datepicker, DatepickerProps } from "flowbite-react";
-import { DatepickerRef } from "flowbite-react/lib/esm/components/Datepicker/Datepicker";
+import type { DatepickerRef } from "flowbite-react/dist/types/components/Datepicker/Datepicker";
 import { useEffect, useRef } from "react";
 
 import { FlowbiteField } from "../field";

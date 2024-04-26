@@ -1,4 +1,4 @@
-import { FlowbiteStateColors } from "flowbite-react/lib/esm/components/Flowbite/FlowbiteTheme";
+import type { FlowbiteStateColors } from "flowbite-react";
 import { FieldAtom, useFieldState } from "form-atoms";
 
 export type InputColors = (keyof FlowbiteStateColors)[];
