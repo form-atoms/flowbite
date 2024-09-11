@@ -1,3 +1,10 @@
+## [5.2.1](https://github.com/form-atoms/flowbite/compare/v5.2.0...v5.2.1) (2024-09-11)
+
+
+### Bug Fixes
+
+* bump flowbite-react to v0.10 ([a3490ce](https://github.com/form-atoms/flowbite/commit/a3490cecd16a9595c665730c2b5d1f1700719fff))
+
 # [5.2.0](https://github.com/form-atoms/flowbite/compare/v5.1.2...v5.2.0) (2024-04-26)
 
 
