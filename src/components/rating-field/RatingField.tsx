@@ -3,7 +3,7 @@ import {
   NumberFieldProps,
   useNumberFieldProps,
 } from "@form-atoms/field";
-import { HelperText, Rating, RatingProps } from "flowbite-react";
+import { Rating, RatingProps, RatingStar } from "flowbite-react";
 import { useFieldActions } from "form-atoms";
 
 import { FlowbiteField, FlowbiteFieldProps } from "../field";
@@ -21,6 +21,8 @@ export const RatingField = ({
   helperText,
   required,
   initialValue,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ref,
   ...uiProps
 }: RatingFieldProps) => {
   const props = useNumberFieldProps(field, { initialValue });
@@ -33,19 +35,20 @@ export const RatingField = ({
       label={label}
       helperText={helperText}
     >
-      {({ color, helperText, ...fieldProps }) => (
+      {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      ({ color, ...fieldProps }) => (
         <>
           <Rating size={size} {...uiProps} {...fieldProps}>
             {options.map((value) => (
               <div key={value} onClick={() => actions.setValue(value)}>
-                <Rating.Star
+                <RatingStar
                   // @ts-expect-error https://github.com/form-atoms/field/issues/66
                   filled={props.value && value ? value <= props.value : false}
                 />
               </div>
             ))}
           </Rating>
-          {helperText && <HelperText color={color}>{helperText}</HelperText>}
         </>
       )}
     </FlowbiteField>

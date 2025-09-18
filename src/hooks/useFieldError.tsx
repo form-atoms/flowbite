@@ -1,4 +1,11 @@
-import type { FlowbiteStateColors } from "flowbite-react";
+
+export interface FlowbiteStateColors {
+    info: string;
+    failure: string;
+    success: string;
+    warning: string;
+}
+
 import { FieldAtom, useFieldState } from "form-atoms";
 
 export type InputColors = (keyof FlowbiteStateColors)[];

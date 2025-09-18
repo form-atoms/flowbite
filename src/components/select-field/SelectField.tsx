@@ -7,12 +7,12 @@ import {
 } from "@form-atoms/field";
 import { SelectProps as FlowbiteSelectProps, Select } from "flowbite-react";
 
-import { FlowbiteField } from "../field";
+import { FlowbiteField, type WithHelperText } from "../field";
 
 export type SelectFieldProps<
   Option,
   Field extends SelectZodField,
-> = SelectProps<Option, Field> & FlowbiteSelectProps;
+> = SelectProps<Option, Field> & FlowbiteSelectProps & WithHelperText;
 
 export const SelectField = <Option, Field extends SelectZodField>({
   field,
