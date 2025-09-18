@@ -2,10 +2,10 @@ import { TextFieldProps, useTextFieldProps } from "@form-atoms/field";
 import { Textarea, TextareaProps } from "flowbite-react";
 
 import { InputColors } from "../../hooks";
-import { FlowbiteField } from "../field";
+import { FlowbiteField, WithHelperText } from "../field";
 
 type FlowbiteTextFieldProps = TextFieldProps &
-  TextareaProps & { colors?: InputColors };
+  TextareaProps & { colors?: InputColors } & WithHelperText;
 
 export const TextareaField = ({
   label,

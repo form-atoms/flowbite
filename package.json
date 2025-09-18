@@ -43,7 +43,8 @@
     "format:check": "prettier . --check",
     "lint": "eslint --ext .tsx,.ts ./src",
     "lint:fix": "yarn run lint --fix",
-    "ui": "yarn upgrade-interactive"
+    "ui": "yarn upgrade-interactive",
+    "postinstall": "flowbite-react register"
   },
   "devDependencies": {
     "@emotion/react": "^11.11.4",
@@ -79,7 +80,7 @@
     "eslint": "8.57.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
-    "flowbite-react": "^0.10.1",
+    "flowbite-react": "^0.12.9",
     "form-atoms": "3.2.5",
     "happy-dom": "12.10.3",
     "jotai": "^2.7.1",

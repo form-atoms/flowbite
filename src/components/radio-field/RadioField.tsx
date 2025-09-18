@@ -4,7 +4,7 @@ import {
   useOptions,
   useSelectFieldProps,
 } from "@form-atoms/field";
-import { HelperText, Label, Radio } from "flowbite-react";
+import { Label, Radio } from "flowbite-react";
 import { Fragment, PropsWithChildren } from "react";
 import { RenderProp } from "react-render-prop-type";
 
@@ -50,7 +50,9 @@ export const RadioField = <Option, Field extends SelectField>({
       label={label}
       helperText={helperText}
     >
-      {({ color, helperText, id: fieldId, ...fieldProps }) => (
+      {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      ({ color, id: fieldId, ...fieldProps }) => (
         <Container>
           {renderOptions.map(({ id, value, label }) => (
             <Option key={id}>
@@ -68,7 +70,6 @@ export const RadioField = <Option, Field extends SelectField>({
               <Label htmlFor={id}>{label}</Label>
             </Option>
           ))}
-          {helperText && <HelperText color={color}>{helperText}</HelperText>}
         </Container>
       )}
     </FlowbiteField>

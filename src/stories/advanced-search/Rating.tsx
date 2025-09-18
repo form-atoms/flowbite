@@ -1,5 +1,5 @@
 import { numberField } from "@form-atoms/field";
-import { Rating } from "flowbite-react";
+import { Rating, RatingStar } from "flowbite-react";
 
 import { RadioField } from "../../components";
 
@@ -16,7 +16,7 @@ export const RatingRadioField = () => (
     getLabel={(val) => (
       <Rating>
         {options.map((_, index) => (
-          <Rating.Star key={index} filled={index < val} />
+          <RatingStar key={index} filled={index < val} />
         ))}
       </Rating>
     )}

@@ -3,7 +3,7 @@ import {
   ZodArrayField,
   useCheckboxGroup,
 } from "@form-atoms/field";
-import { Checkbox, HelperText, Label } from "flowbite-react";
+import { Checkbox, Label } from "flowbite-react";
 
 import { Option as BaseOption, type OptionRenderProp } from "../";
 import { FlowbiteField, type FlowbiteFieldProps } from "../field";
@@ -46,7 +46,7 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
     >
       {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        ({ color, helperText, required: isInputRequired, ...fieldProps }) => {
+        ({ color, required: isInputRequired, ...fieldProps }) => {
           return (
             <>
               {checkboxGroup.map((checkboxProps) => (
@@ -62,9 +62,6 @@ export const CheckboxGroupField = <Option, Field extends ZodArrayField>({
                   </Label>
                 </Option>
               ))}
-              {helperText && (
-                <HelperText color={color}>{helperText}</HelperText>
-              )}
             </>
           );
         }

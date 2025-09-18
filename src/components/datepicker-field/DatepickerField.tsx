@@ -1,12 +1,12 @@
 import { DateFieldProps, useDateFieldProps } from "@form-atoms/field";
 import { Datepicker, DatepickerProps } from "flowbite-react";
-import type { DatepickerRef } from "flowbite-react/dist/types/components/Datepicker/Datepicker";
+import type { DatepickerRef } from "flowbite-react/dist/components/Datepicker/Datepicker";
 import { useEffect, useRef } from "react";
 
-import { FlowbiteField } from "../field";
+import { FlowbiteField, WithHelperText } from "../field";
 
 type DatepickerFIeldProps = DateFieldProps &
-  Omit<DatepickerProps, "onSelectedDateChanged">;
+  Omit<DatepickerProps, "onSelectedDateChanged"> & WithHelperText;
 
 export const DatepickerField = ({
   field,
@@ -37,7 +37,7 @@ export const DatepickerField = ({
 
   const emptyProps = !value
     ? {
-        value: "",
+        value: new Date(),
         placeholder,
       }
     : {};
@@ -56,8 +56,8 @@ export const DatepickerField = ({
           {...uiProps}
           {...fieldProps}
           {...emptyProps}
-          defaultDate={value}
-          onSelectedDateChanged={(valueAsDate) => {
+          defaultValue={value}
+          onChange={(valueAsDate) => {
             onChange({
               // @ts-expect-error fake event
               currentTarget: { valueAsDate },

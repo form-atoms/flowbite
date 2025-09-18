@@ -4,7 +4,7 @@ import {
   ZodField,
   useRequiredProps,
 } from "@form-atoms/field";
-import { Label } from "flowbite-react";
+import { HelperText, Label } from "flowbite-react";
 import { useAtomValue } from "jotai";
 import { ReactNode, useId } from "react";
 import { RenderProp } from "react-render-prop-type";
@@ -15,14 +15,15 @@ import { FlowbiteStateColor, useFieldError } from "../../hooks";
 type ChildrenProp = RenderProp<
   Omit<RequiredProps, "isFieldRequired"> & {
     id: string;
-    helperText: ReactNode;
     color?: FlowbiteStateColor;
   }
 >;
 
-export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> & {
+export type WithHelperText = {
   helperText?: ReactNode;
 };
+
+export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> & WithHelperText;
 
 export const FlowbiteField = <Field extends ZodField>({
   field,
@@ -47,7 +48,8 @@ export const FlowbiteField = <Field extends ZodField>({
           {isFieldRequired ? <RequiredIndicator /> : ""}
         </Label>
       )}
-      {children({ ...requiredProps, id, helperText, color })}
+      {children({ ...requiredProps, id, color })}
+      {helperText && <HelperText color={color}>{helperText}</HelperText>}
     </div>
   );
 };

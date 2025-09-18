@@ -2,6 +2,8 @@ import "./style.css";
 import { DevTools } from "jotai-devtools";
 import React from "react";
 
+import { ThemeInit } from "../.flowbite-react/init";
+
 export const parameters = {
   controls: {
     matchers: {
@@ -15,6 +17,12 @@ export const decorators = [
   (Story) => (
     <>
       <DevTools />
+      <Story />
+    </>
+  ),
+    (Story) => (
+    <>
+      <ThemeInit />
       <Story />
     </>
   ),

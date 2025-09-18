@@ -1,7 +1,7 @@
-import { NumberFieldProps, useNumberFieldProps } from "@form-atoms/field";
+import {type NumberField as TNumberField, useNumberFieldProps } from "@form-atoms/field";
 import { TextInput, TextInputProps } from "flowbite-react";
 
-import { FlowbiteField } from "../field";
+import { FlowbiteField, FlowbiteFieldProps } from "../field";
 
 export const NumberField = ({
   label,
@@ -10,7 +10,7 @@ export const NumberField = ({
   required,
   initialValue,
   ...inputProps
-}: NumberFieldProps & TextInputProps) => {
+}: FlowbiteFieldProps<TNumberField> & TextInputProps) => {
   const props = useNumberFieldProps(field, { initialValue });
 
   return (
