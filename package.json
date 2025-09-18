@@ -89,7 +89,7 @@
     "semantic-release": "^23.0.6",
     "storybook": "^9.1.6",
     "tailwindcss": "^3.4.1",
-    "typescript": "5.3.3",
+    "typescript": "5.9.2",
     "vite": "^7.1.6",
     "vitest": "3.2.4",
     "zod": "^3.25.76"
