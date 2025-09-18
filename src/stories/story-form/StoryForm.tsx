@@ -1,9 +1,9 @@
-import { action } from "@storybook/addon-actions";
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "flowbite-react";
 import { FormAtom, FormFields, formAtom, useForm } from "form-atoms";
 import { useMemo } from "react";
 import { RenderProp } from "react-render-prop-type";
+import { action } from "storybook/actions";
 
 export type VariantProps<Fields extends FormFields> = {
   required: boolean;
