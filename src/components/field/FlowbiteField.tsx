@@ -23,7 +23,8 @@ export type WithHelperText = {
   helperText?: ReactNode;
 };
 
-export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> & WithHelperText;
+export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> &
+  WithHelperText;
 
 export const FlowbiteField = <Field extends ZodField>({
   field,

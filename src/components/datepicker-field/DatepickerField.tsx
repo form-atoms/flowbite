@@ -6,7 +6,8 @@ import { useEffect, useRef } from "react";
 import { FlowbiteField, WithHelperText } from "../field";
 
 type DatepickerFIeldProps = DateFieldProps &
-  Omit<DatepickerProps, "onSelectedDateChanged"> & WithHelperText;
+  Omit<DatepickerProps, "onSelectedDateChanged"> &
+  WithHelperText;
 
 export const DatepickerField = ({
   field,

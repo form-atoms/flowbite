@@ -30,7 +30,7 @@ describe("<RadioField />", () => {
     const [firstRadio] = screen.getAllByRole("radio");
 
     expect(firstRadio).toBeInvalid();
-    expect(screen.getByText("This field is required")).toBeInTheDocument();
+    expect(screen.getByText("Required")).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });
 

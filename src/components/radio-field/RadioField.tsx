@@ -52,26 +52,27 @@ export const RadioField = <Option, Field extends SelectField>({
     >
       {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      ({ color, id: fieldId, ...fieldProps }) => (
-        <Container>
-          {renderOptions.map(({ id, value, label }) => (
-            <Option key={id}>
-              <Radio
-                {...props}
-                role="radio"
-                {...uiProps}
-                {...fieldProps}
-                id={id}
-                value={value}
-                name={props.name ?? fieldId}
-                checked={props.value === value}
-                aria-checked={props.value === value}
-              />
-              <Label htmlFor={id}>{label}</Label>
-            </Option>
-          ))}
-        </Container>
-      )}
+        ({ color, id: fieldId, ...fieldProps }) => (
+          <Container>
+            {renderOptions.map(({ id, value, label }) => (
+              <Option key={id}>
+                <Radio
+                  {...props}
+                  role="radio"
+                  {...uiProps}
+                  {...fieldProps}
+                  id={id}
+                  value={value}
+                  name={props.name ?? fieldId}
+                  checked={props.value === value}
+                  aria-checked={props.value === value}
+                />
+                <Label htmlFor={id}>{label}</Label>
+              </Option>
+            ))}
+          </Container>
+        )
+      }
     </FlowbiteField>
   );
 };

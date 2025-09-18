@@ -1,4 +1,7 @@
-import {type NumberField as TNumberField, useNumberFieldProps } from "@form-atoms/field";
+import {
+  type NumberField as TNumberField,
+  useNumberFieldProps,
+} from "@form-atoms/field";
 import { TextInput, TextInputProps } from "flowbite-react";
 
 import { FlowbiteField, FlowbiteFieldProps } from "../field";

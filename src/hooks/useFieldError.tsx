@@ -1,9 +1,8 @@
-
 export interface FlowbiteStateColors {
-    info: string;
-    failure: string;
-    success: string;
-    warning: string;
+  info: string;
+  failure: string;
+  success: string;
+  warning: string;
 }
 
 import { FieldAtom, useFieldState } from "form-atoms";

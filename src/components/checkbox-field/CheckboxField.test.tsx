@@ -48,7 +48,9 @@ describe("<CheckboxField />", () => {
       const checkbox = screen.getByRole("checkbox");
       expect(checkbox).toBeInvalid();
       expect(checkbox).not.toBeChecked();
-      expect(screen.getByText("This field is required")).toBeInTheDocument();
+      expect(
+        screen.getByText("Invalid literal value, expected true"),
+      ).toBeInTheDocument();
       expect(handleSubmit).not.toBeCalled();
     });
   });

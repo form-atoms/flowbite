@@ -1,4 +1,7 @@
-import { type FilesField as TFilesField, useFilesFieldProps } from "@form-atoms/field";
+import {
+  type FilesField as TFilesField,
+  useFilesFieldProps,
+} from "@form-atoms/field";
 import { FileInput, FileInputProps } from "flowbite-react";
 
 import { InputColors } from "../../hooks";

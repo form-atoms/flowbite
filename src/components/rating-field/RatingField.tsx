@@ -37,20 +37,21 @@ export const RatingField = ({
     >
       {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      ({ color, ...fieldProps }) => (
-        <>
-          <Rating size={size} {...uiProps} {...fieldProps}>
-            {options.map((value) => (
-              <div key={value} onClick={() => actions.setValue(value)}>
-                <RatingStar
-                  // @ts-expect-error https://github.com/form-atoms/field/issues/66
-                  filled={props.value && value ? value <= props.value : false}
-                />
-              </div>
-            ))}
-          </Rating>
-        </>
-      )}
+        ({ color, ...fieldProps }) => (
+          <>
+            <Rating size={size} {...uiProps} {...fieldProps}>
+              {options.map((value) => (
+                <div key={value} onClick={() => actions.setValue(value)}>
+                  <RatingStar
+                    // @ts-expect-error https://github.com/form-atoms/field/issues/66
+                    filled={props.value && value ? value <= props.value : false}
+                  />
+                </div>
+              ))}
+            </Rating>
+          </>
+        )
+      }
     </FlowbiteField>
   );
 };

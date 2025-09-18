@@ -37,7 +37,7 @@ describe("<NumberField />", () => {
       });
 
       expect(screen.getByRole("spinbutton")).toBeInvalid();
-      expect(screen.getByText("This field is required")).toBeInTheDocument();
+      expect(screen.getByText("Required")).toBeInTheDocument();
       expect(onSubmit).not.toBeCalled();
     });
 
@@ -55,7 +55,7 @@ describe("<NumberField />", () => {
 
       const input = screen.getByRole("spinbutton");
       expect(input).toBeInvalid();
-      expect(screen.getByText("This field is required")).toBeInTheDocument();
+      expect(screen.getByText("Required")).toBeInTheDocument();
 
       await act(() => fireEvent.change(input, { target: { value: 0 } }));
 

@@ -36,7 +36,9 @@ describe("<TextareaField />", () => {
       });
 
       expect(screen.getByRole("textbox")).toBeInvalid();
-      expect(screen.getByText("This field is required")).toBeInTheDocument();
+      expect(
+        screen.getByText("String must contain at least 1 character(s)"),
+      ).toBeInTheDocument();
       expect(onSubmit).not.toBeCalled();
     });
 

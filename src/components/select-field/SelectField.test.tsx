@@ -43,7 +43,7 @@ describe("<SelectField />", () => {
     // expect(select).toHaveAttribute("required", "true");
 
     expect(select).toBeInvalid();
-    expect(screen.getByText("This field is required")).toBeInTheDocument();
+    expect(screen.getByText("Required")).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });
 

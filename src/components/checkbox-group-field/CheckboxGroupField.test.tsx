@@ -43,7 +43,9 @@ describe("<CheckboxGroupField />", () => {
     const [firstCheckbox] = screen.getAllByRole("checkbox");
 
     expect(firstCheckbox).toBeInvalid();
-    expect(screen.getByText("This field is required")).toBeInTheDocument();
+    expect(
+      screen.getByText("Array must contain at least 1 element(s)"),
+    ).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });
 

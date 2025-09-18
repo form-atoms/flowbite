@@ -20,7 +20,7 @@ export const decorators = [
       <Story />
     </>
   ),
-    (Story) => (
+  (Story) => (
     <>
       <ThemeInit />
       <Story />

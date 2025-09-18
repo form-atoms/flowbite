@@ -1230,9 +1230,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@form-atoms/field@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "@form-atoms/field@npm:5.1.1"
+"@form-atoms/field@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@form-atoms/field@npm:5.1.2"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -1242,7 +1242,7 @@ __metadata:
     jotai-effect: ^0
     react: ">=16.8"
     zod: ^3
-  checksum: af504b7abfc3352919d5882d9e40ebe4c504a94dcced380c9bbd139b55074518fbd7a4b7256dbdabc1c650094865142496890f647cb52cd145471422097d53f6
+  checksum: fcb22f21996bef2cbf7f0b7454500db5b4cbfa7ff3799c655a1d8d0021db98e92b0217c50ee02b2f034bbdd0d98cc066eb391084a2832a73c504a10a35e20999
   languageName: node
   linkType: hard
 
@@ -1251,9 +1251,9 @@ __metadata:
   resolution: "@form-atoms/flowbite@workspace:."
   dependencies:
     "@emotion/react": "npm:^11.11.4"
-    "@form-atoms/field": "npm:^5.1.1"
-    "@form-atoms/list-atom": "npm:^1.0.11"
-    "@mdx-js/react": "npm:^3.0.1"
+    "@form-atoms/field": "npm:^5.1.2"
+    "@form-atoms/list-atom": "npm:^1.0.12"
+    "@mdx-js/react": "npm:^3.1.1"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^12.0.0"
     "@semantic-release/git": "npm:^10.0.1"
@@ -1272,20 +1272,20 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:7.3.1"
     "@typescript-eslint/parser": "npm:7.3.1"
     "@vitejs/plugin-react": "npm:^4.2.1"
-    autoprefixer: "npm:10.4.19"
+    autoprefixer: "npm:10.4.21"
     eslint: "npm:8.57.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-storybook: "npm:9.1.6"
     flowbite-react: "npm:^0.12.9"
-    form-atoms: "npm:3.2.5"
+    form-atoms: "npm:3.3.1"
     happy-dom: "npm:12.10.3"
     jotai: "npm:^2.7.1"
     jotai-devtools: "npm:0.8.0"
     jotai-effect: "npm:^0.6.0"
-    postcss: "npm:8.4.38"
-    prettier: "npm:^3.2.5"
-    prettier-plugin-tailwindcss: "npm:0.5.12"
+    postcss: "npm:8.5.6"
+    prettier: "npm:^3.6.2"
+    prettier-plugin-tailwindcss: "npm:0.6.14"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-icons: "npm:^4.12.0"
@@ -1296,7 +1296,7 @@ __metadata:
     typescript: "npm:5.3.3"
     vite: "npm:^5.0.11"
     vitest: "npm:1.1.3"
-    zod: "npm:^3.22.4"
+    zod: "npm:^3.25.76"
   peerDependencies:
     "@form-atoms/field": ^5
     flowbite-react: ^0.10
@@ -1306,9 +1306,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@form-atoms/list-atom@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@form-atoms/list-atom@npm:1.0.11"
+"@form-atoms/list-atom@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "@form-atoms/list-atom@npm:1.0.12"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -1316,7 +1316,7 @@ __metadata:
     jotai: ^2
     jotai-effect: ^0
     react: ">=16.8"
-  checksum: a7161d21b748f273d47118600ecdf6a00cce6d9c97abac30a6964e7d6ae416d8673faa0c7e3d1b4b3edde1f58887bcef25d23247667dd44db4ece6b7b90c2d2b
+  checksum: ec1c09ab7d8a288a4d707846782015ad58025f9183c0c4790fb387909a7506bd147972176b4a8997e5b5179898b84cc26e05a26bca092cc12c09ab7a6f373a7b
   languageName: node
   linkType: hard
 
@@ -1574,7 +1574,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^3.0.0, @mdx-js/react@npm:^3.0.1":
+"@mdx-js/react@npm:^3.0.0":
   version: 3.0.1
   resolution: "@mdx-js/react@npm:3.0.1"
   dependencies:
@@ -1583,6 +1583,18 @@ __metadata:
     "@types/react": ">=16"
     react: ">=16"
   checksum: d566407af11e76f498f8133fbfa8a9d8a2ad80dc7a66ca109d29fcb92e953a2d2d7aaedc0c28571d126f1967faeb126dd2e4ab4ea474c994bf5c76fa204c5997
+  languageName: node
+  linkType: hard
+
+"@mdx-js/react@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@mdx-js/react@npm:3.1.1"
+  dependencies:
+    "@types/mdx": "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ">=16"
+    react: ">=16"
+  checksum: 52a740e2f37761694fa94d4704b7825084b4055616a95c8b8f4c1676190d399ddc5cdbb399ffc45b550beecd30497a7224c2e5b05bf43ecb668c7473641037d1
   languageName: node
   linkType: hard
 
@@ -3748,21 +3760,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.19":
-  version: 10.4.19
-  resolution: "autoprefixer@npm:10.4.19"
+"autoprefixer@npm:10.4.21":
+  version: 10.4.21
+  resolution: "autoprefixer@npm:10.4.21"
   dependencies:
-    browserslist: "npm:^4.23.0"
-    caniuse-lite: "npm:^1.0.30001599"
+    browserslist: "npm:^4.24.4"
+    caniuse-lite: "npm:^1.0.30001702"
     fraction.js: "npm:^4.3.7"
     normalize-range: "npm:^0.1.2"
-    picocolors: "npm:^1.0.0"
+    picocolors: "npm:^1.1.1"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 98378eae37b8bf0f1515e4c91b4c9c1ce69ede311d4dea7e934f5afe147d23712c577f112c4019a4c40461c585d82d474d08044f8eb6cb8a063c3d5b7aca52d2
+  checksum: 5d7aeee78ef362a6838e12312908516a8ac5364414175273e5cff83bbff67612755b93d567f3aa01ce318342df48aeab4b291847b5800c780e58c458f61a98a6
   languageName: node
   linkType: hard
 
@@ -3898,21 +3910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.23.0":
-  version: 4.23.0
-  resolution: "browserslist@npm:4.23.0"
-  dependencies:
-    caniuse-lite: "npm:^1.0.30001587"
-    electron-to-chromium: "npm:^1.4.668"
-    node-releases: "npm:^2.0.14"
-    update-browserslist-db: "npm:^1.0.13"
-  bin:
-    browserslist: cli.js
-  checksum: 496c3862df74565dd942b4ae65f502c575cbeba1fa4a3894dad7aa3b16130dc3033bc502d8848147f7b625154a284708253d9598bcdbef5a1e34cf11dc7bad8e
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.24.0":
+"browserslist@npm:^4.24.0, browserslist@npm:^4.24.4":
   version: 4.26.2
   resolution: "browserslist@npm:4.26.2"
   dependencies:
@@ -4061,14 +4059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001587, caniuse-lite@npm:^1.0.30001599":
-  version: 1.0.30001600
-  resolution: "caniuse-lite@npm:1.0.30001600"
-  checksum: 4c52f83ed71bc5f6e443bd17923460f1c77915adc2c2aa79ddaedceccc690b5917054b0c41b79e9138cbbd9abcdc0db9e224e79e3e734e581dfec06505f3a2b4
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001741":
+"caniuse-lite@npm:^1.0.30001702, caniuse-lite@npm:^1.0.30001741":
   version: 1.0.30001743
   resolution: "caniuse-lite@npm:1.0.30001743"
   checksum: e55b13b4a547c9f610a68d5f5668a3239ada4a4aef5d198860397757ab7c03a5b0590675b7e82c5d3d57316b40499e1da52decb08a97ef3066a338871bbb5c37
@@ -4870,13 +4861,6 @@ __metadata:
   version: 1.4.623
   resolution: "electron-to-chromium@npm:1.4.623"
   checksum: 483640dbbedf46d627f264aae7bd2ef723326488fa5b7730fbe9c53f5bdde25ce421e54134b88ef85649e4473f42e73709692da5bbfb6aec7c08cdfe8c0037e2
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.4.668":
-  version: 1.4.715
-  resolution: "electron-to-chromium@npm:1.4.715"
-  checksum: 0fc9fc9fe2c4082c87672d229437c918f43c19ad81274afcdf2d36fba96bfaaee0d9254c309879fbea8eeb2c13fd1b5cf51e0967d55790206697914cecff9c6b
   languageName: node
   linkType: hard
 
@@ -5767,13 +5751,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-atoms@npm:3.2.5":
-  version: 3.2.5
-  resolution: "form-atoms@npm:3.2.5"
+"form-atoms@npm:3.3.1":
+  version: 3.3.1
+  resolution: "form-atoms@npm:3.3.1"
   peerDependencies:
     jotai: ^2.0.0
     react: ">=16.8"
-  checksum: ae886ef78d6248f9d741ad22b272d753e5e7186cba68f3c61ab3ec27f996f6bcab832d930457e6bc395c58f7a193d338eb1854c1dacce83b5db6819b25a3873c
+  checksum: 97c8af269abdc99ab1f6773f5cdbf67717403efc03421441658f2ed5e82910799ab2035682f3a71f21132b1f0d01595cf6bba3fec75d537b41304791b217e74f
   languageName: node
   linkType: hard
 
@@ -8004,6 +7988,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.11":
+  version: 3.3.11
+  resolution: "nanoid@npm:3.3.11"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 73b5afe5975a307aaa3c95dfe3334c52cdf9ae71518176895229b8d65ab0d1c0417dd081426134eb7571c055720428ea5d57c645138161e7d10df80815527c48
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.6":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
@@ -9040,14 +9033,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.38":
-  version: 8.4.38
-  resolution: "postcss@npm:8.4.38"
+"postcss@npm:8.5.6":
+  version: 8.5.6
+  resolution: "postcss@npm:8.5.6"
   dependencies:
-    nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.2.0"
-  checksum: 6e44a7ed835ffa9a2b096e8d3e5dfc6bcf331a25c48aeb862dd54e3aaecadf814fa22be224fd308f87d08adf2299164f88c5fd5ab1c4ef6cbd693ceb295377f4
+    nanoid: "npm:^3.3.11"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 9e4fbe97574091e9736d0e82a591e29aa100a0bf60276a926308f8c57249698935f35c5d2f4e80de778d0cbb8dcffab4f383d85fd50c5649aca421c3df729b86
   languageName: node
   linkType: hard
 
@@ -9080,20 +9073,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:0.5.12":
-  version: 0.5.12
-  resolution: "prettier-plugin-tailwindcss@npm:0.5.12"
+"prettier-plugin-tailwindcss@npm:0.6.14":
+  version: 0.6.14
+  resolution: "prettier-plugin-tailwindcss@npm:0.6.14"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
+    "@prettier/plugin-hermes": "*"
+    "@prettier/plugin-oxc": "*"
     "@prettier/plugin-pug": "*"
     "@shopify/prettier-plugin-liquid": "*"
     "@trivago/prettier-plugin-sort-imports": "*"
+    "@zackad/prettier-plugin-twig": "*"
     prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
     prettier-plugin-import-sort: "*"
     prettier-plugin-jsdoc: "*"
     prettier-plugin-marko: "*"
+    prettier-plugin-multiline-arrays: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
     prettier-plugin-sort-imports: "*"
@@ -9102,11 +9099,17 @@ __metadata:
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
       optional: true
+    "@prettier/plugin-hermes":
+      optional: true
+    "@prettier/plugin-oxc":
+      optional: true
     "@prettier/plugin-pug":
       optional: true
     "@shopify/prettier-plugin-liquid":
       optional: true
     "@trivago/prettier-plugin-sort-imports":
+      optional: true
+    "@zackad/prettier-plugin-twig":
       optional: true
     prettier-plugin-astro:
       optional: true
@@ -9118,6 +9121,8 @@ __metadata:
       optional: true
     prettier-plugin-marko:
       optional: true
+    prettier-plugin-multiline-arrays:
+      optional: true
     prettier-plugin-organize-attributes:
       optional: true
     prettier-plugin-organize-imports:
@@ -9128,18 +9133,16 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-    prettier-plugin-twig-melody:
-      optional: true
-  checksum: 599ac540d323dfeacea14bb81991cffe18ca63524e44fdf6d758a1ed1c0c9cd06e0e43a509e475f0de0a4d66b318a885ccf4e806c473373fa9784449b6d99317
+  checksum: 84235df312878176f7019272d921923943895f08120393e40f518c4c5f572e6adf11fdd9fbe9c92b9d7210ed1f9c6605e89de1b627b6ac2cf8480e199ee80e26
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "prettier@npm:3.2.5"
+"prettier@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: d509f9da0b70e8cacc561a1911c0d99ec75117faed27b95cc8534cb2349667dee6351b0ca83fa9d5703f14127faa52b798de40f5705f02d843da133fc3aa416a
+  checksum: 1213691706bcef1371d16ef72773c8111106c3533b660b1cc8ec158bd109cdf1462804125f87f981f23c4a3dba053b6efafda30ab0114cc5b4a725606bb9ff26
   languageName: node
   linkType: hard
 
@@ -10243,10 +10246,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "source-map-js@npm:1.2.0"
-  checksum: 74f331cfd2d121c50790c8dd6d3c9de6be21926de80583b23b37029b0f37aefc3e019fa91f9a10a5e120c08135297e1ecf312d561459c45908cb1e0e365f49e5
+"source-map-js@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "source-map-js@npm:1.2.1"
+  checksum: ff9d8c8bf096d534a5b7707e0382ef827b4dd360a577d3f34d2b9f48e12c9d230b5747974ee7c607f0df65113732711bb701fe9ece3c7edbd43cb2294d707df3
   languageName: node
   linkType: hard
 
@@ -11728,9 +11731,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.4":
-  version: 3.22.4
-  resolution: "zod@npm:3.22.4"
-  checksum: 73622ca36a916f785cf528fe612a884b3e0f183dbe6b33365a7d0fc92abdbedf7804c5e2bd8df0a278e1472106d46674281397a3dd800fa9031dc3429758c6ac
+"zod@npm:^3.25.76":
+  version: 3.25.76
+  resolution: "zod@npm:3.25.76"
+  checksum: f0c963ec40cd96858451d1690404d603d36507c1fc9682f2dae59ab38b578687d542708a7fdbf645f77926f78c9ed558f57c3d3aa226c285f798df0c4da16995
   languageName: node
   linkType: hard

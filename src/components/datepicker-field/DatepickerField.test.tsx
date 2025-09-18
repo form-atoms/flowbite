@@ -36,7 +36,7 @@ describe("<DatepickerField />", () => {
       render(<DatepickerField role="dialog" field={field} />);
 
       expect(screen.getByRole("dialog")).toBeInvalid();
-      expect(screen.getByText("This field is required")).toBeInTheDocument();
+      expect(screen.getByText("Required")).toBeInTheDocument();
       expect(onSubmit).not.toBeCalled();
     });
 

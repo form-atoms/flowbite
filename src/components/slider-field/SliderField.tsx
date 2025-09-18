@@ -1,8 +1,5 @@
 import { NumberFieldProps, useNumberFieldProps } from "@form-atoms/field";
-import {
-  RangeSlider,
-  RangeSliderProps,
-} from "flowbite-react";
+import { RangeSlider, RangeSliderProps } from "flowbite-react";
 
 import { FlowbiteField, type WithHelperText } from "../field";
 
