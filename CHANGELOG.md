@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/form-atoms/flowbite/compare/v5.2.1...v5.3.0) (2025-09-18)
+
+
+### Features
+
+* **flowbite:** bump to v0.12 ([#14](https://github.com/form-atoms/flowbite/issues/14)) ([9b8a83e](https://github.com/form-atoms/flowbite/commit/9b8a83ee432ab0926b472dab28dc4455735cca73))
+
 ## [5.2.1](https://github.com/form-atoms/flowbite/compare/v5.2.0...v5.2.1) (2024-09-11)
 
 
