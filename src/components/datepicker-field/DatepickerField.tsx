@@ -37,7 +37,7 @@ export const DatepickerField = ({
 
   const emptyProps = !value
     ? {
-        value: "",
+        value: new Date(),
         placeholder,
       }
     : {};
@@ -50,7 +50,6 @@ export const DatepickerField = ({
       helperText={helperText}
     >
       {(fieldProps) => (
-        // @ts-expect-error emptyProps hack to reset value
         <Datepicker
           ref={datepickerRef}
           {...dateFieldProps}
