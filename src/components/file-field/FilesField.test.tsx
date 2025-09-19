@@ -74,24 +74,25 @@ describe("<FilesField />", () => {
 
       const files = [new File(["logo"], "logo.jpeg", { type: "image/jpeg" })];
 
-      await fireEvent.change(fileInput, {
-        target: { files },
-      });
+      await act(() =>
+        fireEvent.change(fileInput, {
+          target: { files },
+        }),
+      );
 
       expect(fileInput.files).toBe(files);
-      expect(fileInput).toHaveValue("/fake/path/logo.jpeg");
 
       // WORKARROUND: should not be here, happy-dom should clear files state when input value set to ""
-      await fireEvent.change(fileInput, {
-        target: { files: [], value: "" },
-      });
+      await act(() =>
+        fireEvent.change(fileInput, {
+          target: { files: [] },
+        }),
+      );
       // must be after workarround, so zod validator gets undefined input instead of empty array
-      await act(async () => {
-        result.current.reset();
-      });
+      await act(() => result.current.reset());
 
       expect(fileInput).toBeValid();
-      expect(fileInput).toHaveValue("");
+      expect(fileInput.files).toEqual([]);
 
       const onSubmit = vi.fn();
       await act(async () => {

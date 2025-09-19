@@ -77,7 +77,7 @@
     "eslint-plugin-storybook": "9.1.6",
     "flowbite-react": "^0.12.9",
     "form-atoms": "3.3.1",
-    "happy-dom": "12.10.3",
+    "happy-dom": "18.0.1",
     "jotai": "^2.7.1",
     "jotai-devtools": "0.8.0",
     "jotai-effect": "^0.6.0",
