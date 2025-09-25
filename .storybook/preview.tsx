@@ -1,6 +1,5 @@
 import "./style.css";
 import { DevTools } from "jotai-devtools";
-import React from "react";
 
 import { ThemeInit } from "../.flowbite-react/init";
 
