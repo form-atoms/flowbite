@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/form-atoms/flowbite/compare/v5.3.0...v5.4.0) (2025-09-25)
+
+
+### Features
+
+* **flowbite:** tailwind v4 ([f676b84](https://github.com/form-atoms/flowbite/commit/f676b84930e354181ebec6a628fe4bfa0221a725))
+
 # [5.3.0](https://github.com/form-atoms/flowbite/compare/v5.2.1...v5.3.0) (2025-09-18)
 
 
