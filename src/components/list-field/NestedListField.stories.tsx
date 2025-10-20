@@ -1,5 +1,5 @@
 import { listField, numberField, textField } from "@form-atoms/field";
-import { List } from "@form-atoms/list-atom";
+import { ListOf, createList } from "@form-atoms/list-atom";
 import { Button, Card } from "flowbite-react";
 
 import { formStory, meta } from "../../stories/story-form";
@@ -25,67 +25,72 @@ const addresses = listField({
       ],
     },
   ],
-  fields: ({ city, street, people = [] }) => ({
+  fields: () => ({
     city: textField({
       name: "city",
-      value: city,
     }),
     street: textField({
       name: "street",
-      value: street,
     }),
     people: listField({
       name: "people",
-      value: people,
-      fields: ({ name, age }) => ({
+      fields: () => ({
         name: textField({
           name: "name",
-          value: name,
         }),
         age: numberField({
           name: "age",
-          value: age,
         }),
       }),
     }),
   }),
 });
 
+const { List } = createList(addresses);
+
 export const AddressesWithPeopleListField = formStory({
   args: {
     fields: { addresses },
-    children: ({ fields }) => (
-      <List
-        atom={fields.addresses}
-        AddButton={({ add }) => (
-          <Button color="gray" onClick={() => add()}>
-            Add Address
-          </Button>
-        )}
-      >
-        {({ fields }) => (
-          <Card>
-            <div className="grid grid-flow-col grid-cols-2 gap-4">
-              <TextField label="City" field={fields.city} />
-              <TextField label="Street" field={fields.street} />
-            </div>
-            <List
-              atom={fields.people}
-              AddButton={({ add }) => (
-                <Button color="gray" onClick={() => add()}>
-                  Add Person
-                </Button>
-              )}
-            >
-              {({ fields }) => (
-                <Card className="grid grid-flow-col grid-cols-2 gap-4">
-                  <TextField label="Name" field={fields.name} />
-                  <NumberField label="Age" field={fields.age} />
-                </Card>
-              )}
-            </List>
-          </Card>
-        )}
+    children: () => (
+      <List>
+        <List.Item>
+          {({ fields }) => (
+            <Card>
+              <div className="grid grid-flow-col grid-cols-2 gap-4">
+                <TextField label="City" field={fields.city} />
+                <TextField label="Street" field={fields.street} />
+              </div>
+              <ListOf atom={fields.people}>
+                {(List) => (
+                  <>
+                    <List.Item>
+                      {({ fields }) => (
+                        <Card className="grid grid-flow-col grid-cols-2 gap-4">
+                          <TextField label="Name" field={fields.name} />
+                          <NumberField label="Age" field={fields.age} />
+                        </Card>
+                      )}
+                    </List.Item>
+                    <List.Add>
+                      {({ add }) => (
+                        <Button color="gray" onClick={() => add()}>
+                          Add Person
+                        </Button>
+                      )}
+                    </List.Add>
+                  </>
+                )}
+              </ListOf>
+            </Card>
+          )}
+        </List.Item>
+        <List.Add>
+          {({ add }) => (
+            <Button color="gray" onClick={() => add()}>
+              Add Address
+            </Button>
+          )}
+        </List.Add>
       </List>
     ),
   },

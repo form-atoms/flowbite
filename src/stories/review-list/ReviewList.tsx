@@ -3,7 +3,6 @@ import {
   type TextField as TTextField,
 } from "@form-atoms/field";
 import { ListOf } from "@form-atoms/list-atom";
-import { AddProps } from "@form-atoms/list-atom/dist/components/add";
 import { Button, Card, Label } from "flowbite-react";
 import {
   HiOutlineMinusCircle,
