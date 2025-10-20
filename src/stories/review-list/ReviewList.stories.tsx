@@ -11,11 +11,11 @@ export default {
 const fields = {
   positives: listField({
     value: [{ item: "quality materials used" }, { item: "waterproof" }],
-    fields: ({ item }) => ({ item: textField({ value: item }) }),
+    fields: () => ({ item: textField() }),
   }),
   negatives: listField({
     value: [{ item: "could be lighter" }],
-    fields: ({ item }) => ({ item: textField({ value: item }) }),
+    fields: () => ({ item: textField() }),
   }),
 };
 

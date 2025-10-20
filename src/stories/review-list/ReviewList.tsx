@@ -2,11 +2,8 @@ import {
   type ListField,
   type TextField as TTextField,
 } from "@form-atoms/field";
-import {
-  type AddButtonProps,
-  List,
-  type RemoveButtonProps,
-} from "@form-atoms/list-atom";
+import { ListOf } from "@form-atoms/list-atom";
+import { AddProps } from "@form-atoms/list-atom/dist/components/add";
 import { Button, Card, Label } from "flowbite-react";
 import {
   HiOutlineMinusCircle,
@@ -16,14 +13,14 @@ import {
 
 import { TextField } from "../../components";
 
-const AddButton = ({ add }: AddButtonProps<any>) => (
+const AddButton = ({ add }: { add: () => void }) => (
   // The div makes it non-full width
   <div>
-    <Button onClick={add}>Add</Button>
+    <Button onClick={() => add()}>Add</Button>
   </div>
 );
 
-const RemoveButton = ({ remove }: RemoveButtonProps) => (
+const RemoveButton = ({ remove }: { remove: () => void }) => (
   <Button onClick={remove} color="light">
     <HiOutlineTrash />
   </Button>
@@ -45,37 +42,49 @@ export const ReviewList = ({
     <div className="flex gap-4">
       <div className="flex flex-1 flex-col gap-4">
         <Label>Positives</Label>
-        <List
-          atom={fields.positives}
-          RemoveButton={RemoveButton}
-          AddButton={AddButton}
-        >
-          {({ fields, RemoveButton }) => (
-            <div className="flex items-center gap-2">
-              <RemoveButton />
-              <div className="w-full">
-                <TextField icon={HiOutlinePlusCircle} field={fields.item} />
-              </div>
-            </div>
+        <ListOf atom={fields.positives}>
+          {({ List }) => (
+            <>
+              <List.Item>
+                {({ fields, remove }) => (
+                  <div className="flex items-center gap-2">
+                    <RemoveButton remove={remove} />
+                    <div className="w-full">
+                      <TextField
+                        icon={HiOutlinePlusCircle}
+                        field={fields.item}
+                      />
+                    </div>
+                  </div>
+                )}
+              </List.Item>
+              <List.Add>{({ add }) => <AddButton add={add} />}</List.Add>
+            </>
           )}
-        </List>
+        </ListOf>
       </div>
       <div className="flex flex-1 flex-col gap-4">
         <Label>Negatives</Label>
-        <List
-          atom={fields.negatives}
-          RemoveButton={RemoveButton}
-          AddButton={AddButton}
-        >
-          {({ fields, RemoveButton }) => (
-            <div className="flex w-full items-center gap-2">
-              <RemoveButton />
-              <div className="w-full">
-                <TextField icon={HiOutlineMinusCircle} field={fields.item} />
-              </div>
-            </div>
+        <ListOf atom={fields.negatives}>
+          {({ List }) => (
+            <>
+              <List.Item>
+                {({ fields, remove }) => (
+                  <div className="flex w-full items-center gap-2">
+                    <RemoveButton remove={remove} />
+                    <div className="w-full">
+                      <TextField
+                        icon={HiOutlineMinusCircle}
+                        field={fields.item}
+                      />
+                    </div>
+                  </div>
+                )}
+              </List.Item>
+              <List.Add>{({ add }) => <AddButton add={add} />}</List.Add>
+            </>
           )}
-        </List>
+        </ListOf>
       </div>
     </div>
   </Card>
