@@ -61,7 +61,7 @@ export const AddressesWithPeopleListField = formStory({
                 <TextField label="Street" field={fields.street} />
               </div>
               <ListOf atom={fields.people}>
-                {(List) => (
+                {({ List }) => (
                   <>
                     <List.Item>
                       {({ fields }) => (
@@ -73,7 +73,7 @@ export const AddressesWithPeopleListField = formStory({
                     </List.Item>
                     <List.Add>
                       {({ add }) => (
-                        <Button color="gray" onClick={() => add()}>
+                        <Button color="light" onClick={() => add()}>
                           Add Person
                         </Button>
                       )}
@@ -86,7 +86,7 @@ export const AddressesWithPeopleListField = formStory({
         </List.Item>
         <List.Add>
           {({ add }) => (
-            <Button color="gray" onClick={() => add()}>
+            <Button color="light" onClick={() => add()}>
               Add Address
             </Button>
           )}
