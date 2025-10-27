@@ -1,10 +1,10 @@
 import {
-  CheckboxField,
-  FieldProps,
+  type CheckboxField,
+  type FieldProps,
   useCheckboxFieldProps,
   useRequiredProps,
 } from "@form-atoms/field";
-import { HelperText, Label, Radio } from "flowbite-react";
+import { HelperText, Label, Radio, type RadioProps } from "flowbite-react";
 import { useAtomValue } from "jotai";
 import { ReactNode, useId } from "react";
 
@@ -16,7 +16,11 @@ export const RadioOption = <Field extends CheckboxField>({
   required,
   label,
   helperText,
-}: FieldProps<Field> & { helperText?: ReactNode }) => {
+  onChange,
+}: FieldProps<Field> & { helperText?: ReactNode } & Pick<
+    RadioProps,
+    "onChange"
+  >) => {
   const id = useId();
   const props = useCheckboxFieldProps(field);
   const { error } = useFieldError(field);
@@ -24,9 +28,17 @@ export const RadioOption = <Field extends CheckboxField>({
   const atom = useAtomValue(field);
   const isFieldRequired = useAtomValue(atom.required);
 
+  const handleChange = onChange ?? props.onChange;
+
   return (
     <div className="flex items-center gap-2">
-      <Radio {...props} id={id} {...requiredProps} role="radio" />
+      <Radio
+        {...props}
+        id={id}
+        {...requiredProps}
+        onChange={handleChange}
+        role="radio"
+      />
       <div className="flex flex-col">
         <Label htmlFor={id} color={error ? "failure" : undefined}>
           <>
