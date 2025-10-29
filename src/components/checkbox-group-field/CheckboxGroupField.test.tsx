@@ -44,7 +44,7 @@ describe("<CheckboxGroupField />", () => {
 
     expect(firstCheckbox).toBeInvalid();
     expect(
-      screen.getByText("Array must contain at least 1 element(s)"),
+      screen.getByText("Too small: expected array to have >=1 items"),
     ).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });

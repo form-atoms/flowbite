@@ -26,7 +26,6 @@ export const NumberField = ({
       {(fieldProps) => (
         <TextInput
           role="spinbutton"
-          type="number"
           {...inputProps}
           {...props}
           {...fieldProps}

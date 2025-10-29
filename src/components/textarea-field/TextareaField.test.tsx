@@ -24,7 +24,7 @@ describe("<TextareaField />", () => {
 
   describe("with required textField()", () => {
     it("renders error message when submitting empty", async () => {
-      const bio = textField();
+      const bio = textField({ required_error: "tell us about yourself" });
       const form = formAtom({ bio });
       const { result } = renderHook(() => useFormSubmit(form));
 
@@ -36,13 +36,11 @@ describe("<TextareaField />", () => {
       });
 
       expect(screen.getByRole("textbox")).toBeInvalid();
-      expect(
-        screen.getByText("String must contain at least 1 character(s)"),
-      ).toBeInTheDocument();
+      expect(screen.getByText("tell us about yourself")).toBeInTheDocument();
       expect(onSubmit).not.toBeCalled();
     });
 
-    it("submits form without error  when entered valid numeric value", async () => {
+    it("submits form without error when entered valid numeric value", async () => {
       const cowsay = textField();
       const form = formAtom({ cowsay });
       const { result } = renderHook(() => useFormSubmit(form));
@@ -51,7 +49,7 @@ describe("<TextareaField />", () => {
 
       const textarea = screen.getByRole("textbox");
 
-      await fireEvent.change(textarea, { target: { value: "memento mori" } });
+      fireEvent.change(textarea, { target: { value: "memento mori" } });
 
       expect(textarea).toBeValid();
 

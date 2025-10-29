@@ -25,7 +25,7 @@ describe("<SelectField />", () => {
   });
 
   it("should render error message when submitting empty & required", async () => {
-    const field = stringField();
+    const field = stringField({ required_error: "Required" });
     const form = formAtom({ field });
     const { result } = renderHook(() => useFormSubmit(form));
 

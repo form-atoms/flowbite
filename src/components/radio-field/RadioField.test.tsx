@@ -16,7 +16,7 @@ describe("<RadioField />", () => {
   };
 
   it("should render error message when submitting empty & required", async () => {
-    const field = stringField();
+    const field = stringField({ required_error: "This field is required" });
     const form = formAtom({ field });
     const { result } = renderHook(() => useFormSubmit(form));
 
@@ -30,7 +30,7 @@ describe("<RadioField />", () => {
     const [firstRadio] = screen.getAllByRole("radio");
 
     expect(firstRadio).toBeInvalid();
-    expect(screen.getByText("Required")).toBeInTheDocument();
+    expect(screen.getByText("This field is required")).toBeInTheDocument();
     expect(onSubmit).not.toBeCalled();
   });
 

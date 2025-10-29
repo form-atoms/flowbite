@@ -49,7 +49,7 @@ describe("<CheckboxField />", () => {
       expect(checkbox).toBeInvalid();
       expect(checkbox).not.toBeChecked();
       expect(
-        screen.getByText("Invalid literal value, expected true"),
+        screen.getByText("Invalid input: expected true"),
       ).toBeInTheDocument();
       expect(handleSubmit).not.toBeCalled();
     });

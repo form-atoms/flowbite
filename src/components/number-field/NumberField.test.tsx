@@ -25,7 +25,7 @@ describe("<NumberField />", () => {
 
   describe("with required numberField", () => {
     it("renders error message when submitting empty", async () => {
-      const price = numberField();
+      const price = numberField({ required_error: "Required" });
       const form = formAtom({ price });
       const { result } = renderHook(() => useFormSubmit(form));
 
@@ -42,7 +42,7 @@ describe("<NumberField />", () => {
     });
 
     it("submits form without error when entered valid numeric value", async () => {
-      const price = numberField();
+      const price = numberField({ required_error: "Required" });
       const form = formAtom({ price });
       const { result } = renderHook(() => useFormSubmit(form));
 
