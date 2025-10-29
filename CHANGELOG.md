@@ -1,3 +1,11 @@
+## [5.4.1](https://github.com/form-atoms/flowbite/compare/v5.4.0...v5.4.1) (2025-10-29)
+
+
+### Bug Fixes
+
+* **NumberField:** no need to set type ([f629479](https://github.com/form-atoms/flowbite/commit/f629479a6a11aae53d75d6076afab349e69fd1e0))
+* **radio-option:** enable custom handler ([f546dd2](https://github.com/form-atoms/flowbite/commit/f546dd274b62eb20a275945aefd03bab1ecd6cc7))
+
 # [5.4.0](https://github.com/form-atoms/flowbite/compare/v5.3.0...v5.4.0) (2025-09-25)
 
 
