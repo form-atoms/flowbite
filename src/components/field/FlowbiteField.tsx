@@ -1,3 +1,5 @@
+import { type ReactNode, useId } from "react";
+import { useAtomValue } from "jotai";
 import {
   FieldProps,
   RequiredProps,
@@ -5,15 +7,13 @@ import {
   useRequiredProps,
 } from "@form-atoms/field";
 import { HelperText, Label } from "flowbite-react";
-import { useAtomValue } from "jotai";
-import { ReactNode, useId } from "react";
-import { RenderProp } from "react-render-prop-type";
 
+import { type Prettify } from "../utils";
 import { RequiredIndicator } from "../";
 import { FlowbiteStateColor, useFieldError } from "../../hooks";
 
-type ChildrenProp = RenderProp<
-  Omit<RequiredProps, "isFieldRequired"> & {
+type ChildrenProps = Prettify<
+  RequiredProps & {
     id: string;
     color?: FlowbiteStateColor;
   }
@@ -23,23 +23,28 @@ export type WithHelperText = {
   helperText?: ReactNode;
 };
 
-export type FlowbiteFieldProps<Field extends ZodField> = FieldProps<Field> &
-  WithHelperText;
+export type FlowbiteFieldProps<Field extends ZodField> = Prettify<
+  FieldProps<Field> & WithHelperText
+>;
+
+type Props<Field extends ZodField> = Prettify<
+  FlowbiteFieldProps<Field> & {
+    children: (props: ChildrenProps) => ReactNode;
+  }
+>;
 
 export const FlowbiteField = <Field extends ZodField>({
   field,
   required,
   label,
   children,
-  ...uiProps
-}: FlowbiteFieldProps<Field> & ChildrenProp) => {
+  helperText,
+}: Props<Field>) => {
   const id = useId();
   const { color, error } = useFieldError(field);
   const requiredProps = useRequiredProps({ field, required });
   const atom = useAtomValue(field);
   const isFieldRequired = useAtomValue(atom.required);
-
-  const helperText = uiProps.helperText ?? error;
 
   return (
     <div className="flex flex-col gap-2">
@@ -50,7 +55,8 @@ export const FlowbiteField = <Field extends ZodField>({
         </Label>
       )}
       {children({ ...requiredProps, id, color })}
-      {helperText && <HelperText color={color}>{helperText}</HelperText>}
+      {helperText && <HelperText>{helperText}</HelperText>}
+      {error && <HelperText color={color}>{error}</HelperText>}
     </div>
   );
 };
