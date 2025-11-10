@@ -1,3 +1,15 @@
+# [5.5.0](https://github.com/form-atoms/flowbite/compare/v5.4.2...v5.5.0) (2025-11-10)
+
+
+### Bug Fixes
+
+* run install ([cf9ae11](https://github.com/form-atoms/flowbite/commit/cf9ae11a5d6ed70644624eec7c39286f97d1c012))
+
+
+### Features
+
+* **field:** up peer dependency ([3d67ae3](https://github.com/form-atoms/flowbite/commit/3d67ae35b5d350e6f2f40b20b5d27f2700f6e99e))
+
 ## [5.4.2](https://github.com/form-atoms/flowbite/compare/v5.4.1...v5.4.2) (2025-11-10)
 
 
