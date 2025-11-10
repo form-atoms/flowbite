@@ -990,7 +990,7 @@ __metadata:
     vitest: "npm:4.0.4"
     zod: "npm:^4.1.12"
   peerDependencies:
-    "@form-atoms/field": ^5
+    "@form-atoms/field": ^6
     flowbite-react: ^0.12
     form-atoms: ^3
     jotai: ^2
