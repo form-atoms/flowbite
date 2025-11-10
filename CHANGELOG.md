@@ -1,3 +1,10 @@
+## [5.4.2](https://github.com/form-atoms/flowbite/compare/v5.4.1...v5.4.2) (2025-11-10)
+
+
+### Bug Fixes
+
+* **field:** render helper text and error together ([8c46527](https://github.com/form-atoms/flowbite/commit/8c465275f1d6d5fb614882d8aac82128482ed4e9))
+
 ## [5.4.1](https://github.com/form-atoms/flowbite/compare/v5.4.0...v5.4.1) (2025-10-29)
 
 
